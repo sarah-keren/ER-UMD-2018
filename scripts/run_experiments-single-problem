@@ -1,0 +1,301 @@
+#!/bin/sh
+# $1 - benchmark-folder
+# $2 - domain
+# $3 - instance
+# $4 - max-budget
+# $5 - exe-folder
+
+
+
+
+	echo ""
+	echo "---------------------------------------"
+	echo "Testing $2 $3 original"
+	echo "---------------------------------------"
+	echo ""
+	
+
+
+	#echo " - - - -" 
+ 	#ulimit -t 1800;
+	#echo ""
+	#echo "---$1/$2/simplified_joint/p$3/p$3-domain.pddl p$3 LAO* compilation zero-heur---"
+	#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3 LAO* compilation zero-heur
+
+
+	echo " - - - -" 
+ 	ulimit -t 1800;
+	echo ""
+	echo "---$1/$2/simplified_joint/p$3/p$3-domain.pddl p$3 LAO* compilation hmin-heur-false---"
+	$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3 LAO* compilation hmin-heur-false
+
+
+	#echo " - - - -" 
+ 	#ulimit -t 1800;	
+	echo ""
+	echo "---$1/$2/simplified_joint/p$3/p$3-domain.pddl p$3 LAO* compilation AM1F---"
+	$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3 LAO* compilation AM1F
+
+
+	#echo " - - - -" 
+ 	#ulimit -t 1800;
+	#echo ""
+	#echo "---$1/$2/simplified_joint/p$3/p$3-domain.pddl p$3 LAO* compilation FF---"
+	#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3 LAO* compilation FF
+
+
+
+
+
+
+	for b in $(seq 0 $4);
+	do	
+		
+		echo ""
+		echo "---------------------------------------"
+		echo "Testing $2 p$3 budget: $b "
+		echo "---------------------------------------"
+
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo "LAO* $b " 
+		echo "---------------------------------------"
+
+	
+		#echo " - - - -" 
+	 	#ulimit -t 1800;	
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* compilation zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* compilation zero-heur
+
+	
+		#echo " - - - -" 
+	 	#ulimit -t 1800;	
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* compilation hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* compilation hmin-heur-false
+
+
+		echo " - - - -" 
+	 	ulimit -t 1800;	
+		echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* compilation AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* compilation AM1F
+
+	
+		#echo " - - - -" 
+	 	#ulimit -t 1800;		
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* compilation FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* compilation FF
+	
+
+		
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo "bfs_design  $b "
+		echo "---------------------------------------"				
+
+	
+		#echo " - - - -" 
+	 	#ulimit -t 1800;			
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* bfs_design zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* bfs_design zero-heur
+
+
+
+		#echo " - - - -" 
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* bfs_design hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* bfs_design hmin-heur-false
+
+		echo " - - - -" 		
+		ulimit -t 1800;
+		echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* bfs_design AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* bfs_design AM1F
+		
+		#echo " - - - -" 
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* bfs_design FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* bfs_design FF
+			
+		
+	
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo "relaxed-env  $b "
+		echo "---------------------------------------"				
+
+
+		#echo " - - - -" 		
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-env zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-env zero-heur
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-env hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-env hmin-heur-false
+
+		echo " - - - -"     	        
+		ulimit -t 1800;
+		echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-env AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-env AM1F
+
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-env FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-env FF
+
+
+
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo "rel-proc  $b "
+		echo "---------------------------------------"				
+
+		#echo " - - - -" 		
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-proc zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-proc zero-heur
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-proc hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-proc hmin-heur-false
+
+	     
+ 		echo " - - - -" 
+		ulimit -t 1800;
+    	        echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-proc AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-proc AM1F
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-proc FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-proc FF
+
+	
+
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo "rel-mod  $b "
+		echo "---------------------------------------"				
+
+		#echo " - - - -" 		
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-mod zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-mod zero-heur
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-mod hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-mod hmin-heur-false
+ 		
+
+	`	#echo " - - - -" 
+		ulimit -t 1800;
+    	        echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-mod AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-mod AM1F
+
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-mod FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-mod FF
+	      
+
+
+
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo "rel-combined  $b "
+		echo "---------------------------------------"				
+
+		#echo " - - - -" 		
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-combined zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-combined zero-heur
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-combined hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-combined hmin-heur-false
+	     
+ 		echo " - - - -" 
+		ulimit -t 1800;
+    	        echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-combined AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-combined AM1F
+	
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO* rel-combined FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* rel-combined FF
+
+
+
+
+
+		echo ''
+		echo ''
+		echo "---------------------------------------"
+		echo " combined-rel-proc  $b "
+		echo "---------------------------------------"				
+
+		#echo " - - - -" 		
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO*  combined-rel-proc zero-heur---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* combined-rel-proc zero-heur
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO*  combined-rel-proc hmin-heur-false---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* combined-rel-proc hmin-heur-false
+	      
+ 		echo " - - - -" 
+		ulimit -t 1800;
+    	        echo ""
+		echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO*  combined-rel-proc AM1F---"
+		$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO*  combined-rel-proc AM1F
+
+
+		#echo " - - - -" 	        
+		#ulimit -t 1800;
+		#echo ""
+		#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all-$b.pddl p$3\-$b-design LAO*  combined-rel-proc FF---"
+		#$5/umd $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$b-design LAO* combined-rel-proc FF
+
+
+	done
+
+
+

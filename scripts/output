@@ -1,0 +1,39 @@
+
+---------------------------------------
+Testing blocksworld 2 original
+---------------------------------------
+
+ - - - -
+
+---/home/sarah/Documents/GoalRecognitionDesign/Redesign/Benchmarks/umd-Benchmakrs-2018/blocksworld/simplified_joint/p2/p2-domain.pddl p2 LAO* original hmin-heur-false---
+file:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Benchmarks/umd-Benchmakrs-2018/blocksworld/simplified_joint/p2/p2-domain-design-all.pddl
+prob:: p2
+Problem:: p2
+Domain::  blocks-domain
+Command type:: original
+heuristic_name:: hmin-heur-false
+Initial state:: [ 0:(emptyhand) 8:(on-table b4) 10:(clear b2) 14:(clear b1) 22:(on b1 b3) 42:(on b3 b4) 54:(on-table b2) ]
+Expected cost:: 7.97222
+Best action:: (pick-up b1 b3)
+heuristic approach : original
+solver heuristic : hmin-heur-false
+The real total time is : 0.138998
+~0.138998
+
+---------------------------------------
+Testing blocksworld p2 budget: 2 
+---------------------------------------
+
+
+---------------------------------------
+LAO* 2 
+---------------------------------------
+ - - - -
+
+---/home/sarah/Documents/GoalRecognitionDesign/Redesign/Benchmarks/umd-Benchmakrs-2018/blocksworld/simplified_joint/p2/p2-domain-design-all-2.pddl p2\-2-design LAO* compilation hmin-heur-false---
+file:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Benchmarks/umd-Benchmakrs-2018/blocksworld/simplified_joint/p2/p2-domain-design-all.pddl
+prob:: p2-2-design
+Problem:: p2-2-design
+Domain::  blocks-domain-design
+Command type:: compilation
+heuristic_name:: hmin-heur-false
