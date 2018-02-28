@@ -1,0 +1,424 @@
+# depslib dependency file v1.0
+1519644126 source:/home/lpineda/Documents/code/ER-UMD/src/ErUmdProblem.cpp
+	<stdio.h>
+	"../include/UMDProblem.h"
+	"../include/UmdDefs.h"
+	"../include/UmdUtils.h"
+	"./solvers/Solver.h"
+	"./solvers/FLARESSolver.h"
+	"./solvers/LAOStarSolver.h"
+	"./solvers/FLARESSolver.h"
+	"./solvers/DeterministicSolver.h"
+	"./solvers/LRTDPSolver.h"
+	"../include/ErUmdProblem.h"
+	<sstream>
+	"./reduced/PPDDLTaggedReduction.h"
+	"./reduced/ReducedHeuristicWrapper.h"
+	"./reduced/ReducedModel.h"
+	"./reduced/ReducedState.h"
+	"./reduced/ReducedTransition.h"
+	"./solvers/FFReducedModelSolver.h"
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/UMDProblem.h
+	"./ppddl/PPDDLProblem.h"
+	"./ppddl/mini-gpt/problems.h"
+	"../include/UMDHeuristic.h"
+
+1478058921 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/PPDDLProblem.h
+	"mini-gpt/problems.h"
+	"mini-gpt/rational.h"
+	"../Problem.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/problems.h
+	"global.h"
+	"actions.h"
+	"domains.h"
+	"effects.h"
+	"formulas.h"
+	"graph.h"
+	"expressions.h"
+	"terms.h"
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+
+1452287807 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/global.h
+	<stdio.h>
+	<string>
+	<memory>
+	<stack>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/actions.h
+	"global.h"
+	"effects.h"
+	"formulas.h"
+	"rational.h"
+	"terms.h"
+	"utils.h"
+	<assert.h>
+	<iostream>
+	<list>
+	<map>
+	<string>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/effects.h
+	"global.h"
+	"terms.h"
+	<assert.h>
+	<iostream>
+	<vector>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/terms.h
+	"global.h"
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_map>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/types.h
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_set>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/formulas.h
+	"global.h"
+	"predicates.h"
+	"terms.h"
+	<iostream>
+	<set>
+	<vector>
+	<list>
+	<tr1/unordered_set>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/predicates.h
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_set>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/rational.h
+	<iostream>
+	<utility>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/utils.h
+	"global.h"
+	<stdlib.h>
+	<assert.h>
+	<iostream>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/domains.h
+	"actions.h"
+	"functions.h"
+	"predicates.h"
+	"terms.h"
+	"types.h"
+	"requirements.h"
+	<iostream>
+	<map>
+	<string>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/functions.h
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_set>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/requirements.h
+
+1452287807 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/graph.h
+	"global.h"
+	"utils.h"
+	<stdlib.h>
+	<limits.h>
+	<assert.h>
+	<iostream>
+	<vector>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/expressions.h
+	"functions.h"
+	"terms.h"
+	"rational.h"
+	<assert.h>
+	<iostream>
+	<set>
+	<tr1/unordered_map>
+
+1515150585 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/Problem.h
+	<list>
+	"State.h"
+	"Action.h"
+	"Heuristic.h"
+	"util/general.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/State.h
+	<iostream>
+	<string>
+	<list>
+	<unordered_set>
+	<unordered_map>
+	"Action.h"
+	"MDPLib.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/Action.h
+	<iostream>
+	<unordered_set>
+	<unordered_map>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/MDPLib.h
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/Heuristic.h
+	"State.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/util/general.h
+	<cstring>
+	<iostream>
+	<unordered_set>
+	<unordered_map>
+	<unistd.h>
+	<chrono>
+	<vector>
+	<thread>
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/UMDHeuristic.h
+	<./Heuristic.h>
+	"./State.h"
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/UmdDefs.h
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/UmdUtils.h
+	<sstream>
+	"./ppddl/PPDDLState.h"
+	"./ppddl/PPDDLProblem.h"
+	"./ppddl/PPDDLHeuristic.h"
+	"../include/UmdDefs.h"
+	"../include/ErUmdProblem.h"
+	"../include/solvers/HMinHeuristic.h"
+	"../include/solvers/Solver.h"
+	"../include/GPTHeuristicsDesign.h"
+
+1478237029 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/PPDDLState.h
+	"mini-gpt/states.h"
+	"mini-gpt/atom_states.h"
+	"../State.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/states.h
+	"full_states.h"
+	"atom_states.h"
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/full_states.h
+	"problems.h"
+	"rational.h"
+	<list>
+	<deque>
+	<map>
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/atom_states.h
+	"problems.h"
+	"rational.h"
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<list>
+	<deque>
+	<map>
+	"md4.h"
+
+1452287807 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/md4.h
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/PPDDLHeuristic.h
+	"mini-gpt/heuristics.h"
+	"../Heuristic.h"
+	"../State.h"
+	"PPDDLProblem.h"
+
+1452287807 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/heuristics.h
+	"actions.h"
+	"global.h"
+	"rational.h"
+	<stdlib.h>
+	<iostream>
+	<queue>
+	<set>
+	<tr1/unordered_map>
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/ErUmdProblem.h
+	"./ppddl/PPDDLAction.h"
+	<UMDProblem.h>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/PPDDLAction.h
+	"mini-gpt/states.h"
+	"mini-gpt/actions.h"
+	"mini-gpt/problems.h"
+	"../Action.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/HMinHeuristic.h
+	"../Heuristic.h"
+	"../Problem.h"
+
+1515064477 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/Solver.h
+	<random>
+	<cassert>
+	<vector>
+	<mutex>
+	"../Heuristic.h"
+	"../Problem.h"
+	"../State.h"
+	"../util/general.h"
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/GPTHeuristicsDesign.h
+	"../include/UMDProblem.h"
+	"../include/UMDState.h"
+	"./ppddl/PPDDLState.h"
+	"./ppddl/mini-gpt/problems.h"
+	"./ppddl/mini-gpt/states.h"
+	"./ppddl/mini-gpt/domains.h"
+	"./ppddl/mini-gpt/states.h"
+	"./ppddl/mini-gpt/exceptions.h"
+	"./ppddl/mini-gpt/heuristics.h"
+	"./ppddl/mini-gpt/queue.h"
+	<stdlib.h>
+	<iostream>
+	<queue>
+	<set>
+	<tr1/unordered_map>
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/UMDState.h
+	"./ppddl/PPDDLState.h"
+
+1452287806 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/exceptions.h
+	<iostream>
+	<string>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/mini-gpt/queue.h
+	<queue>
+	<set>
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/FLARESSolver.h
+	"../Problem.h"
+	"../Heuristic.h"
+	"Solver.h"
+
+1515062506 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/LAOStarSolver.h
+	<ctime>
+	"Solver.h"
+
+1517399652 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/DeterministicSolver.h
+	"../Action.h"
+	"../State.h"
+	"Solver.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/LRTDPSolver.h
+	"../Problem.h"
+	"../Heuristic.h"
+	"Solver.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/reduced/PPDDLTaggedReduction.h
+	<fstream>
+	<iostream>
+	<list>
+	<sstream>
+	<string>
+	<unordered_map>
+	<vector>
+	"../ppddl/PPDDLAction.h"
+	"../State.h"
+	"ReducedTransition.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/reduced/ReducedTransition.h
+	<vector>
+	"../Action.h"
+	"../State.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/reduced/ReducedHeuristicWrapper.h
+	"../Heuristic.h"
+	"../State.h"
+	"ReducedState.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/reduced/ReducedState.h
+	"../State.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/reduced/ReducedModel.h
+	<list>
+	"../domains/WrapperProblem.h"
+	"../solvers/Solver.h"
+	"../Action.h"
+	"../Problem.h"
+	"../State.h"
+	"ReducedHeuristicWrapper.h"
+	"ReducedState.h"
+	"ReducedTransition.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/domains/WrapperProblem.h
+	<cassert>
+	"../Problem.h"
+	"../State.h"
+	"DummyState.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/domains/DummyState.h
+	<list>
+	"../State.h"
+
+1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/solvers/FFReducedModelSolver.h
+	<ctime>
+	<string>
+	"../ppddl/PPDDLProblem.h"
+	"../ppddl/PPDDLState.h"
+	"../reduced/ReducedModel.h"
+	"../Action.h"
+	"../Problem.h"
+	"Solver.h"
+
+1519644126 source:/home/lpineda/Documents/code/ER-UMD/src/GPTHeuristicsDesign.cpp
+	"../include/GPTHeuristicsDesign.h"
+	<assert.h>
+	<limits.h>
+	<math.h>
+	<values.h>
+	<iostream>
+	<sstream>
+
+1519644126 source:/home/lpineda/Documents/code/ER-UMD/src/main .cpp
+	<sstream>
+	<iostream>
+	"../include/UMDHeuristic.h"
+	"../include/PDBHeuristic.h"
+	"../include/UmdDefs.h"
+	"../include/UmdUtils.h"
+	"./ppddl/mini-gpt/problems.h"
+	"./ppddl/mini-gpt/states.h"
+	"./ppddl/mini-gpt/domains.h"
+	"./ppddl/mini-gpt/states.h"
+	"./ppddl/mini-gpt/exceptions.h"
+
+1519644126 /home/lpineda/Documents/code/ER-UMD/include/PDBHeuristic.h
+	<UMDHeuristic.h>
+	"../include/ErUmdProblem.h"
+	<map>
+
+1519644126 source:/home/lpineda/Documents/code/ER-UMD/src/PDBHeuristic.cpp
+	"../include/PDBHeuristic.h"
+	"../include/UmdDefs.h"
+	"../include/UmdUtils.h"
+	"./solvers/LAOStarSolver.h"
+
+1519644126 source:/home/lpineda/Documents/code/ER-UMD/src/UMDHeuristic.cpp
+	"../include/UMDHeuristic.h"
+	"../include/UmdDefs.h"
+	"../include/UmdUtils.h"
+	"../include/UMDState.h"
+	"../include/ErUmdProblem.h"
+	"../include/UmdUtils.h"
+	"./ppddl/mini-gpt/atom_states.h"
+	"./solvers/LAOStarSolver.h"
+	<sstream>
+
