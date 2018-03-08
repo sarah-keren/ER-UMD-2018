@@ -87,7 +87,7 @@ problem_t* parse_problem ( std::string file, std::string prob)
 
 
 // given the input ERUMD problem - parse the command
-umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdProblem, std::string command_type)
+umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdProblem, std::string command_type, std::string solverName)
 {
 
     //design hueristic
@@ -138,7 +138,7 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
         exit(0);
         return  NULL;
     }//if
-    simplifiedProblem = new umd::ErUmdProblem(simplified_problem);
+    simplifiedProblem = new umd::ErUmdProblem(simplified_problem, solverName);
 
     // get the suitable design heuristic
     desHeuristic = umdutils::getHeuristic(heuristic_name,simplifiedProblem->getPPDDLProblem());
@@ -174,6 +174,8 @@ int perform_testing (int argc, char **argv)
         double  seconds_elapsed;
 
 
+
+
         //get problem
         std::string file = argv[1];//"/home/sarah/Documents/GoalRecognitionDesign/Redesign/Benchmarks/Redesign-Benchmakrs-2008/Current/triangle-tireworld-simplified-new-8/joint/p1/p1-domain-design-add-road-service.pddl"; /
         std::string prob = argv[2]; //"p1"
@@ -182,8 +184,10 @@ int perform_testing (int argc, char **argv)
 
         //Parse ppddl problem using mgpt parser
         problem_t *problem = NULL;
-        std::cout<< "file:: " << file << std::endl;
-        std::cout<< "prob:: " << prob << std::endl;
+        std::cout<< "File:: " << file << std::endl;
+        //std::cout<< "prob:: " << prob << std::end
+        std::cout<< "Solver name:: " << solverName << std::endl;
+
         problem = parse_problem(file,prob);
         if(!problem)
         {
@@ -195,30 +199,30 @@ int perform_testing (int argc, char **argv)
 
 
         //create erumd problem
-        umd::ErUmdProblem* umdProblem = new umd::ErUmdProblem(problem);
+        umd::ErUmdProblem* umdProblem = new umd::ErUmdProblem(problem,solverName);
 
 
         //get analysis type
         std::string command_type = argv[4];
         std::cout<<"\nCommand type:: " << command_type <<std::endl;
         std::string heuristic_name = argv[5];
-        std::cout<<"heuristic_name:: " << heuristic_name <<std::endl;
+        std::cout<<"Heuristic_name:: " << heuristic_name <<std::endl;
 
 
         //parse input and get heuristic
-        umd::UmdHeuristic* umdHeur = parse_command(argc, argv,umdProblem,command_type);
+        umd::UmdHeuristic* umdHeur = parse_command(argc, argv,umdProblem,command_type,solverName);
         //cout<<"Init State: "<<umdProblem->getPPDDLProblem()->initialState()<<" Starting execution" << std::endl;
 
         // solve the problem
-        umdProblem->solve(umdHeur,solverName,true,command_type);
+        umdProblem->solve(umdHeur,true,command_type);
 
 
         //log results
-        cout<<"heuristic approach : "<< argv[4] <<endl;
-        cout<<"solver heuristic : "<< argv[5] <<endl;
+        cout<<"Heuristic approach:: "<< argv[4] <<endl;
+        cout<<"Solver heuristic:: "<< argv[5] <<endl;
         seconds_elapsed =  ((unsigned long) clock() - begTime)/(CLOCKS_PER_SEC/1.0);
-        cout<<"The real total time is : "<<seconds_elapsed<<endl;
-        cout<<umddefs::deliminator<<seconds_elapsed<<endl;
+        cout<<"Total time:: "<<seconds_elapsed<<endl;
+        //cout<<umddefs::deliminator<<seconds_elapsed<<endl;
         //umdutils::print_policy(umdProblem);
 
 

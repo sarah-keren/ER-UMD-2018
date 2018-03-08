@@ -24,22 +24,24 @@
 namespace umd
 {
 
-ErUmdProblem::ErUmdProblem(problem_t* pProblem):mlppddl::PPDDLProblem (pProblem)
+ErUmdProblem::ErUmdProblem(problem_t* pProblem, std::string str_solverName):mlppddl::PPDDLProblem (pProblem)
 {
 
     ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem);
     domainName_ = pProblem->domain().name();
-
+    solverName = str_solverName;
 
 }
 
-ErUmdProblem::ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::string str_problemName, std::string str_domainName ):mlppddl::PPDDLProblem (pProblem)
+ErUmdProblem::ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName ):mlppddl::PPDDLProblem (pProblem)
 {
 
     ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem);
     fileName(str_fileName);
     problemName(str_problemName);
     domainName(str_domainName);
+    solverName = str_solverName;
+
 
 
 }
@@ -54,14 +56,14 @@ ErUmdProblem::~ErUmdProblem()
 }
 
 
-void ErUmdProblem::solve(UmdHeuristic* umdHeur,std::string solverName, bool timed, std::string command_type)
+void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_type)
 {
 
     // solve the compilation\original problem with a single search
     if((command_type.find(umddefs::compilation) != std::string::npos)|| (command_type.find(umddefs::original) != std::string::npos))
     {
 
-        if (true) {
+        if (solverName.find(umddefs::solverLAO)) {
             // TODO: change this if(true) to an appropriate option
             //SOLVE
             this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
@@ -70,61 +72,70 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur,std::string solverName, bool time
 
             //ANALYZE
             double cost = this->ppddlProblem_->initialState()->cost();
-            std::cout << "Initial state:: "<<this->ppddlProblem_->initialState() <<std::endl;
+            //std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
             std::cout<< "Expected cost:: "<< this->ppddlProblem_->initialState()->cost()<<std::endl;
             //umdutils::print_policy_pddl(this->ppddlProblem_);
             std::cout << "Best action:: "<< this->ppddlProblem_->initialState()->bestAction() << std::endl;
             return;
         } else {
-            // This is the suboptimal solver part
-            // SOLVE
-            mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
-            solver.solve(this->ppddlProblem_->initialState());
 
-            // ANALYZE
-            std::cout << "Initial state:: "<<this->ppddlProblem_->initialState() <<std::endl;
-            double expectedCost = 0.0;
-            double expectedTime = 0.0;
-            int numSims = 20;
-            for (int sim = 0; sim < numSims; sim++) {
-                double cost = 0.0;
-                double planningTime = 0.0;
-                mlcore::State* currentState = this->ppddlProblem_->initialState();
-                unsigned long startTime = clock();
-                solver.solve(currentState);
-                unsigned long endTime = clock();
-                planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
-                mlcore::Action* action = currentState->bestAction();
-                while (cost < mdplib::dead_end_cost) {
-                    cost += this->ppddlProblem_->cost(currentState, action);
-                    // The successor state according to the
-                    // original transition model.
-                    mlcore::State* nextState =
-                        mlsolvers::randomSuccessor(
-                            this->ppddlProblem_, currentState, action);
-                    if (this->ppddlProblem_->goal(nextState)) {
-                        break;
+            if (solverName.find(umddefs::solverFLARES)) {
+                // This is the suboptimal solver part
+                // SOLVE
+                mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
+                solver.solve(this->ppddlProblem_->initialState());
+
+                // ANALYZE
+                std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
+                double expectedCost = 0.0;
+                double expectedTime = 0.0;
+                int numSims = 20;
+                for (int sim = 0; sim < numSims; sim++) {
+                    double cost = 0.0;
+                    double planningTime = 0.0;
+                    mlcore::State* currentState = this->ppddlProblem_->initialState();
+                    unsigned long startTime = clock();
+                    solver.solve(currentState);
+                    unsigned long endTime = clock();
+                    planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
+                    mlcore::Action* action = currentState->bestAction();
+                    while (cost < mdplib::dead_end_cost) {
+                        cost += this->ppddlProblem_->cost(currentState, action);
+                        // The successor state according to the
+                        // original transition model.
+                        mlcore::State* nextState =
+                            mlsolvers::randomSuccessor(
+                                this->ppddlProblem_, currentState, action);
+                        if (this->ppddlProblem_->goal(nextState)) {
+                            break;
+                        }
+                        currentState = nextState;
+                        // Re-planning if needed.
+                        if (!currentState->checkBits(mdplib::SOLVED_FLARES)) {
+                            startTime = clock();
+                            solver.solve(currentState);
+                            endTime = clock();
+                            planningTime +=
+                                (double(endTime - startTime) / CLOCKS_PER_SEC);
+                        }
+                        if (currentState->deadEnd()) {
+                            cost = mdplib::dead_end_cost;
+                        }
+                        action = currentState->bestAction();
                     }
-                    currentState = nextState;
-                    // Re-planning if needed.
-                    if (!currentState->checkBits(mdplib::SOLVED_FLARES)) {
-                        startTime = clock();
-                        solver.solve(currentState);
-                        endTime = clock();
-                        planningTime +=
-                            (double(endTime - startTime) / CLOCKS_PER_SEC);
-                    }
-                    if (currentState->deadEnd()) {
-                        cost = mdplib::dead_end_cost;
-                    }
-                    action = currentState->bestAction();
+                    expectedCost += cost;
+                    expectedTime += planningTime;
                 }
-                expectedCost += cost;
-                expectedTime += planningTime;
-            }
-            std::cout << std::endl << "ExpectedCost " << expectedCost / numSims << std::endl;
-            std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
-        }
+                std::cout << std::endl << "ExpectedCost:: " << expectedCost / numSims << std::endl;
+                std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
+                }//if sub optimal
+                else //error
+                {
+                    std::cout<< "Error-solver "<< solverName <<" not suported " << std::endl;
+                    throw Exception( "Error-solver not suported ");
+
+                }
+        }//else
     }
 
 
@@ -203,7 +214,7 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
     // the action is a start execution action the cost is the cost of the underlaying mdp
     else
     {
-        if (true) {
+        if (solverName.find(umddefs::solverLAO)) {
             // TODO: change this if(true) to have an appropriate option
             mlsolvers::LAOStarSolver solver(this->ppddlProblem_);
             auto successors = ppddlProblem_->transition(s,a);
@@ -213,12 +224,22 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
             //std::cout << "\n for state: "<<s << " and successor state: " << s0 <<" cost is:  "<< cost<<std::endl;
             return cost;
         } else {
-            mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
-            unsigned long startTime = clock();
-            solver.solve(s0);
-            unsigned long endTime = clock();
-            double planTime = (double(endTime - startTime) / CLOCKS_PER_SEC);
-            return s0->cost();
+            if (solverName.find(umddefs::solverFLARES)) {
+                mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
+                unsigned long startTime = clock();
+                solver.solve(s0);
+                unsigned long endTime = clock();
+                double planTime = (double(endTime - startTime) / CLOCKS_PER_SEC);
+                return s0->cost();
+            }
+            else
+            {
+
+                std::cout<< "Error in ErUmdProblem::cost - solver " <<solverName << "not supported" <<std::endl;
+                throw Exception( "Error in ErUmdProblem::cost - solver not supported");
+
+
+            }
         }
     }
 }

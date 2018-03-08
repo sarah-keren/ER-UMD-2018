@@ -1,8 +1,8 @@
 #ifndef PDBHEURISTIC_H
 #define PDBHEURISTIC_H
 
-#include <UMDHeuristic.h>
-#include "../include/ErUmdProblem.h"
+#include <../include/UMDHeuristic.h>
+#include <../include/ErUmdProblem.h>
 #include <map>
 
 namespace umd

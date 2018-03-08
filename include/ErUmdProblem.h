@@ -3,7 +3,7 @@
 
 
 #include "./ppddl/PPDDLAction.h"
-#include <UMDProblem.h>
+#include "../include/UMDProblem.h"
 
 
 
@@ -18,12 +18,12 @@ class ErUmdProblem : mlppddl::PPDDLProblem
 {
     public:
 
-        ErUmdProblem(problem_t* pProblem);
-        ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::string str_problemName, std::string str_domainName );
+        ErUmdProblem(problem_t* pProblem, std::string solverName);
+        ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName );
         virtual ~ErUmdProblem();
         virtual mlppddl::PPDDLProblem* getPPDDLProblem(){return ppddlProblem_;}
         // get the optimal policy for the umd problem using the solver (e.g. LAO*)
-        virtual void solve(UmdHeuristic* umdHeur,std::string solverName,bool timed,std::string command_type);
+        virtual void solve(UmdHeuristic* umdHeur,bool timed,std::string command_type);
 
 
         void fileName(std::string name) { fileName_ = name; }
@@ -52,6 +52,7 @@ class ErUmdProblem : mlppddl::PPDDLProblem
     protected:
        mlppddl::PPDDLProblem* ppddlProblem_;
        std::string domainName_;
+       std::string solverName;
     private:
         std::string fileName_;
         std::string problemName_;

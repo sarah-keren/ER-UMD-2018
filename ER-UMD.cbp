@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../../../grd_non_deterministic/planners/mdp-lib-umd/include" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,11 +32,23 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="include/ErUmdProblem.h" />
+		<Unit filename="include/GPTHeuristicsDesign.h" />
+		<Unit filename="include/HashMap.h" />
+		<Unit filename="include/PDBHeuristic.h" />
+		<Unit filename="include/UMDHeuristic.h" />
+		<Unit filename="include/UMDProblem.h" />
+		<Unit filename="include/UMDState.h" />
+		<Unit filename="include/UmdDefs.h" />
+		<Unit filename="include/UmdUtils-old.h" />
+		<Unit filename="include/UmdUtils.h" />
+		<Unit filename="src/ErUmdProblem.cpp" />
+		<Unit filename="src/GPTHeuristicsDesign.cpp" />
+		<Unit filename="src/PDBHeuristic.cpp" />
+		<Unit filename="src/UMDHeuristic.cpp" />
+		<Unit filename="src/main .cpp" />
 		<Extensions>
-			<envvars />
 			<code_completion />
 			<debugger />
 		</Extensions>
