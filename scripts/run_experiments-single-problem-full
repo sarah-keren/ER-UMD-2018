@@ -4,13 +4,14 @@
 # $3 - instance
 # $4 - max-budget
 # $5 - exe-folder
+# $6 - problem-type (simplified or original)
 
 echo "*****************************************************"
 
 for method in LAO* FLARES; do
-	for heuristic in AM1F FF hmin-heur-false; do			
-		#echo "---$1/$2/simplified_joint/p$3/p$3-domain.pddl p$3 $method original $heuristic ---"
-		$5/ER-UMD $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3 $method original $heuristic
+	for heuristic in zero-heur AM1F hmin-heur-false FF; do			
+		#echo "---$1/$2/$6/p$3/p$3-domain.pddl p$3 $method original $heuristic ---"
+		$5/ER-UMD $1/$2/$6/p$3/p$3-domain-design-all.pddl p$3 $method original $heuristic
 		echo ""
 		echo "*****************************************************"
 		echo ""
@@ -18,13 +19,13 @@ for method in LAO* FLARES; do
 done
 done	
 
-for budget in $(seq 2 $4);do	
-	for method in LAO* FLARES; do
-		for approach in compilation rel-env; do
-			for heuristic in AM1F FF hmin-heur-false; do
+for budget in $(seq 0 $4);do	
+	for method in LAO* FLARES; do		
+		for heuristic in zero-heur AM1F hmin-heur-false FF; do
+			for approach in bfs_design compilation rel-env rel-mod rel-combined rel-proc rel-combined-proc; do
 	
-				#echo "---$1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic ---"
-				$5/ER-UMD $1/$2/simplified_joint/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic
+				#echo "---$1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic ---"
+				$5/ER-UMD $1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic
 				echo ""
 				echo "*****************************************************"
 				echo ""

@@ -1,0 +1,2848 @@
+*****************************************************
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: zero-heur
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected cost:: 6.25
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: zero-heur
+Total time:: 0.019367
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: AM1F
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected cost:: 6.25
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: AM1F
+Total time:: 0.020687
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected cost:: 6.25
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: hmin-heur-false
+Total time:: 0.023812
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: FF
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected cost:: 6.25
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: FF
+Total time:: 0.021377
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: zero-heur
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected Cost:: 6.23
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: zero-heur
+Total time:: 0.020074
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: AM1F
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected Cost:: 6.09
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: AM1F
+Total time:: 0.02012
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected Cost:: 7.06
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: hmin-heur-false
+Total time:: 0.025593
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1
+Domain::  triangle-tire
+Command type:: original
+Heuristic_name:: FF
+Initial state:: [ 4:(not-flattire) 6:(vehicle-at l-1-1) 18:(spare-in l-2-1) 22:(spare-in l-2-2) 30:(spare-in l-3-1) ]
+Expected Cost:: 7.06
+Best action:: (move-car l-1-1 l-2-1)
+Heuristic approach:: original
+Solver heuristic:: FF
+Total time:: 0.02147
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: zero-heur
+cost::2.5002
+g() value::2.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 3.2502
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: zero-heur
+Total time:: 0.090319
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: zero-heur
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 5.3752
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: zero-heur
+Total time:: 0.08258
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: zero-heur
+Total time:: 0.06612
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: zero-heur
+Total time:: 0.070769
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: zero-heur
+Total time:: 0.069743
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: zero-heur
+Total time:: 0.070573
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5001
+g() value::1.5001  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: zero-heur
+Total time:: 0.064426
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: AM1F
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: AM1F
+Total time:: 0.058978
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: AM1F
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 5.3752
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: AM1F
+Total time:: 0.209781
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-relaxed
+cost::1.5001
+g() value::1.5001  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: AM1F
+Total time:: 0.091043
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over
+cost::1.5001
+g() value::1.5001  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: AM1F
+Total time:: 0.085857
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: AM1F
+Total time:: 0.087929
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: AM1F
+Total time:: 0.084934
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: AM1F
+Total time:: 0.082263
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: hmin-heur-false
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: hmin-heur-false
+Total time:: 0.199597
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 5.3752
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: hmin-heur-false
+Total time:: 0.208116
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: hmin-heur-false
+Total time:: 0.502879
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: hmin-heur-false
+Total time:: 0.392486
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: hmin-heur-false
+Total time:: 1.10284
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 5
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 0.402759
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5002
+g() value::1.5002  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 1.1072
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: FF
+cost::1.5001
+g() value::1.5001  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: FF
+Total time:: 0.059492
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: FF
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 5.3752
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: FF
+Total time:: 0.123182
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-relaxed
+cost::12
+g() value::1.5002  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: FF
+Total time:: 0.086637
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over
+cost::8.0001
+g() value::1.5003  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: FF
+Total time:: 0.089769
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over-relaxed
+cost::8.0001
+g() value::1.5003  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: FF
+Total time:: 0.087254
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over
+cost::8.0001
+g() value::1.5003  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: FF
+Total time:: 0.097595
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over-relaxed
+cost::8.0001
+g() value::1.5003  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: FF
+Total time:: 0.089178
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: zero-heur
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: zero-heur
+Total time:: 0.110621
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: zero-heur
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected Cost:: 241.04
+Best action:: (design-add-road-service l-1-2 l-1-3 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: zero-heur
+Total time:: 0.075908
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-relaxed
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-env
+Solver heuristic:: zero-heur
+Total time:: 0.144845
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: zero-heur
+Total time:: 0.132096
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over-relaxed
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: zero-heur
+Total time:: 0.121657
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: zero-heur
+Total time:: 0.131429
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-1-design-over-relaxed
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: zero-heur
+Total time:: 0.121974
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: AM1F
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: AM1F
+Total time:: 0.109967
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: AM1F
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected Cost:: 246.02
+Best action:: (design-add-road-service l-1-2 l-1-3 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: AM1F
+Total time:: 0.063195
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-relaxed
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-env
+Solver heuristic:: AM1F
+Total time:: 0.130813
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: AM1F
+Total time:: 0.150494
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over-relaxed
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: AM1F
+Total time:: 0.131293
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: AM1F
+Total time:: 0.136978
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-1-design-over-relaxed
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: AM1F
+Total time:: 0.151916
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: hmin-heur-false
+cost::1.5
+g() value::1.5  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: hmin-heur-false
+Total time:: 0.202968
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected Cost:: 251
+Best action:: (design-start-execution)
+Heuristic approach:: compilation
+Solver heuristic:: hmin-heur-false
+Total time:: 0.224799
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-relaxed
+cost::1.5
+g() value::1.5  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: hmin-heur-false
+Total time:: 0.444633
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over
+cost::1.5
+g() value::1.5  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: hmin-heur-false
+Total time:: 0.375458
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5
+g() value::1.5  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: hmin-heur-false
+Total time:: 1.06941
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over
+cost::1.5
+g() value::1.5  
+iteration_counter: 5
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 0.425197
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-1-design-over-relaxed
+cost::1.5
+g() value::1.5  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 1.14141
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: FF
+cost::5.3751
+g() value::5.3751  
+iteration_counter: 13
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: FF
+Total time:: 0.1176
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: FF
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected Cost:: 216.14
+Best action:: (design-start-execution)
+Heuristic approach:: compilation
+Solver heuristic:: FF
+Total time:: 0.062501
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-relaxed
+cost::12
+g() value::6.25  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: FF
+Total time:: 0.087327
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: FF
+Total time:: 0.109998
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over-relaxed
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: FF
+Total time:: 0.094331
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: FF
+Total time:: 0.088325
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-1-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-1-design-over-relaxed
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 46:(vehicle-at l-1-1) 58:(spare-in l-2-1) 62:(spare-in l-2-2) 70:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: FF
+Total time:: 0.075189
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: zero-heur
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: zero-heur
+Total time:: 0.178508
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: zero-heur
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 5.1878
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: zero-heur
+Total time:: 0.404522
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-relaxed
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: zero-heur
+Total time:: 0.211145
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: zero-heur
+Total time:: 0.201281
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over-relaxed
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: zero-heur
+Total time:: 0.224359
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: zero-heur
+Total time:: 0.195613
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over-relaxed
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: zero-heur
+Total time:: 0.262025
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: AM1F
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: AM1F
+Total time:: 0.194095
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: AM1F
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 5.1878
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: AM1F
+Total time:: 1.10197
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-relaxed
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: AM1F
+Total time:: 0.137637
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: AM1F
+Total time:: 0.136403
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over-relaxed
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: AM1F
+Total time:: 0.132212
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: AM1F
+Total time:: 0.125765
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over-relaxed
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: AM1F
+Total time:: 0.120899
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: hmin-heur-false
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: hmin-heur-false
+Total time:: 1.39894
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 5.1878
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: hmin-heur-false
+Total time:: 1.39289
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-relaxed
+cost::1.0001
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: hmin-heur-false
+Total time:: 2.99352
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over
+cost::1.0002
+g() value::0.0003  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: hmin-heur-false
+Total time:: 2.21985
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over-relaxed
+cost::1.0001
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: hmin-heur-false
+Total time:: 9.51045
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over
+cost::1.0002
+g() value::0.0003  
+iteration_counter: 4
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 2.32292
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over-relaxed
+cost::1.0001
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 9.7919
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: FF
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: FF
+Total time:: 0.188997
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: FF
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 5.3752
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: FF
+Total time:: 0.229031
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-relaxed
+cost::12
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: FF
+Total time:: 0.139123
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over
+cost::8.0001
+g() value::1.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: FF
+Total time:: 0.21891
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over-relaxed
+cost::8.0001
+g() value::1.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: FF
+Total time:: 0.210139
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over
+cost::8.0001
+g() value::1.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: FF
+Total time:: 0.18851
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over-relaxed
+cost::8.0001
+g() value::1.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 1.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: FF
+Total time:: 0.18742
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: zero-heur
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: zero-heur
+Total time:: 0.536454
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: zero-heur
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected Cost:: 241.04
+Best action:: (idle-design t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: zero-heur
+Total time:: 0.196219
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-relaxed
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-env
+Solver heuristic:: zero-heur
+Total time:: 0.739171
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: zero-heur
+Total time:: 0.761873
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over-relaxed
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: zero-heur
+Total time:: 0.754336
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: zero-heur
+Total time:: 0.769694
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-2-design-over-relaxed
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: zero-heur
+Total time:: 0.754451
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: AM1F
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: AM1F
+Total time:: 0.730694
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: AM1F
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected Cost:: 260.96
+Best action:: (idle-design t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: AM1F
+Total time:: 0.271846
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-relaxed
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-env
+Solver heuristic:: AM1F
+Total time:: 0.803349
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: AM1F
+Total time:: 0.814418
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over-relaxed
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: AM1F
+Total time:: 0.792761
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: AM1F
+Total time:: 0.775025
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-2-design-over-relaxed
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: AM1F
+Total time:: 0.784947
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: hmin-heur-false
+cost::1.5
+g() value::1.5  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: hmin-heur-false
+Total time:: 1.2671
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected Cost:: 270.92
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: hmin-heur-false
+Total time:: 1.19164
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-relaxed
+cost::1.5
+g() value::1.5  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: hmin-heur-false
+Total time:: 2.76298
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over
+cost::1.5
+g() value::1.5  
+iteration_counter: 34
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: hmin-heur-false
+Total time:: 2.11085
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over-relaxed
+cost::1.5
+g() value::1.5  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: hmin-heur-false
+Total time:: 10.4219
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over
+cost::1.5
+g() value::1.5  
+iteration_counter: 78
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 2.13006
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-2-design-over-relaxed
+cost::1.5
+g() value::1.5  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 12.0685
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: FF
+cost::5.1877
+g() value::5.1877  
+iteration_counter: 134
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: FF
+Total time:: 0.531363
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: FF
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected Cost:: 191.24
+Best action:: (design-add-road-service l-3-1 l-2-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: FF
+Total time:: 0.213314
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-relaxed
+cost::12
+g() value::6.25  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: FF
+Total time:: 0.089384
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: FF
+Total time:: 0.099561
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over-relaxed
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: FF
+Total time:: 0.089674
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: FF
+Total time:: 0.085043
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-2-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-2-design-over-relaxed
+cost::8.0001
+g() value::6.2501  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 48:(vehicle-at l-1-1) 60:(spare-in l-2-1) 64:(spare-in l-2-2) 72:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: FF
+Total time:: 0.091153
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: zero-heur
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: zero-heur
+Total time:: 0.705051
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: zero-heur
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 5.0629
+Best action:: (design-add-road-service l-3-1 l-2-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: zero-heur
+Total time:: 1.8517
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-relaxed
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: zero-heur
+Total time:: 1.06431
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: zero-heur
+Total time:: 1.00156
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over-relaxed
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: zero-heur
+Total time:: 1.00298
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: zero-heur
+Total time:: 1.04861
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over-relaxed
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: zero-heur
+Total time:: 1.03837
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: AM1F
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: AM1F
+Total time:: 0.833885
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: AM1F
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 5.0629
+Best action:: (design-add-road-service l-3-1 l-2-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: AM1F
+Total time:: 5.59882
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: AM1F
+The relaxed problem:: p1-3-design-relaxed
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: AM1F
+Total time:: 0.282591
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: AM1F
+The relaxed problem:: p1-3-design-over
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: AM1F
+Total time:: 0.253461
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: AM1F
+The relaxed problem:: p1-3-design-over-relaxed
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: AM1F
+Total time:: 0.298548
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-3-design-over
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: AM1F
+Total time:: 0.237771
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: AM1F
+The relaxed problem:: p1-3-design-over-relaxed
+cost::1
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: AM1F
+Total time:: 0.250289
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: hmin-heur-false
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5001
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: hmin-heur-false
+Total time:: 8.87623
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: hmin-heur-false
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 5.0629
+Best action:: (design-add-road-service l-3-1 l-2-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: hmin-heur-false
+Total time:: 9.89916
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-3-design-relaxed
+cost::1.0001
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: hmin-heur-false
+Total time:: 18.714
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-3-design-over
+cost::1.0002
+g() value::0.0003  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-mod
+Solver heuristic:: hmin-heur-false
+Total time:: 15.2162
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-3-design-over-relaxed
+cost::1.0001
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined
+Solver heuristic:: hmin-heur-false
+Total time:: 77.4329
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-3-design-over
+cost::1.0002
+g() value::0.0003  
+iteration_counter: 4
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 14.519
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: hmin-heur-false
+The relaxed problem:: p1-3-design-over-relaxed
+cost::1.0001
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: hmin-heur-false
+Total time:: 75.8538
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: FF
+cost::0.0003
+g() value::0.0003  
+iteration_counter: 628
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 1.5002
+Best action:: (design-start-execution)
+Heuristic approach:: bfs_design
+Solver heuristic:: FF
+Total time:: 0.990247
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: FF
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 5.3752
+Best action:: (design-add-road-service l-1-1 l-2-1 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: FF
+Total time:: 0.421837
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: FF
+The relaxed problem:: p1-3-design-relaxed
+cost::12
+g() value::0.0003  
+iteration_counter: 2
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-start-execution)
+Heuristic approach:: rel-env
+Solver heuristic:: FF
+Total time:: 0.236883
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: FF
+The relaxed problem:: p1-3-design-over
+cost::8.0001
+g() value::0.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: FF
+Total time:: 0.3624
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: FF
+The relaxed problem:: p1-3-design-over-relaxed
+cost::8.0001
+g() value::0.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: FF
+Total time:: 0.358067
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-3-design-over
+cost::8.0001
+g() value::0.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: FF
+Total time:: 0.347845
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: LAO*
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: FF
+The relaxed problem:: p1-3-design-over-relaxed
+cost::8.0001
+g() value::0.0004  
+iteration_counter: 3
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0.0003
+Best action:: (design-add-road l-1-1 l-1-2 l-2-1 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: FF
+Total time:: 0.340156
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: zero-heur
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: zero-heur
+Total time:: 2.67284
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: zero-heur
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected Cost:: 186.26
+Best action:: (idle-design t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: zero-heur
+Total time:: 0.966288
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-relaxed
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: rel-env
+Solver heuristic:: zero-heur
+Total time:: 2.75012
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-mod
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: rel-mod
+Solver heuristic:: zero-heur
+Total time:: 2.70226
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over-relaxed
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: rel-combined
+Solver heuristic:: zero-heur
+Total time:: 2.73855
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: rel-proc
+Solver heuristic:: zero-heur
+Total time:: 2.7458
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-combined-proc
+Heuristic_name:: zero-heur
+The relaxed problem:: p1-3-design-over-relaxed
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: rel-combined-proc
+Solver heuristic:: zero-heur
+Total time:: 2.40158
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: bfs_design
+Heuristic_name:: AM1F
+cost::5.0628
+g() value::5.0628  
+iteration_counter: 750
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected cost:: 0
+Best action:: (design-add-road-service l-2-1 l-1-2 t1 t2)
+Heuristic approach:: bfs_design
+Solver heuristic:: AM1F
+Total time:: 1.89584
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: compilation
+Heuristic_name:: AM1F
+Initial state:: [ 6:(not-flattire) 8:(current-time t1) 50:(vehicle-at l-1-1) 62:(spare-in l-2-1) 66:(spare-in l-2-2) 74:(spare-in l-3-1) ]
+Expected Cost:: 265.94
+Best action:: (design-add-road-service l-3-1 l-2-2 t1 t2)
+Heuristic approach:: compilation
+Solver heuristic:: AM1F
+Total time:: 0.636657
+
+*****************************************************
+
+File:: /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018/triangle-tireworld/joint/p1/p1-domain-design-all.pddl
+Solver name:: FLARES
+Problem:: p1-3-design
+Domain::  triangle-tire-design
+Command type:: rel-env
+Heuristic_name:: AM1F

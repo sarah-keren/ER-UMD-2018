@@ -41,9 +41,6 @@ ErUmdProblem::ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::s
     problemName(str_problemName);
     domainName(str_domainName);
     solverName = str_solverName;
-
-
-
 }
 
 ErUmdProblem::~ErUmdProblem()
@@ -63,7 +60,8 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
     if((command_type.find(umddefs::compilation) != std::string::npos)|| (command_type.find(umddefs::original) != std::string::npos))
     {
 
-        if (solverName.find(umddefs::solverLAO)) {
+
+        if (solverName.find(umddefs::solverLAO) != std::string::npos) {
             // TODO: change this if(true) to an appropriate option
             //SOLVE
             this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
@@ -72,14 +70,14 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
 
             //ANALYZE
             double cost = this->ppddlProblem_->initialState()->cost();
-            //std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
+            std::cout << "Initial state:: "<<this->ppddlProblem_->initialState()<<std::endl;
             std::cout<< "Expected cost:: "<< this->ppddlProblem_->initialState()->cost()<<std::endl;
             //umdutils::print_policy_pddl(this->ppddlProblem_);
             std::cout << "Best action:: "<< this->ppddlProblem_->initialState()->bestAction() << std::endl;
             return;
         } else {
 
-            if (solverName.find(umddefs::solverFLARES)) {
+            if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
                 // This is the suboptimal solver part
                 // SOLVE
                 mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
@@ -89,7 +87,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
                 double expectedCost = 0.0;
                 double expectedTime = 0.0;
-                int numSims = 20;
+                int numSims = 100;
                 for (int sim = 0; sim < numSims; sim++) {
                     double cost = 0.0;
                     double planningTime = 0.0;
@@ -126,7 +124,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     expectedCost += cost;
                     expectedTime += planningTime;
                 }
-                std::cout << std::endl << "ExpectedCost:: " << expectedCost / numSims << std::endl;
+                std::cout << std::endl << "Expected Cost:: " << expectedCost / numSims << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
                 }//if sub optimal
                 else //error
@@ -214,7 +212,7 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
     // the action is a start execution action the cost is the cost of the underlaying mdp
     else
     {
-        if (solverName.find(umddefs::solverLAO)) {
+        if (solverName.find(umddefs::solverLAO)!= std::string::npos) {
             // TODO: change this if(true) to have an appropriate option
             mlsolvers::LAOStarSolver solver(this->ppddlProblem_);
             auto successors = ppddlProblem_->transition(s,a);
@@ -224,7 +222,7 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
             //std::cout << "\n for state: "<<s << " and successor state: " << s0 <<" cost is:  "<< cost<<std::endl;
             return cost;
         } else {
-            if (solverName.find(umddefs::solverFLARES)) {
+            if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
                 mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
                 unsigned long startTime = clock();
                 solver.solve(s0);
