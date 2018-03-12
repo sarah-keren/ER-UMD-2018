@@ -16,6 +16,11 @@
 					<Add directory="../../../grd_non_deterministic/planners/mdp-lib-umd/include" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp_ppddl.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libminigpt_working.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/ER-UMD" prefix_auto="1" extension_auto="1" />
@@ -24,9 +29,14 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../grd_non_deterministic/planners/mdp-lib-umd/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp_ppddl.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libminigpt_working.a" />
 				</Linker>
 			</Target>
 		</Build>
