@@ -251,9 +251,9 @@
 	<set>
 	<tr1/unordered_map>
 
-1519644126 /home/lpineda/Documents/code/ER-UMD/include/ErUmdProblem.h
+1520853013 /home/lpineda/Documents/code/ER-UMD/include/ErUmdProblem.h
 	"./ppddl/PPDDLAction.h"
-	<UMDProblem.h>
+	"../include/UMDProblem.h"
 
 1477941313 /home/lpineda/Documents/code/ER-UMD/mdp-lib-umd/include/ppddl/PPDDLAction.h
 	"mini-gpt/states.h"
@@ -400,9 +400,9 @@
 	"./ppddl/mini-gpt/states.h"
 	"./ppddl/mini-gpt/exceptions.h"
 
-1519644126 /home/lpineda/Documents/code/ER-UMD/include/PDBHeuristic.h
-	<UMDHeuristic.h>
-	"../include/ErUmdProblem.h"
+1520853013 /home/lpineda/Documents/code/ER-UMD/include/PDBHeuristic.h
+	<../include/UMDHeuristic.h>
+	<../include/ErUmdProblem.h>
 	<map>
 
 1519644126 source:/home/lpineda/Documents/code/ER-UMD/src/PDBHeuristic.cpp

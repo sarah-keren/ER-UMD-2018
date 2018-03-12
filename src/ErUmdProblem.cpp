@@ -89,7 +89,8 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
                 double expectedCost = 0.0;
                 double expectedTime = 0.0;
-                int numSims = 20;
+                std::vector<double> simCosts;
+                int numSims = 100;
                 for (int sim = 0; sim < numSims; sim++) {
                     double cost = 0.0;
                     double planningTime = 0.0;
@@ -124,9 +125,17 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                         action = currentState->bestAction();
                     }
                     expectedCost += cost;
+                    simCosts.push_back(cost);
                     expectedTime += planningTime;
                 }
-                std::cout << std::endl << "ExpectedCost:: " << expectedCost / numSims << std::endl;
+                double stderr = 0.0;
+                for (double cost : simCosts) {
+                    double diff = (cost - expectedCost);
+                    stderr += diff * diff;
+                }
+                stderr /= (numSims - 1);
+                stderr = sqrt(stderr / numSims);
+                std::cout << std::endl << "ExpectedCost:: " << expectedCost / numSims << " +/- " << stderr << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
                 }//if sub optimal
                 else //error
