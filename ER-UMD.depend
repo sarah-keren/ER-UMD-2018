@@ -422,7 +422,7 @@
 	"./solvers/LAOStarSolver.h"
 	<sstream>
 
-1478940068 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/GPTHeuristicsDesign.cpp
+1521369860 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/GPTHeuristicsDesign.cpp
 	"../include/GPTHeuristicsDesign.h"
 	<assert.h>
 	<limits.h>
@@ -431,7 +431,7 @@
 	<iostream>
 	<sstream>
 
-1514887593 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/GPTHeuristicsDesign.h
+1521368908 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/GPTHeuristicsDesign.h
 	"../include/UMDProblem.h"
 	"../include/UMDState.h"
 	"./ppddl/PPDDLState.h"
@@ -460,7 +460,7 @@
 1514887502 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/UMDState.h
 	"./ppddl/PPDDLState.h"
 
-1520535201 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/main .cpp
+1521517215 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/main .cpp
 	<sstream>
 	<iostream>
 	"../include/UMDHeuristic.h"
@@ -480,7 +480,7 @@
 
 1519027840 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/UmdDefs.h
 
-1517393670 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/UmdUtils.h
+1521546164 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/UmdUtils.h
 	<sstream>
 	"./ppddl/PPDDLState.h"
 	"./ppddl/PPDDLProblem.h"
@@ -491,17 +491,17 @@
 	"../include/solvers/Solver.h"
 	"../include/GPTHeuristicsDesign.h"
 
-1519852638 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/ErUmdProblem.h
+1521543919 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/ErUmdProblem.h
 	"./ppddl/PPDDLAction.h"
 	"../include/UMDProblem.h"
 
-1519030393 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/PDBHeuristic.cpp
+1521134275 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/PDBHeuristic.cpp
 	"../include/PDBHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/UmdUtils.h"
 	"./solvers/LAOStarSolver.h"
 
-1520767567 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/UMDHeuristic.cpp
+1521517387 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/UMDHeuristic.cpp
 	"../include/UMDHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/UmdUtils.h"
@@ -754,7 +754,7 @@
 	<ctime>
 	"Solver.h"
 
-1520766755 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/ErUmdProblem.cpp
+1521543914 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/ErUmdProblem.cpp
 	<stdio.h>
 	"../include/UMDProblem.h"
 	"../include/UmdDefs.h"
@@ -974,7 +974,7 @@
 	<set>
 	<tr1/unordered_map>
 
-1515150585 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/grd_non_deterministic/planners/mdp-lib-umd/include/Problem.h
+1521370391 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/grd_non_deterministic/planners/mdp-lib-umd/include/Problem.h
 	<list>
 	"State.h"
 	"Action.h"
@@ -1026,7 +1026,7 @@
 	<deque>
 	<map>
 
-1452287806 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/grd_non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/atom_states.h
+1521542000 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/grd_non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/atom_states.h
 	"problems.h"
 	"rational.h"
 	<stdlib.h>
@@ -1157,4 +1157,15 @@
 	"../Action.h"
 	"../Problem.h"
 	"Solver.h"
+
+1521546012 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/src/HMinHeuristic.cpp
+	<list>
+	"../include/State.h"
+	"../include/HMinHeuristic.h"
+	"../include/solvers/Solver.h"
+
+1521540186 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/include/HMinHeuristic.h
+	"./Heuristic.h"
+	"./Problem.h"
+	"./ErUmdProblem.h"
 

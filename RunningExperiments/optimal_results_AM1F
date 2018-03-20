@@ -1,0 +1,308 @@
+
+
+
+domain: ex-blocksworld 
+
+
+
+
+budget: 0
+- - - -
+method:: rel-env time:: 9.211011 nodes:: 2.000000
+method:: rel-mod time:: 6.777684 nodes:: 2.000000
+method:: combined-rel-proc time:: 7.467618 nodes:: 2.000000
+method:: rel-combined time:: 6.819065 nodes:: 2.000000
+method:: bfs_design time:: 6.839679 nodes:: 2.000000
+method:: compilation time:: 0.096951 nodes:: 1.000000
+method:: rel-proc time:: 7.320428 nodes:: 2.000000
+
+budget: 1
+- - - -
+method:: rel-env time:: 0.766054 nodes:: 19.000000
+method:: rel-mod time:: 0.754611 nodes:: 19.000000
+method:: combined-rel-proc time:: 0.753335 nodes:: 19.000000
+method:: rel-combined time:: 0.748841 nodes:: 19.000000
+method:: bfs_design time:: 0.741304 nodes:: 19.000000
+method:: compilation time:: 0.541484 nodes:: 1.000000
+method:: rel-proc time:: 0.748455 nodes:: 19.000000
+
+budget: 2
+- - - -
+method:: rel-env time:: 7.891869 nodes:: 324.000000
+method:: rel-mod time:: 7.884502 nodes:: 324.000000
+method:: combined-rel-proc time:: 7.937419 nodes:: 324.000000
+method:: rel-combined time:: 7.845410 nodes:: 324.000000
+method:: bfs_design time:: 7.822123 nodes:: 324.000000
+method:: compilation time:: 5.929669 nodes:: 1.000000
+method:: rel-proc time:: 7.775313 nodes:: 324.000000
+
+budget: 3
+- - - -
+method:: rel-env time:: 56.026410 nodes:: 3053.000000
+method:: rel-mod time:: 56.246570 nodes:: 3053.000000
+method:: combined-rel-proc time:: 57.861895 nodes:: 3053.000000
+method:: rel-combined time:: 57.828480 nodes:: 3053.000000
+method:: bfs_design time:: 53.930865 nodes:: 3053.000000
+method:: compilation time:: 48.041215 nodes:: 1.000000
+method:: rel-proc time:: 54.634535 nodes:: 3053.000000
+
+budget: 4
+- - - -
+
+budget: 5
+- - - -
+
+budget: 6
+- - - -
+
+
+
+domain: boxworld 
+
+
+
+
+budget: 0
+- - - -
+
+budget: 1
+- - - -
+
+budget: 2
+- - - -
+
+budget: 3
+- - - -
+
+budget: 4
+- - - -
+
+budget: 5
+- - - -
+
+budget: 6
+- - - -
+
+
+
+domain: blocksworld 
+
+
+
+
+budget: 0
+- - - -
+method:: rel-env time:: 0.056241 nodes:: 2.000000
+method:: rel-mod time:: 0.058611 nodes:: 2.000000
+method:: combined-rel-proc time:: 0.057470 nodes:: 2.000000
+method:: rel-combined time:: 0.056815 nodes:: 2.000000
+method:: bfs_design time:: 0.039295 nodes:: 2.000000
+method:: compilation time:: 0.055206 nodes:: 1.000000
+method:: rel-proc time:: 0.057933 nodes:: 2.000000
+
+budget: 1
+- - - -
+method:: rel-env time:: 0.261170 nodes:: 33.000000
+method:: rel-mod time:: 0.258385 nodes:: 33.000000
+method:: combined-rel-proc time:: 0.242946 nodes:: 33.000000
+method:: rel-combined time:: 0.253084 nodes:: 33.000000
+method:: bfs_design time:: 0.227818 nodes:: 33.000000
+method:: compilation time:: 0.450367 nodes:: 1.000000
+method:: rel-proc time:: 0.232498 nodes:: 33.000000
+
+budget: 2
+- - - -
+method:: rel-env time:: 3.202510 nodes:: 994.000000
+method:: rel-mod time:: 3.218000 nodes:: 994.000000
+method:: combined-rel-proc time:: 3.038350 nodes:: 994.000000
+method:: rel-combined time:: 3.247720 nodes:: 994.000000
+method:: bfs_design time:: 3.002920 nodes:: 994.000000
+method:: compilation time:: 7.576430 nodes:: 1.000000
+method:: rel-proc time:: 2.993670 nodes:: 994.000000
+
+budget: 3
+- - - -
+method:: rel-env time:: 44.286000 nodes:: 15440.000000
+method:: rel-mod time:: 37.989300 nodes:: 15440.000000
+method:: combined-rel-proc time:: 37.469500 nodes:: 15440.000000
+method:: rel-combined time:: 52.421200 nodes:: 15440.000000
+method:: bfs_design time:: 31.977700 nodes:: 15440.000000
+method:: compilation time:: 83.967000 nodes:: 1.000000
+method:: rel-proc time:: 39.726400 nodes:: 15440.000000
+
+budget: 4
+- - - -
+
+budget: 5
+- - - -
+
+budget: 6
+- - - -
+
+
+
+domain: elevators 
+
+
+
+
+budget: 0
+- - - -
+method:: rel-env time:: 0.498227 nodes:: 2.000000
+method:: rel-mod time:: 0.505635 nodes:: 2.000000
+method:: combined-rel-proc time:: 0.632394 nodes:: 2.000000
+method:: rel-combined time:: 0.488813 nodes:: 2.000000
+method:: bfs_design time:: 0.499270 nodes:: 2.000000
+method:: compilation time:: 0.738749 nodes:: 1.000000
+method:: rel-proc time:: 0.664808 nodes:: 2.000000
+
+budget: 1
+- - - -
+method:: rel-env time:: 30.694100 nodes:: 59.000000
+method:: rel-mod time:: 32.465100 nodes:: 59.000000
+method:: combined-rel-proc time:: 31.361100 nodes:: 59.000000
+method:: rel-combined time:: 33.025000 nodes:: 59.000000
+method:: bfs_design time:: 30.044600 nodes:: 59.000000
+method:: compilation time:: 16.912700 nodes:: 1.000000
+method:: rel-proc time:: 28.932200 nodes:: 59.000000
+
+budget: 2
+- - - -
+
+budget: 3
+- - - -
+
+budget: 4
+- - - -
+
+budget: 5
+- - - -
+
+budget: 6
+- - - -
+
+
+
+domain: triangle_tire 
+
+
+
+
+budget: 0
+- - - -
+method:: rel-env time:: 0.614611 nodes:: 2.000000
+method:: rel-mod time:: 0.827944 nodes:: 2.000000
+method:: combined-rel-proc time:: 0.680603 nodes:: 2.000000
+method:: rel-combined time:: 0.816507 nodes:: 2.000000
+method:: bfs_design time:: 0.718802 nodes:: 2.000000
+method:: compilation time:: 1.568666 nodes:: 1.000000
+method:: rel-proc time:: 0.823878 nodes:: 2.000000
+
+budget: 1
+- - - -
+method:: rel-env time:: 0.149174 nodes:: 13.000000
+method:: rel-mod time:: 0.139043 nodes:: 13.000000
+method:: combined-rel-proc time:: 0.136958 nodes:: 13.000000
+method:: rel-combined time:: 0.135273 nodes:: 13.000000
+method:: bfs_design time:: 0.167761 nodes:: 13.000000
+method:: compilation time:: 0.313010 nodes:: 1.000000
+method:: rel-proc time:: 0.138370 nodes:: 13.000000
+
+budget: 2
+- - - -
+method:: rel-env time:: 0.696802 nodes:: 134.000000
+method:: rel-mod time:: 0.725789 nodes:: 134.000000
+method:: combined-rel-proc time:: 0.745016 nodes:: 134.000000
+method:: rel-combined time:: 0.700775 nodes:: 134.000000
+method:: bfs_design time:: 0.620448 nodes:: 134.000000
+method:: compilation time:: 1.123675 nodes:: 1.000000
+method:: rel-proc time:: 0.678389 nodes:: 134.000000
+
+budget: 3
+- - - -
+method:: rel-env time:: 1.889935 nodes:: 750.000000
+method:: rel-mod time:: 2.377910 nodes:: 750.000000
+method:: combined-rel-proc time:: 2.321975 nodes:: 750.000000
+method:: rel-combined time:: 2.144025 nodes:: 750.000000
+method:: bfs_design time:: 2.138020 nodes:: 750.000000
+method:: compilation time:: 5.141980 nodes:: 1.000000
+method:: rel-proc time:: 1.835825 nodes:: 750.000000
+
+budget: 4
+- - - -
+method:: rel-env time:: 5.573600 nodes:: 2686.000000
+method:: rel-mod time:: 6.098970 nodes:: 2686.000000
+method:: combined-rel-proc time:: 6.086070 nodes:: 2686.000000
+method:: rel-combined time:: 6.052180 nodes:: 2686.000000
+method:: bfs_design time:: 6.163235 nodes:: 2686.000000
+method:: compilation time:: 12.905050 nodes:: 1.000000
+method:: rel-proc time:: 5.379715 nodes:: 2686.000000
+
+budget: 5
+- - - -
+
+budget: 6
+- - - -
+
+
+
+domain: vacuum 
+
+
+
+
+budget: 0
+- - - -
+method:: rel-env time:: 0.294177 nodes:: 2.000000
+method:: rel-mod time:: 0.279774 nodes:: 2.000000
+method:: combined-rel-proc time:: 0.283994 nodes:: 2.000000
+method:: rel-combined time:: 0.290812 nodes:: 2.000000
+method:: bfs_design time:: 0.355333 nodes:: 2.000000
+method:: compilation time:: 0.286616 nodes:: 1.000000
+method:: rel-proc time:: 0.374403 nodes:: 2.000000
+
+budget: 1
+- - - -
+method:: rel-env time:: 0.226684 nodes:: 4.500000
+method:: rel-mod time:: 0.320925 nodes:: 4.750000
+method:: combined-rel-proc time:: 0.364098 nodes:: 5.000000
+method:: rel-combined time:: 0.299953 nodes:: 4.750000
+method:: bfs_design time:: 0.246200 nodes:: 4.500000
+method:: compilation time:: 0.222651 nodes:: 1.000000
+method:: rel-proc time:: 0.284428 nodes:: 5.000000
+
+budget: 2
+- - - -
+method:: rel-env time:: 0.637848 nodes:: 19.000000
+method:: rel-mod time:: 0.872511 nodes:: 20.750000
+method:: combined-rel-proc time:: 1.288495 nodes:: 22.500000
+method:: rel-combined time:: 0.848715 nodes:: 20.750000
+method:: bfs_design time:: 0.629142 nodes:: 19.000000
+method:: compilation time:: 0.421005 nodes:: 1.000000
+method:: rel-proc time:: 1.022732 nodes:: 22.500000
+
+budget: 3
+- - - -
+method:: rel-env time:: 0.809475 nodes:: 38.333333
+method:: rel-mod time:: 1.240348 nodes:: 38.333333
+method:: combined-rel-proc time:: 0.823596 nodes:: 38.333333
+method:: rel-combined time:: 0.863822 nodes:: 38.333333
+method:: bfs_design time:: 1.140164 nodes:: 38.333333
+method:: compilation time:: 0.755746 nodes:: 1.000000
+method:: rel-proc time:: 0.924717 nodes:: 38.333333
+
+budget: 4
+- - - -
+method:: rel-env time:: 1.509707 nodes:: 67.333333
+method:: rel-mod time:: 1.262782 nodes:: 67.333333
+method:: combined-rel-proc time:: 1.264673 nodes:: 67.333333
+method:: rel-combined time:: 1.197134 nodes:: 67.333333
+method:: bfs_design time:: 1.260857 nodes:: 67.333333
+method:: compilation time:: 1.168978 nodes:: 1.000000
+method:: rel-proc time:: 1.422794 nodes:: 67.333333
+
+budget: 5
+- - - -
+
+budget: 6
+- - - -
