@@ -396,6 +396,12 @@
                    (:init (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
                    (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
 
+(define (problem p1)
+                   (:domain triangle-tire)
+                   (:objects l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
 (define (problem p1-0-design)
                    (:domain triangle-tire-design)
                    (:objects t1 - time
@@ -422,6 +428,14 @@
 
 (define (problem p1-0-design-over-relaxed)
                    (:domain triangle-tire-design-over-relaxed)
+                   (:objects t1 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
+(define (problem p1-0-design-tip)
+                   (:domain triangle-tire-design)
                    (:objects t1 - time
  l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
                    (:init (current-time t1)
@@ -460,6 +474,14 @@
  (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
                    (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
 
+(define (problem p1-1-design-tip)
+                   (:domain triangle-tire-design)
+                   (:objects t1 t2 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)(next t1 t2)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
 (define (problem p1-2-design)
                    (:domain triangle-tire-design)
                    (:objects t1 t2 t3 - time
@@ -486,6 +508,14 @@
 
 (define (problem p1-2-design-over-relaxed)
                    (:domain triangle-tire-design-over-relaxed)
+                   (:objects t1 t2 t3 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)(next t1 t2)(next t2 t3)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
+(define (problem p1-2-design-tip)
+                   (:domain triangle-tire-design)
                    (:objects t1 t2 t3 - time
  l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
                    (:init (current-time t1)(next t1 t2)(next t2 t3)
@@ -524,6 +554,14 @@
  (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
                    (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
 
+(define (problem p1-3-design-tip)
+                   (:domain triangle-tire-design)
+                   (:objects t1 t2 t3 t4 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
 (define (problem p1-4-design)
                    (:domain triangle-tire-design)
                    (:objects t1 t2 t3 t4 t5 - time
@@ -550,6 +588,14 @@
 
 (define (problem p1-4-design-over-relaxed)
                    (:domain triangle-tire-design-over-relaxed)
+                   (:objects t1 t2 t3 t4 t5 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
+(define (problem p1-4-design-tip)
+                   (:domain triangle-tire-design)
                    (:objects t1 t2 t3 t4 t5 - time
  l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
                    (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
@@ -588,6 +634,14 @@
  (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
                    (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
 
+(define (problem p1-5-design-tip)
+                   (:domain triangle-tire-design)
+                   (:objects t1 t2 t3 t4 t5 t6 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
 (define (problem p1-6-design)
                    (:domain triangle-tire-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
@@ -614,6 +668,14 @@
 
 (define (problem p1-6-design-over-relaxed)
                    (:domain triangle-tire-design-over-relaxed)
+                   (:objects t1 t2 t3 t4 t5 t6 t7 - time
+ l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
+                   (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
+ (vehicle-at l-1-1)(road l-1-1 l-1-2)(road l-1-2 l-1-3)(road l-1-1 l-2-1)(road l-1-2 l-2-2)(road l-2-1 l-1-2)(road l-2-2 l-1-3)(spare-in l-2-1)(spare-in l-2-2)(road l-2-1 l-3-1)(road l-3-1 l-2-2)(spare-in l-3-1)(not-flattire))
+                   (:goal (vehicle-at l-1-3)) (:goal-reward 100) (:metric maximize (reward)))
+
+(define (problem p1-6-design-tip)
+                   (:domain triangle-tire-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
  l-1-1 l-1-2 l-1-3 l-2-1 l-2-2 l-2-3 l-3-1 l-3-2 l-3-3 - location)
                    (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)

@@ -510,6 +510,32 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p7)
+                   (:domain vacuum-no-fuel)
+                   (:objects x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p7-0-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 - time
@@ -596,6 +622,34 @@
 
 (define (problem p7-0-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p7-0-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 - time
  x1 x2 x3 y1 y2 y3 y4 - location 
 		              d1 d2 d3 - dirt)
@@ -734,6 +788,34 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p7-1-design-tip)
+                   (:domain vacuum-no-fuel-design)
+                   (:objects t1 t2 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)(next t1 t2)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p7-2-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 - time
@@ -820,6 +902,34 @@
 
 (define (problem p7-2-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 t2 t3 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p7-2-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 - time
  x1 x2 x3 y1 y2 y3 y4 - location 
 		              d1 d2 d3 - dirt)
@@ -958,6 +1068,34 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p7-3-design-tip)
+                   (:domain vacuum-no-fuel-design)
+                   (:objects t1 t2 t3 t4 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p7-4-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 - time
@@ -1044,6 +1182,34 @@
 
 (define (problem p7-4-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 t2 t3 t4 t5 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p7-4-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 - time
  x1 x2 x3 y1 y2 y3 y4 - location 
 		              d1 d2 d3 - dirt)
@@ -1182,6 +1348,34 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p7-5-design-tip)
+                   (:domain vacuum-no-fuel-design)
+                   (:objects t1 t2 t3 t4 t5 t6 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p7-6-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
@@ -1268,6 +1462,34 @@
 
 (define (problem p7-6-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 t2 t3 t4 t5 t6 t7 - time
+ x1 x2 x3 y1 y2 y3 y4 - location 
+		              d1 d2 d3 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
+ 
+(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)
+(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+
+(occupied x2 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x2 y4)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x3 y2)
+(dirt-at d3 x2 y3)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p7-6-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
  x1 x2 x3 y1 y2 y3 y4 - location 
 		              d1 d2 d3 - dirt)

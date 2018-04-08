@@ -1,19 +1,20 @@
 #!/bin/sh
 # $1 - benchmark folder
 # $2 - domain
-# $3 - instances
-# $4 - max-budget
-# $5 - exe-folder
-# $6 - from-index
+# $3 - from-index
+# $4 - to-index
+# $5 - max-budget
+# $6 - exe-folder
+
 
 ulimit -t 1800;
 
 rm -r ../exp_results
 mkdir ../exp_results
 
-for i in $(seq $6 $3);
+for i in $(seq $3 $4);
 do
 
-	./run_experiments-single-problem-part $1 $2 $i $4 $5 simplified_joint > ../exp_results/output_$2_$i
+	./run_experiments-single-problem-part $1 $2 $i $5 $6 simplified_joint > ../exp_results/output_$2_$i
 
 done

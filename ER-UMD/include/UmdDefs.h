@@ -35,6 +35,7 @@ namespace umddefs
   const std::string original("original"); // zero heuristic for design, regular heuristic for execution
 
 
+
   // the general huuristics used
   const std::string zeroHeuristic ("zero-heur");
   const std::string zeroPlusHeuristic ("zero-plus-heur");
@@ -45,6 +46,7 @@ namespace umddefs
   const std::string atomMin1ForwardHeuristic ("AM1F");
   const std::string atomMinMForwardHeuristic ("AMMF");
   const std::string atomMinMBackwardHeuristic ("AMMB");
+  const std::string sarahHeuristic ("sarah-heur");
 
 
   // Solution algorithms
@@ -69,6 +71,9 @@ namespace umddefs
    const std::string domain_name_ex_blocksworld = "exploding-blocksworld";
    const std::string domain_name_blocksworld = "blocks-domain";
 
+   const int ITERATION_LIMIT = 10;
+
+   const std::string TIP = "-tip";
 
 
 

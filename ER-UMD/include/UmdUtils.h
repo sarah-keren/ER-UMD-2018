@@ -9,7 +9,7 @@
 
 #include "../include/UmdDefs.h"
 #include "../include/ErUmdProblem.h"
-//#include "../include/HMinHeuristic.h"
+#include "../include/SarahHeuristic.h"
 #include "../include/solvers/HMinHeuristic.h"
 #include "../include/solvers/Solver.h"
 #include "../include/GPTHeuristicsDesign.h"
@@ -703,7 +703,17 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
                                         }
 
                                         else
+                                        {
+
+                                        if(heuristic_name.find(umddefs::sarahHeuristic)!= std::string::npos)
+                                        {
+                                            heuristic =  new umd::SarahHeuristic(umdProblem,true,umddefs::ITERATION_LIMIT);
+                                        }
+                                        else
                                         {throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );}
+
+
+                                        }
                     }}}}}}}}//else
 
         seconds_elapsed =  ((unsigned long) clock() - begTime);
@@ -752,6 +762,42 @@ inline void print_policy(umd::ErUmdProblem* umdProblem)
 {
 
     print_policy_pddl(umdProblem->getPPDDLProblem());
+}
+
+
+
+inline mlcore::State* mostLikelyOutcome(mlcore::Problem* problem, mlcore::State* s,
+                                 mlcore::Action* a, bool random)
+{
+
+    if (random)
+    {
+        double prob = -1.0;
+        double eps = 1.0e-6;
+        std::vector<mlcore::State*> outcomes;
+        for (mlcore::Successor sccr : problem->transition(s, a)) {
+            if (sccr.su_prob > prob + eps) {
+                prob = sccr.su_prob;
+                outcomes.clear();
+                outcomes.push_back(sccr.su_state);
+            } else if (sccr.su_prob > prob - eps) {
+                outcomes.push_back(sccr.su_state);
+            }
+        }
+        return outcomes[rand() % outcomes.size()];
+    }//if
+    else //most likely
+    {
+        mlcore::State* max_prob_state = NULL;
+        double max_prob = 0.0;
+        for (mlcore::Successor sccr : problem->transition(s, a)) {
+            if (sccr.su_prob > max_prob) {
+                max_prob = sccr.su_prob;
+                max_prob_state = sccr.su_state;
+            }//if
+        }
+        return max_prob_state;
+    }
 }
 
 

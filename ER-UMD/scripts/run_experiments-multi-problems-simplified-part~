@@ -14,6 +14,6 @@ mkdir ../exp_results
 for i in $(seq $6 $3);
 do
 
-	./run_experiments-single-problem-part $1 $2 $i $4 $5 simplified_joint #> ../exp_results/output_$2_$i
+	./run_experiments-single-problem-part $1 $2 $i $4 $5 simplified_joint > ../exp_results/output_$2_$i
 
 done

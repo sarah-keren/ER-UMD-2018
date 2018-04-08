@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ER-UMD" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ER-UMD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../../grd_non_deterministic/planners/mdp-lib-umd/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp_ppddl.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libminigpt_working.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ER-UMD" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="../grd_non_deterministic/planners/mdp-lib-umd/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libmdp_ppddl.a" />
+					<Add library="../grd_non_deterministic/planners/mdp-lib-umd/lib/libminigpt_working.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/ErUmdProblem.h" />
+		<Unit filename="include/GPTHeuristicsDesign.h" />
+		<Unit filename="include/HashMap.h" />
+		<Unit filename="include/PDBHeuristic.h" />
+		<Unit filename="include/SarahHeuristic.h" />
+		<Unit filename="include/UMDHeuristic.h" />
+		<Unit filename="include/UMDProblem.h" />
+		<Unit filename="include/UMDState.h" />
+		<Unit filename="include/UmdDefs.h" />
+		<Unit filename="include/UmdUtils-old.h" />
+		<Unit filename="include/UmdUtils.h" />
+		<Unit filename="src/ErUmdProblem.cpp" />
+		<Unit filename="src/GPTHeuristicsDesign.cpp" />
+		<Unit filename="src/PDBHeuristic.cpp" />
+		<Unit filename="src/SarahHeuristic.cpp" />
+		<Unit filename="src/UMDHeuristic.cpp" />
+		<Unit filename="src/main .cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -442,6 +442,17 @@
   (:metric maximize (reward))
 )
 
+(define (problem p5)
+  (:domain exploding-blocksworld)
+  (:objects b1 b2 b3 b4 b5 - block)
+  (:init (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
 (define (problem p5-0-design)
   (:domain exploding-blocksworld-design)
   (:objects t1 - time
@@ -483,6 +494,19 @@
 
 (define (problem p5-0-design-over-relaxed)
   (:domain exploding-blocksworld-design-over-relaxed)
+  (:objects t1 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
+(define (problem p5-0-design-tip)
+  (:domain exploding-blocksworld-design)
   (:objects t1 - time
  b1 b2 b3 b4 b5 - block)
   (:init (current-time t1)
@@ -546,6 +570,19 @@
   (:metric maximize (reward))
 )
 
+(define (problem p5-1-design-tip)
+  (:domain exploding-blocksworld-design)
+  (:objects t1 t2 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)(next t1 t2)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
 (define (problem p5-2-design)
   (:domain exploding-blocksworld-design)
   (:objects t1 t2 t3 - time
@@ -587,6 +624,19 @@
 
 (define (problem p5-2-design-over-relaxed)
   (:domain exploding-blocksworld-design-over-relaxed)
+  (:objects t1 t2 t3 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)(next t1 t2)(next t2 t3)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
+(define (problem p5-2-design-tip)
+  (:domain exploding-blocksworld-design)
   (:objects t1 t2 t3 - time
  b1 b2 b3 b4 b5 - block)
   (:init (current-time t1)(next t1 t2)(next t2 t3)
@@ -650,6 +700,19 @@
   (:metric maximize (reward))
 )
 
+(define (problem p5-3-design-tip)
+  (:domain exploding-blocksworld-design)
+  (:objects t1 t2 t3 t4 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
 (define (problem p5-4-design)
   (:domain exploding-blocksworld-design)
   (:objects t1 t2 t3 t4 t5 - time
@@ -691,6 +754,19 @@
 
 (define (problem p5-4-design-over-relaxed)
   (:domain exploding-blocksworld-design-over-relaxed)
+  (:objects t1 t2 t3 t4 t5 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
+(define (problem p5-4-design-tip)
+  (:domain exploding-blocksworld-design)
   (:objects t1 t2 t3 t4 t5 - time
  b1 b2 b3 b4 b5 - block)
   (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
@@ -754,6 +830,19 @@
   (:metric maximize (reward))
 )
 
+(define (problem p5-5-design-tip)
+  (:domain exploding-blocksworld-design)
+  (:objects t1 t2 t3 t4 t5 t6 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
 (define (problem p5-6-design)
   (:domain exploding-blocksworld-design)
   (:objects t1 t2 t3 t4 t5 t6 t7 - time
@@ -795,6 +884,19 @@
 
 (define (problem p5-6-design-over-relaxed)
   (:domain exploding-blocksworld-design-over-relaxed)
+  (:objects t1 t2 t3 t4 t5 t6 t7 - time
+ b1 b2 b3 b4 b5 - block)
+  (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
+ (emptyhand) (on-table b1) (on-table b2) (on b3 b5) (on b4 b1) (on-table b5) (clear b2) (clear b3) (clear b4)
+ (no-detonated b1) (no-destroyed b1) (no-detonated b2) (no-destroyed b2) (no-detonated b3) (no-destroyed b3) (no-detonated b4) (no-destroyed b4) (no-detonated b5) (no-destroyed b5)(no-destroyed-table)
+)
+  (:goal (and (emptyhand) (on b1 b3) (on b2 b4) (on-table b3) (on b4 b1) (on b5 b2) (clear b5)))
+  (:goal-reward 1)
+  (:metric maximize (reward))
+)
+
+(define (problem p5-6-design-tip)
+  (:domain exploding-blocksworld-design)
   (:objects t1 t2 t3 t4 t5 t6 t7 - time
  b1 b2 b3 b4 b5 - block)
   (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)

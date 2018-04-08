@@ -60,28 +60,17 @@ static bool read_file( const char* name )
     }
 }
 
-problem_t* parse_problem ( std::string file, std::string prob)
+bool parse_problem ( std::string file, std::string prob)
 {
- //   std::cout<< "parse_problem " << file.c_str()<< ":"<< prob<<std::endl;
+    std::cout<< "parse_problem " << file.c_str()<< ":"<< prob<<std::endl;
 
     if( !read_file( file.c_str() ) ) {
         std::cout <<
             "<main>: ERROR: couldn't read problem file `" << file << std::endl;
-        return( NULL );
+        return false;
     }
-//    std::cout<< "read_file " << file<< ":"<<std::endl;
-
-    problem_t* problem = (problem_t*) problem_t::find( prob.c_str() );
-
-    if( !problem ) {
-        std::cout << "<main>: ERROR: problem `" << prob <<
-            "' is not defined in file '" << file << "'" << std::endl;
-        return NULL;
-    }
-
-    return problem;
-
-
+    std::cout<< "read_file " << file<< ":"<<std::endl;
+    return true;
 
 }//parse_problem
 
@@ -99,7 +88,7 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
     //umd hueristic
     umd::UmdHeuristic* umdHeuristic = NULL;
     //simplified version
-    umd::ErUmdProblem* simplifiedProblem = NULL;
+    mlppddl::PPDDLProblem* simplifiedProblem = NULL;
 
     //relaxed method (e.g. large epsilon) - NA
     bool isRelaxedMethod = false;
@@ -142,22 +131,20 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
     }//if
 
 
-    simplifiedProblem = new umd::ErUmdProblem(simplified_problem, solverName);
-
-
+    simplifiedProblem = new mlppddl::PPDDLProblem(simplified_problem);
 
     // get the suitable design heuristic
-    desHeuristic = umdutils::getHeuristic(heuristic_name,simplifiedProblem->getPPDDLProblem());
+    desHeuristic = umdutils::getHeuristic(heuristic_name,simplifiedProblem);
 
     if((command_type.find(umddefs::relaxed_design_process) != std::string::npos)|| (command_type.find(umddefs::relaxed_combined_design_process) != std::string::npos))
     {
-        umdHeuristic  = new umd::PDBHeuristic (umdProblem->getPPDDLProblem(), simplifiedProblem->getPPDDLProblem(), desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
+        umdHeuristic  = new umd::PDBHeuristic (umdProblem->getPPDDLProblem(), simplifiedProblem, desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
         return umdHeuristic;
     }
 
     if((command_type.find(umddefs::relaxed_environment) != std::string::npos)|| (command_type.find(umddefs::relaxed_modification) != std::string::npos)|| (command_type.find(umddefs::relaxed_combined) != std::string::npos))
     {
-       umdHeuristic = new umd::UmdHeuristic(umdProblem->getPPDDLProblem(),simplifiedProblem->getPPDDLProblem(),desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
+       umdHeuristic = new umd::UmdHeuristic(umdProblem->getPPDDLProblem(),simplifiedProblem,desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
        return umdHeuristic;
     }
 
@@ -181,7 +168,6 @@ int perform_testing (int argc, char **argv)
 
 
 
-
         //get problem
         std::string file = argv[1];//"/home/sarah/Documents/GoalRecognitionDesign/Redesign/Benchmarks/Redesign-Benchmakrs-2008/Current/triangle-tireworld-simplified-new-8/joint/p1/p1-domain-design-add-road-service.pddl"; /
         std::string prob = argv[2]; //"p1"
@@ -189,24 +175,45 @@ int perform_testing (int argc, char **argv)
 
 
         //Parse ppddl problem using mgpt parser
-        problem_t *problem = NULL;
+
         std::cout<< "File:: " << file << std::endl;
-        //std::cout<< "prob:: " << prob << std::end
+        std::cout<< "prob:: " << prob << std::endl;
         std::cout<< "Solver name:: " << solverName << std::endl;
 
-        problem = parse_problem(file,prob);
-        if(!problem)
+        //parse the ppddle file (all problems are witihn the class problem_t)
+        if(!parse_problem(file,prob))
         {
             std::cout << "Parse error \n";
             exit(0);
             return -1;
         }//if
-        std::cout<<"Problem:: " << problem->name()<< "\nDomain::  "<< problem->domain().name();
 
+        //get the original problem
+        problem_t* problem = (problem_t*) problem_t::find( prob.c_str() );
+        if( !problem ) {
+            std::cout << "<main>: ERROR: problem `" << prob <<
+            "' is not defined in file '" << file << "'" << std::endl;
+            return NULL;
+        }
+        std::cout<< "found problem  " << prob.c_str()<<std::endl;
+
+
+        //std::cout<<"Problem:: " << problem->name()<< "\nDomain::  "<< problem->domain().name();
+
+        //ge the mdp to be used at the tip nodes
+        std:string prob_tip = prob+umddefs::TIP;
+        std::cout<<"Serching for problem " << prob_tip<<std::endl;
+        problem_t * problem_tip_nodes =  (problem_t*) problem_t::find( prob_tip.c_str() );
+        if(!problem_tip_nodes)
+        {
+            std::cout << "Parse error \n";
+            exit(0);
+            return -1;
+        }//if
 
         //create erumd problem
-        umd::ErUmdProblem* umdProblem = new umd::ErUmdProblem(problem,solverName);
-
+        umd::ErUmdProblem* umdProblem = new umd::ErUmdProblem(problem,problem_tip_nodes,solverName);
+        std::cout<<"generated umdproblem\n";
 
         //get analysis type
         std::string command_type = argv[4];

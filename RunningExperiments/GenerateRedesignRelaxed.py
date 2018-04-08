@@ -90,15 +90,23 @@ def generate_problems(domains_folder_name, problems_folder_name, destination_fol
                             outfile.write(line)
                             outfile.flush()
 
+                    # include original problem for the tip nodes and change the name
+                    with open(os.path.join(problems_folder_name,problem_file)) as infile:
+                        for line in infile.readlines():
+                            outfile.write(line)
+                            outfile.flush()
+
                     # paste problem file with various budgets in original and relaxed form
                     for b in range(MAX_BUDGET+1):
-                        for mode in ('design','design-relaxed','design-over','design-over-relaxed'):
+                        for mode in ('design','design-relaxed','design-over','design-over-relaxed','design-tip'):
                             with open(os.path.join(problems_folder_name,problem_file)) as infile:
                                 for line in infile.readlines():
                                     if 'problem' in line :
                                         line = line.replace(')','-%d-%s)'%(b,mode))
                                     if 'domain' in line :
                                         line = line.replace(')','-%s)'%mode)
+                                        if 'tip' in mode:
+                                            line = line.replace('-tip','')
                                     #if '(:goal (' in line :
                                     #    line = line.replace('(:goal (','(:goal (and (current-time t%d)('% (b+1))
                                     #if ' (:goal-reward' in line :
@@ -166,13 +174,14 @@ def generate_problems(domains_folder_name, problems_folder_name, destination_fol
 if __name__ == '__main__' :
 
     domain_names = []
-    domain_names.append('vacuum-no-fuel-test')
+    #domain_names.append('vacuum-no-fuel-test')
     #domain_names.append('vacuum-no-fuel')
     #domain_names.append('triangle-tireworld')
-    domain_names.append('triangle-tireworld-test')
-    #domain_names.append('ex-blocksworld')
-    #domain_names.append('boxworld')
-    #domain_names.append('blocksworld')
+    #domain_names.append('triangle-tireworld-test')
+    #domain_names.append('vacuum-no-fuel-running-example')
+    domain_names.append('ex-blocksworld')
+    domain_names.append('boxworld')
+    domain_names.append('blocksworld')
     #domain_names.append('elevators')
 
 
@@ -183,7 +192,7 @@ if __name__ == '__main__' :
 
 
 
-    benchmarks_location = '/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/umd-Benchmakrs-2018'
+    benchmarks_location = '/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/umd-Benchmakrs-2018'
 
 
     for domain_name in domain_names:

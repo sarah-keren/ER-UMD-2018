@@ -3,9 +3,8 @@
 
 
 #include "./ppddl/PPDDLAction.h"
+#include "./ppddl/PPDDLProblem.h"
 #include "../include/UMDProblem.h"
-
-
 
 
 namespace umd
@@ -18,8 +17,8 @@ class ErUmdProblem : public mlppddl::PPDDLProblem
 {
     public:
 
-        ErUmdProblem(problem_t* pProblem, std::string solverName);
-        ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName );
+        ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string solverName);
+        ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName );
         virtual ~ErUmdProblem();
         virtual mlppddl::PPDDLProblem* getPPDDLProblem(){return ppddlProblem_;}
         // get the optimal policy for the umd problem using the solver (e.g. LAO*)
@@ -44,7 +43,7 @@ class ErUmdProblem : public mlppddl::PPDDLProblem
         /**
         * Overrides method from pddlProblem.
         */
-        virtual double cost_(mlcore::State* s, mlcore::Action* a) const;
+        virtual double cost(mlcore::State* s, mlcore::Action* a) const;
 
 
 

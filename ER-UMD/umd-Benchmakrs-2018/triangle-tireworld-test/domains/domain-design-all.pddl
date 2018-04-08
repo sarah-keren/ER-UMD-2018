@@ -65,19 +65,6 @@
     :effect (and (execution))
   )
 
-  (:action idle-design
-    :parameters ( ?t - time ?tnext - time )
-    :precondition (and (not(execution))(current-time ?t )(next ?t ?tnext))
-    :effect (and (current-time ?tnext )(not(current-time ?t)))
-  )
-
-
-
-  (:action design-add-road
-    :parameters (?from - location ?to - location ?inter - location ?t - time ?tnext - time)
-    :precondition (and (not(execution))(next ?t ?tnext)(current-time ?t )(road ?from ?to)(road ?from ?inter)(road ?inter ?to))
-    :effect (and (enabled-shortcut ?from ?to )(enabled-shortcut-from ?from)(current-time ?tnext )(not (current-time ?t )))
-  )
 
   (:action design-add-road-service
     :parameters (?from - location ?to - location ?t - time ?tnext - time)

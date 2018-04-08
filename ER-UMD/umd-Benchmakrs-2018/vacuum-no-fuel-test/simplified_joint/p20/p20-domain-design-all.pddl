@@ -529,6 +529,51 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p20)
+                   (:domain vacuum-no-fuel)
+                   (:objects x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p20-0-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 - time
@@ -672,6 +717,53 @@
 
 (define (problem p20-0-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p20-0-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 - time
  x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
 		              d1 d2 d3 d4 d5 d6 - dirt)
@@ -905,6 +997,53 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p20-1-design-tip)
+                   (:domain vacuum-no-fuel-design)
+                   (:objects t1 t2 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)(next t1 t2)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p20-2-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 - time
@@ -1048,6 +1187,53 @@
 
 (define (problem p20-2-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 t2 t3 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p20-2-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 - time
  x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
 		              d1 d2 d3 d4 d5 d6 - dirt)
@@ -1281,6 +1467,53 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p20-3-design-tip)
+                   (:domain vacuum-no-fuel-design)
+                   (:objects t1 t2 t3 t4 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p20-4-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 - time
@@ -1424,6 +1657,53 @@
 
 (define (problem p20-4-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 t2 t3 t4 t5 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p20-4-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 - time
  x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
 		              d1 d2 d3 d4 d5 d6 - dirt)
@@ -1657,6 +1937,53 @@
 (:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
 
 
+(define (problem p20-5-design-tip)
+                   (:domain vacuum-no-fuel-design)
+                   (:objects t1 t2 t3 t4 t5 t6 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
 (define (problem p20-6-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
@@ -1800,6 +2127,53 @@
 
 (define (problem p20-6-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
+                   (:objects t1 t2 t3 t4 t5 t6 t7 - time
+ x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
+		              d1 d2 d3 d4 d5 d6 - dirt)
+(:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
+ 
+(prox x10 x9)(prox x9 x8)(prox x8 x7)(prox x7 x6)(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)(prox x6 x7)(prox x7 x8)(prox x8 x9)(prox x9 x10)
+(prox y1 y2)(prox y2 y3)(prox y3 y4)(prox y4 y5)(prox y5 y6)(prox y6 y7)(prox y7 y8)
+(prox y8 y7)(prox y7 y6)(prox y6 y5)(prox y5 y4)(prox y4 y3)(prox y3 y2)(prox y2 y1)
+
+(robot-at x1 y1)
+
+;Kitchen island
+(occupied x3 y2)
+(occupied x3 y3)
+(occupied x3 y4)
+(occupied x3 y5)
+;Arm-charis
+(occupied x6 y5)
+(occupied x6 y6)
+(occupied x7 y3)
+(occupied x8 y3)
+;sofa
+(occupied x7 y8)
+(occupied x8 y8)
+(occupied x9 y8)
+;sofa
+(occupied x10 y3)
+(occupied x10 y4)
+(occupied x10 y5)
+(occupied x10 y6)
+;table
+(occupied x7 y5)
+
+(dirt-at d1 x1 y2)
+(dirt-at d2 x4 y3)
+(dirt-at d3 x2 y7)
+(dirt-at d4 x10 y8)
+(dirt-at d5 x10 y1)
+(dirt-at d6 x10 y2)
+)
+
+(:goal (and  (dirt-in-robot d1)(dirt-in-robot d2)(dirt-in-robot d3)(dirt-in-robot d4)(dirt-in-robot d5)(dirt-in-robot d6))) (:goal-reward 100) (:metric maximize (reward)))
+
+
+(define (problem p20-6-design-tip)
+                   (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
  x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 y1 y2 y3 y4 y5 y6 y7 y8  - location 
 		              d1 d2 d3 d4 d5 d6 - dirt)

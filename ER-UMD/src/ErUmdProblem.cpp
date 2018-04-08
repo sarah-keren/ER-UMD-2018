@@ -24,19 +24,19 @@
 namespace umd
 {
 
-ErUmdProblem::ErUmdProblem(problem_t* pProblem, std::string str_solverName):mlppddl::PPDDLProblem (pProblem)
+ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_solverName):mlppddl::PPDDLProblem (pProblem)
 {
 
-    ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem);
+    ppddlProblem_ = new mlppddl::PPDDLProblem(pProblem_tip_nodes);
     domainName_ = pProblem->domain().name();
     solverName = str_solverName;
 
 }
 
-ErUmdProblem::ErUmdProblem(problem_t* pProblem, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName ):mlppddl::PPDDLProblem (pProblem)
+ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName ):mlppddl::PPDDLProblem (pProblem)
 {
-std::cout<<"in const"<<std::endl;
-    ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem);
+    std::cout<<"in const"<<std::endl;
+    ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem_tip_nodes);
     fileName(str_fileName);
     problemName(str_problemName);
     domainName(str_domainName);
@@ -51,7 +51,6 @@ ErUmdProblem::~ErUmdProblem()
  }
 
 }
-
 
 void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_type)
 {
@@ -148,14 +147,16 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
 
     else
     {
+        this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
+
         //SOLVE
         mlsolvers::DeterministicSolver solver (this, mlsolvers::det_most_likely, umdHeur);
         mlcore::Action* best_action = solver.solve(this->initialState());
 
         //ANALYZE
         std::cout << "Initial state:: " << this->initialState() <<std::endl;
-        std::cout << "Expected cost:: "<< this->initialState()->cost()<<std::endl;
-        std::cout << "Best action:: " << best_action <<std::endl;
+        //std::cout << "Expected cost:: "<< this->initialState()->cost()<<std::endl;
+        //std::cout << "Best action:: " << best_action <<std::endl;
         return;
     }
 
@@ -166,27 +167,27 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
  bool ErUmdProblem::goal(mlcore::State* s) const
  {
 
-    std::cout << "in goal with state" << s << std::endl;
+    //std::cout << "in goal with state" << s << std::endl;
     // the goal is achieved when the extracted noded is an execution node
     std::stringstream buffer;
     buffer<<(mlppddl::PPDDLState*)s;
 
     if (buffer.str().find(umddefs::execution_stage_string) != std::string::npos)
     {
-        std::cout << "at goal : execution node" << std::endl;
+        //std::cout << "at goal : execution node" << std::endl;
         return true;
 
     }
-    std::cout << "not yet at goal" << std::endl;
+    //std::cout << "not yet at goal" << std::endl;
 
     return false;
  }
 
-double ErUmdProblem::cost_(mlcore::State* s, mlcore::Action* a) const
+double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
 {
 
     std::string actionName = ((mlppddl::PPDDLAction*)a)->pAction()->name();
-    std::cout << "\n in ErUmdProblem::cost with state" << s << " and action "<< a<< std::endl;
+    //std::cout << "\n in ErUmdProblem::cost with state" << s << " and action "<< a<< std::endl;
 
     // for design actions that do not start execution
     if (actionName.find(umddefs::design_start_execution) == std::string::npos)
@@ -221,6 +222,8 @@ double ErUmdProblem::cost_(mlcore::State* s, mlcore::Action* a) const
     // the action is a start execution action the cost is the cost of the underlaying mdp
     else
     {
+
+
         if (solverName.find(umddefs::solverLAO)!= std::string::npos) {
             // TODO: change this if(true) to have an appropriate option
             mlsolvers::LAOStarSolver solver(this->ppddlProblem_);
@@ -228,7 +231,7 @@ double ErUmdProblem::cost_(mlcore::State* s, mlcore::Action* a) const
             mlcore::State* s0 = successors.front().su_state;
             solver.solve(s0);
             double cost = s0->cost();
-            std::cout << "\n for state: "<<s << " and successor state: " << s0 <<" cost is:  "<< cost<<std::endl;
+            //std::cout << "\n for state: "<<s << " and successor state: " << s0 <<" cost is:  "<< cost<<std::endl;
             return cost;
         } else {
             if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
@@ -250,6 +253,5 @@ double ErUmdProblem::cost_(mlcore::State* s, mlcore::Action* a) const
         }
     }
 }
-
 
 }
