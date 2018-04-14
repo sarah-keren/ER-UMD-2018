@@ -39,14 +39,14 @@ namespace umddefs
   // the general huuristics used
   const std::string zeroHeuristic ("zero-heur");
   const std::string zeroPlusHeuristic ("zero-plus-heur");
-  const std::string hminHeuristic ("hmin-heur");
   const std::string minminIDAHeuristic ("mm-ida");
   const std::string hminFalseHeuristic ("hmin-heur-false");
   const std::string FFHeuristic ("FF");
   const std::string atomMin1ForwardHeuristic ("AM1F");
   const std::string atomMinMForwardHeuristic ("AMMF");
   const std::string atomMinMBackwardHeuristic ("AMMB");
-  const std::string sarahHeuristic ("sarah-heur");
+  const std::string baodHeuristic ("BAOD-heur");
+  const std::string hminminHeuristic ("hmin-heur");
 
 
   // Solution algorithms

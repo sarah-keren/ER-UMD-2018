@@ -70,7 +70,10 @@ namespace mlsolvers
                 actionsRoll[i] = a;
                 tmp = next;
                 if (problem_->goal(tmp))
+                {
+                    std::cout<<"Solution found"<<std::endl;
                     break;
+                }
             }
 
             for (int i = 1; i <= maxSteps; i++) {

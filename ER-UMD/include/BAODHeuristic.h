@@ -1,23 +1,19 @@
-#ifndef UMD_SARAHHEURISTIC_H
-#define UMD_SARAHHEURISTIC_H
+#ifndef UMD_BAODHEURISTIC_H
+#define UMD_BAODHEURISTIC_H
 
 
 #include "../include/State.h"
-#include "./Heuristic.h"
 #include "./Problem.h"
 #include "./ErUmdProblem.h"
+#include "./MDPHeuristic.h"
 
 
 namespace umd
 {
 
-/**
- * Implements the hmin heuristic described in
- * http://www.aaai.org/Papers/ICAPS/2003/ICAPS03-002.pdf
- */
-class SarahHeuristic : public mlcore::Heuristic
+class BAODHeuristic : public MDPHeuristic
 {
-private:
+protected:
     /* The problem for which this heuristic is computed. */
     //mlcore::Problem* problem_;
     ErUmdProblem* problem_;
@@ -82,11 +78,11 @@ private:
 
 
 public:
-    //SarahHeuristic(mlcore::Problem* problem_, bool solveAll);
+    //BAODHeuristic(mlcore::Problem* problem_, bool solveAll);
 
-    SarahHeuristic(mlcore::Problem* problem_, bool solveAll, int iteration_limit);
+    BAODHeuristic(mlcore::Problem* problem_, bool solveAll, int iteration_limit);
 
-    virtual ~SarahHeuristic() { }
+    virtual ~BAODHeuristic() { }
 
     void reset()
     {
@@ -99,4 +95,4 @@ public:
 };
 
 }
-#endif // UMD_SARAHHEURISTIC_H
+#endif // UMD_BAODHEURISTIC_H

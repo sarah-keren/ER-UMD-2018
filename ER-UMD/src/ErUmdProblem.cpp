@@ -73,6 +73,9 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
             std::cout<< "Expected cost:: "<< this->ppddlProblem_->initialState()->cost()<<std::endl;
             //umdutils::print_policy_pddl(this->ppddlProblem_);
             std::cout << "Best action:: "<< this->ppddlProblem_->initialState()->bestAction() << std::endl;
+            int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
+            std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<std::endl;
+
             return;
         } else {
 
@@ -134,6 +137,9 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 stderr = sqrt(stderr / numSims);
                 std::cout << std::endl << "ExpectedCost:: " << expectedCost / numSims << " +/- " << stderr << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
+                int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
+                std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<std::endl;
+
                 }//if sub optimal
                 else //error
                 {
@@ -144,7 +150,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
         }//else
     }
 
-
+    // BFD
     else
     {
         this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
@@ -152,11 +158,22 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
         //SOLVE
         mlsolvers::DeterministicSolver solver (this, mlsolvers::det_most_likely, umdHeur);
         mlcore::Action* best_action = solver.solve(this->initialState());
-
         //ANALYZE
         std::cout << "Initial state:: " << this->initialState() <<std::endl;
         //std::cout << "Expected cost:: "<< this->initialState()->cost()<<std::endl;
         //std::cout << "Best action:: " << best_action <<std::endl;
+        int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
+        int iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_designHeuristic_())->get_counter();
+
+        std::cout << "Expanded nodes:: Execution:" << iExpandedNodesExecution << " Design: " << iExpandedNodesDesign<< " Total: " << iExpandedNodesDesign+iExpandedNodesExecution<<std::endl;
+
+
+        std::cout << "UMD heuristic Examined nodes:: " << umdHeur->get_examinedStateCounter() << " Expanded nodes:: " << umdHeur->get_expandedStateCounter() <<std::endl;
+
+
+
+
+
         return;
     }
 

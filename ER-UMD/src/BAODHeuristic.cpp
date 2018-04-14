@@ -1,6 +1,6 @@
 #include<list>
 
-#include "../include/SarahHeuristic.h"
+#include "../include/BAODHeuristic.h"
 #include "../include/solvers/Solver.h"
 #include "../include/UmdUtils.h"
 
@@ -12,7 +12,7 @@ namespace umd
 
 
 
-SarahHeuristic::SarahHeuristic(mlcore::Problem* problem, bool solveAll, int iteration_limit)
+BAODHeuristic::BAODHeuristic(mlcore::Problem* problem, bool solveAll, int iteration_limit):MDPHeuristic()
 {
 
 
@@ -38,15 +38,15 @@ SarahHeuristic::SarahHeuristic(mlcore::Problem* problem, bool solveAll, int iter
     */
 }
 
-double SarahHeuristic::cost(const mlcore::State* s)
+double BAODHeuristic::cost(const mlcore::State* s)
 {
 
+    this->update_counter();
 
-    std::cout<<"\n\n Entering SarahHeuristic cost with state : "<< (mlcore::State*)s<< std::endl;
 
     if (problem_->goal(const_cast<mlcore::State*>(s)))
     {
-        std::cout<<" ------->goal sate "<<std::endl<< std::endl<< std::endl;
+        //std::cout<<" ------->goal sate "<<std::endl<< std::endl<< std::endl;
         return 0.0;
     }
 
@@ -82,40 +82,39 @@ double SarahHeuristic::cost(const mlcore::State* s)
 
         // switch pointers and increment counter
         iteration_counter += 1;
+        //go through the states in the current list
+        double curIterMinCost = 0;
 
-
+        /*
         std::cout<<"Start iteration with current list (" <<current->size()<<")\n";
         std::set<std::pair<const mlcore::State*, double>>::iterator itt;
         for (itt = current->begin(); itt != current->end(); ++itt) {
             std::cout<<"      State: "<< (mlcore::State*)(*itt).first<< " and cost: "<< (*itt).second<<"\n";
         }
         std::cout<<"------------------------------------\n\n\n";
-
+        */
 
        //clear the list that will hold the nodes for the next iteration
         next->clear();
 
-        //go through the states in the current list
-        double curMinCost = 0;
         std::set<std::pair<const mlcore::State*, double>>::iterator it;
         for (it = current->begin(); it != current->end(); ++it) {
 
             //get current state
             mlcore::State* current_state =  (mlcore::State*)(*it).first;
-            std::cout << "\n\nExpanding current state :" <<current_state << std::endl;
+            //std::cout << "\n\nExpanding current state :" <<current_state << std::endl;
             double cur_cost = (*it).second ;
             ///if the goal is found return it's cost
             if (problem_->goal(const_cast<mlcore::State*>((*it).first)))
             {
-
                 //std::cout<<"Heur value is (goal reached) "<<cur_cost<<std::endl;
                 //cache the result
                 return cur_cost;
             }
 
-            if ((curMinCost == 0)||(cur_cost < curMinCost))
+            if ((curIterMinCost == 0)||(cur_cost < curIterMinCost))
             {
-                curMinCost = cur_cost;
+                curIterMinCost = cur_cost;
             }
 
 
@@ -133,29 +132,13 @@ double SarahHeuristic::cost(const mlcore::State* s)
 
                 //action cost
                 double qAction = problem_->cost((mlcore::State*)s, a);
-                std::cout<<" \n      Checking action: "<<a<< " with qAction "<<qAction<<std::endl;
-
-
+                //std::cout<<" \n      Checking action: "<<a<< " with qAction "<<qAction<<std::endl;
                 if(bMostLikleyOutcome)
                 {
                     //get the next state
                     nextState = umdutils::mostLikelyOutcome(problem_, (mlcore::State*)current_state, a, false);
-
-                    double accumulated_cost = 0.0;
-                    //check if its value has been already computed
-                    auto it = costs_.find(const_cast<mlcore::State*> (nextState));
-                    if (it != costs_.end())
-                    {
-                        //std::cout<<" ------->value found: "<<it->second<<std::endl;
-                        accumulated_cost =  it->second;
-                    }
-                    else
-                    {
-                        accumulated_cost = qAction + cur_cost;
-                        costs_[nextState] = accumulated_cost;
-                    }
-                    std::cout<<" cost for state " << nextState << " and most likely outcome is " << accumulated_cost<<std::endl;
-
+                    double accumulated_cost = qAction + cur_cost;
+                    //std::cout<<" cost for state " << nextState << " and most likely outcome is " << accumulated_cost<<std::endl;
                     next->insert(std::make_pair(nextState, accumulated_cost));
                 }
 
@@ -163,31 +146,13 @@ double SarahHeuristic::cost(const mlcore::State* s)
                 {
                     // get all possible transitions and add them to the next list
                     std::list<std::pair<mlcore::State*, double>> next_states = problem_->transition((mlcore::State*)current_state, a);
-                    std::cout<<" number of successor node is "<<next_states.size() << std::endl;
-
+                    //std::cout<<" number of successor nodes is "<<next_states.size() << std::endl;
 
                     std::list<std::pair<mlcore::State*, double>>::iterator it_states;
                     for (it_states = next_states.begin(); it_states != next_states.end(); ++it_states) {
                         mlcore::State* suc_state = (*it_states).first;
-
-
-                        double accumulated_cost = 0.0;
-                        //check if its value has been already computed
-                        auto it = costs_.find(const_cast<mlcore::State*> (suc_state));
-                        if (it != costs_.end())
-                        {
-                            //std::cout<<" ------->value found: "<<it->second<<std::endl;
-                            accumulated_cost =  it->second;
-                        }
-                        else
-                        {
-                            accumulated_cost = qAction + cur_cost;
-                            costs_[suc_state] = accumulated_cost;
-                        }
-
-
-                        std::cout<<"                       **successor state" << suc_state<<" with accumulated cost: "<<accumulated_cost<< std::endl;
-
+                        double accumulated_cost = qAction + cur_cost;
+                        //std::cout<<"                       **successor state" << suc_state<<" with accumulated cost: "<<accumulated_cost<< std::endl;
                         //push back with the accumulated cost
                         next->insert(std::make_pair(suc_state, accumulated_cost));
                     } //for
@@ -195,19 +160,20 @@ double SarahHeuristic::cost(const mlcore::State* s)
 
             }//for
         }//for - exploring current
-        std::cout<<"End interation \n";
-        std::cout<<"next size is: "<<next->size()<<std::endl;
+        //std::cout<<"End iteration \n";
+        //std::cout<<"next size is: "<<next->size()<<std::endl;
 
         //switch the q'
         tmp = current;
         current = next;
         next = tmp;
-        minCost = curMinCost;
+        minCost = curIterMinCost;
 
-        std::cout<< "current has "<< current->size()<< "elements\n";
+        //std::cout<< "current has "<< current->size()<< "elements\n";
 
     }//while
 
+    /*
     if (iteration_counter>=iteration_limit)
         std::cout<<"\n\nHeur value is (iteration limit "<<iteration_counter<< ":: "<<minCost <<std::endl;
     else
@@ -215,6 +181,7 @@ double SarahHeuristic::cost(const mlcore::State* s)
         if(current->size()==0)
         std::cout<<"\n\nHeur value is (dead end)"<<minCost <<std::endl;
     }
+    */
 
     return minCost;
 
@@ -223,10 +190,10 @@ double SarahHeuristic::cost(const mlcore::State* s)
 
 
 
-double SarahHeuristic::cost_original(const mlcore::State* s)
+double BAODHeuristic::cost_original(const mlcore::State* s)
 {
 
-    std::cout<<"Entering  hmin cost with state : "<< (mlcore::State*)s<< std::endl;
+    //std::cout<<"Entering  hmin cost with state : "<< (mlcore::State*)s<< std::endl;
 
     if (problem_->goal(const_cast<mlcore::State*>(s)))
     {
@@ -309,7 +276,7 @@ double SarahHeuristic::cost_original(const mlcore::State* s)
 
 
 void
- SarahHeuristic::hminUpdate(mlcore::State* s)
+ BAODHeuristic::hminUpdate(mlcore::State* s)
 {
     if (problem_->goal(s)) {
         costs_[s] = 0.0;
@@ -341,7 +308,7 @@ void
     }
     costs_[s] = bestQ;
 
-    print_cost_array();
+    //print_cost_array();
 }
 
 

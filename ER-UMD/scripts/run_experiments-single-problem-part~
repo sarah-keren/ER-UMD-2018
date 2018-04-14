@@ -21,7 +21,7 @@ echo "*****************************************************"
 
 for budget in $(seq 1 $4);do	
 	for method in LAO*; do		
-		for heuristic in sarah-heur hmin-heur-false; do
+		for heuristic in BAOD-heur ;do # hmin-heur-false; do
 			for approach in rel-env rel-mod rel-combined rel-proc rel-combined-proc compilation bfs_design; do
 	
 				#echo "---$1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic ---"

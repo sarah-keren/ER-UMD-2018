@@ -9,8 +9,13 @@
 
 #include "../include/UmdDefs.h"
 #include "../include/ErUmdProblem.h"
-#include "../include/SarahHeuristic.h"
-#include "../include/solvers/HMinHeuristic.h"
+
+#include "../include/BAODHeuristic.h"
+#include "../include/HminminHeuristic.h"
+#include "../include/ZeroHeuristic.h"
+
+
+
 #include "../include/solvers/Solver.h"
 #include "../include/GPTHeuristicsDesign.h"
 
@@ -649,7 +654,8 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
         mlcore::Heuristic*  heuristic ;
 
         if (heuristic_name.find(umddefs::zeroHeuristic)!= std::string::npos)
-            {heuristic = new umd_heuristics::design_zeroHeuristic_t(*umdProblem->pProblem());}
+            //{heuristic = new umd_heuristics::design_zeroHeuristic_t(*umdProblem->pProblem());}
+            {heuristic = new umd::ZeroHeuristic();}
         else
         {
             if(heuristic_name.find(umddefs::zeroPlusHeuristic)!= std::string::npos)
@@ -658,23 +664,8 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
             else
             {
 
-                if(heuristic_name.find(umddefs::hminFalseHeuristic)!= std::string::npos)
-                {
-                    heuristic =  new mlsolvers::HMinHeuristic(umdProblem,false);
-               }
-
-                else
-                {
-
-                    if (heuristic_name.find(umddefs::hminHeuristic)!= std::string::npos)
-                    {
-
-                        heuristic =  new mlsolvers::HMinHeuristic(umdProblem,true);
-                    }
-                    else
-                    {
-                        if(heuristic_name.find(umddefs::FFHeuristic)!= std::string::npos)
-                        {heuristic = new mlppddl::PPDDLHeuristic(umdProblem, mlppddl::FF);}
+                    if(heuristic_name.find(umddefs::FFHeuristic)!= std::string::npos)
+                    {heuristic = new mlppddl::PPDDLHeuristic(umdProblem, mlppddl::FF);}
 
                         else
                         {
@@ -705,16 +696,23 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
                                         else
                                         {
 
-                                        if(heuristic_name.find(umddefs::sarahHeuristic)!= std::string::npos)
+                                        if(heuristic_name.find(umddefs::baodHeuristic)!= std::string::npos)
                                         {
-                                            heuristic =  new umd::SarahHeuristic(umdProblem,true,umddefs::ITERATION_LIMIT);
+                                            heuristic =  new umd::BAODHeuristic(umdProblem,true,umddefs::ITERATION_LIMIT);
                                         }
                                         else
-                                        {throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );}
+                                        {
+                                            if(heuristic_name.find(umddefs::hminminHeuristic)!= std::string::npos)
+                                            {
+                                                heuristic =  new umd::HminminHeuristic(umdProblem,umddefs::ITERATION_LIMIT);
+                                            }
 
-
+                                            else
+                                            {
+                                                throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );}
+                                            }
                                         }
-                    }}}}}}}}//else
+                    }}}}}}//else
 
         seconds_elapsed =  ((unsigned long) clock() - begTime);
         return heuristic;

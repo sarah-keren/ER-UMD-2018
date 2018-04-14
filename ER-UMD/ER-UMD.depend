@@ -1169,7 +1169,7 @@
 	"./Problem.h"
 	"./ErUmdProblem.h"
 
-1523008471 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/ErUmdProblem.cpp
+1523423612 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/ErUmdProblem.cpp
 	<stdio.h>
 	"../include/UMDProblem.h"
 	"../include/UmdDefs.h"
@@ -1189,7 +1189,7 @@
 	"./reduced/ReducedTransition.h"
 	"./solvers/FFReducedModelSolver.h"
 
-1517121980 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDProblem.h
+1523168733 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDProblem.h
 	"./ppddl/PPDDLProblem.h"
 	"./ppddl/mini-gpt/problems.h"
 	"../include/UMDHeuristic.h"
@@ -1359,21 +1359,22 @@
 	<vector>
 	<thread>
 
-1519030163 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDHeuristic.h
+1523423328 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDHeuristic.h
 	<./Heuristic.h>
 	"./State.h"
 
-1523009491 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdDefs.h
+1523705640 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdDefs.h
 
-1522314681 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdUtils.h
+1523705832 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdUtils.h
 	<sstream>
 	"./ppddl/PPDDLState.h"
 	"./ppddl/PPDDLProblem.h"
 	"./ppddl/PPDDLHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/ErUmdProblem.h"
-	"../include/SarahHeuristic.h"
-	"../include/solvers/HMinHeuristic.h"
+	"../include/BAODHeuristic.h"
+	"../include/HminminHeuristic.h"
+	"../include/ZeroHeuristic.h"
 	"../include/solvers/Solver.h"
 	"../include/GPTHeuristicsDesign.h"
 
@@ -1422,7 +1423,7 @@
 	<set>
 	<tr1/unordered_map>
 
-1522162311 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/ErUmdProblem.h
+1523168733 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/ErUmdProblem.h
 	"./ppddl/PPDDLAction.h"
 	"./ppddl/PPDDLProblem.h"
 	"../include/UMDProblem.h"
@@ -1447,7 +1448,7 @@
 	"../State.h"
 	"../util/general.h"
 
-1521368908 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/GPTHeuristicsDesign.h
+1523168733 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/GPTHeuristicsDesign.h
 	"../include/UMDProblem.h"
 	"../include/UMDState.h"
 	"./ppddl/PPDDLState.h"
@@ -1464,7 +1465,7 @@
 	<set>
 	<tr1/unordered_map>
 
-1514887502 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDState.h
+1523168733 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDState.h
 	"./ppddl/PPDDLState.h"
 
 1452287806 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/grd_non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/exceptions.h
@@ -1550,7 +1551,7 @@
 	"../Problem.h"
 	"Solver.h"
 
-1521369860 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/GPTHeuristicsDesign.cpp
+1523168733 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/GPTHeuristicsDesign.cpp
 	"../include/GPTHeuristicsDesign.h"
 	<assert.h>
 	<limits.h>
@@ -1559,7 +1560,7 @@
 	<iostream>
 	<sstream>
 
-1522310661 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/main .cpp
+1523386496 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/main .cpp
 	<sstream>
 	<iostream>
 	"../include/UMDHeuristic.h"
@@ -1572,18 +1573,18 @@
 	"./ppddl/mini-gpt/states.h"
 	"./ppddl/mini-gpt/exceptions.h"
 
-1519155861 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/PDBHeuristic.h
+1523168733 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/PDBHeuristic.h
 	<../include/UMDHeuristic.h>
 	<../include/ErUmdProblem.h>
 	<map>
 
-1521134275 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/PDBHeuristic.cpp
+1523427639 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/PDBHeuristic.cpp
 	"../include/PDBHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/UmdUtils.h"
 	"./solvers/LAOStarSolver.h"
 
-1521517387 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/UMDHeuristic.cpp
+1523427097 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/UMDHeuristic.cpp
 	"../include/UMDHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/UmdUtils.h"
@@ -1600,7 +1601,7 @@
 	"../include/solvers/Solver.h"
 	"../include/UmdUtils.h"
 
-1521704150 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/SarahHeuristic.h
+1523168733 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/SarahHeuristic.h
 	"../include/State.h"
 	"./Heuristic.h"
 	"./Problem.h"
@@ -1613,4 +1614,372 @@
 
 1521891173 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UMDPPDDLProblem.h
 	"./ppddl/PPDDLProblem.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/PPDDLProblem.h
+	"mini-gpt/problems.h"
+	"mini-gpt/rational.h"
+	"../Problem.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/problems.h
+	"global.h"
+	"actions.h"
+	"domains.h"
+	"effects.h"
+	"formulas.h"
+	"graph.h"
+	"expressions.h"
+	"terms.h"
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/global.h
+	<stdio.h>
+	<string>
+	<memory>
+	<stack>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/actions.h
+	"global.h"
+	"effects.h"
+	"formulas.h"
+	"rational.h"
+	"terms.h"
+	"utils.h"
+	<assert.h>
+	<iostream>
+	<list>
+	<map>
+	<string>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/effects.h
+	"global.h"
+	"terms.h"
+	<assert.h>
+	<iostream>
+	<vector>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/terms.h
+	"global.h"
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_map>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/types.h
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_set>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/formulas.h
+	"global.h"
+	"predicates.h"
+	"terms.h"
+	<iostream>
+	<set>
+	<vector>
+	<list>
+	<tr1/unordered_set>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/predicates.h
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_set>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/rational.h
+	<iostream>
+	<utility>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/utils.h
+	"global.h"
+	<stdlib.h>
+	<assert.h>
+	<iostream>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/domains.h
+	"actions.h"
+	"functions.h"
+	"predicates.h"
+	"terms.h"
+	"types.h"
+	"requirements.h"
+	<iostream>
+	<map>
+	<string>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/functions.h
+	"types.h"
+	<iostream>
+	<map>
+	<string>
+	<vector>
+	<tr1/unordered_set>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/requirements.h
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/graph.h
+	"global.h"
+	"utils.h"
+	<stdlib.h>
+	<limits.h>
+	<assert.h>
+	<iostream>
+	<vector>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/expressions.h
+	"functions.h"
+	"terms.h"
+	"rational.h"
+	<assert.h>
+	<iostream>
+	<set>
+	<tr1/unordered_map>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/Problem.h
+	<list>
+	"State.h"
+	"Action.h"
+	"Heuristic.h"
+	"util/general.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/State.h
+	<iostream>
+	<string>
+	<list>
+	<unordered_set>
+	<unordered_map>
+	"Action.h"
+	"MDPLib.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/Action.h
+	<iostream>
+	<unordered_set>
+	<unordered_map>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/MDPLib.h
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/Heuristic.h
+	"State.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/util/general.h
+	<cstring>
+	<iostream>
+	<unordered_set>
+	<unordered_map>
+	<unistd.h>
+	<chrono>
+	<vector>
+	<thread>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/PPDDLState.h
+	"mini-gpt/states.h"
+	"mini-gpt/atom_states.h"
+	"../State.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/states.h
+	"full_states.h"
+	"atom_states.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/full_states.h
+	"problems.h"
+	"rational.h"
+	<list>
+	<deque>
+	<map>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/atom_states.h
+	"problems.h"
+	"rational.h"
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<list>
+	<deque>
+	<map>
+	"md4.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/md4.h
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/PPDDLHeuristic.h
+	"mini-gpt/heuristics.h"
+	"../Heuristic.h"
+	"../State.h"
+	"PPDDLProblem.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/heuristics.h
+	"actions.h"
+	"global.h"
+	"rational.h"
+	<stdlib.h>
+	<iostream>
+	<queue>
+	<set>
+	<tr1/unordered_map>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/PPDDLAction.h
+	"mini-gpt/states.h"
+	"mini-gpt/actions.h"
+	"mini-gpt/problems.h"
+	"../Action.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/HMinHeuristic.h
+	"../Heuristic.h"
+	"../Problem.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/Solver.h
+	<random>
+	<cassert>
+	<vector>
+	<mutex>
+	"../Heuristic.h"
+	"../Problem.h"
+	"../State.h"
+	"../util/general.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/exceptions.h
+	<iostream>
+	<string>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/ppddl/mini-gpt/queue.h
+	<queue>
+	<set>
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/FLARESSolver.h
+	"../Problem.h"
+	"../Heuristic.h"
+	"Solver.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/LAOStarSolver.h
+	<ctime>
+	"Solver.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/DeterministicSolver.h
+	"../Action.h"
+	"../State.h"
+	"Solver.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/LRTDPSolver.h
+	"../Problem.h"
+	"../Heuristic.h"
+	"Solver.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/reduced/PPDDLTaggedReduction.h
+	<fstream>
+	<iostream>
+	<list>
+	<sstream>
+	<string>
+	<unordered_map>
+	<vector>
+	"../ppddl/PPDDLAction.h"
+	"../State.h"
+	"ReducedTransition.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/reduced/ReducedTransition.h
+	<vector>
+	"../Action.h"
+	"../State.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/reduced/ReducedHeuristicWrapper.h
+	"../Heuristic.h"
+	"../State.h"
+	"ReducedState.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/reduced/ReducedState.h
+	"../State.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/reduced/ReducedModel.h
+	<list>
+	"../domains/WrapperProblem.h"
+	"../solvers/Solver.h"
+	"../Action.h"
+	"../Problem.h"
+	"../State.h"
+	"ReducedHeuristicWrapper.h"
+	"ReducedState.h"
+	"ReducedTransition.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/domains/WrapperProblem.h
+	<cassert>
+	"../Problem.h"
+	"../State.h"
+	"DummyState.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/domains/DummyState.h
+	<list>
+	"../State.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/FFReducedModelSolver.h
+	<ctime>
+	<string>
+	"../ppddl/PPDDLProblem.h"
+	"../ppddl/PPDDLState.h"
+	"../reduced/ReducedModel.h"
+	"../Action.h"
+	"../Problem.h"
+	"Solver.h"
+
+1523705144 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/BAODHeuristic.h
+	"../include/State.h"
+	"./Problem.h"
+	"./ErUmdProblem.h"
+	"./MDPHeuristic.h"
+
+1523706025 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/BAODHeuristic.cpp
+	<list>
+	"../include/BAODHeuristic.h"
+	"../include/solvers/Solver.h"
+	"../include/UmdUtils.h"
+
+1523265741 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/MDPHeuristic.cpp
+	"MDPHeuristic.h"
+
+1523265981 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/MDPHeuristic.h
+	"../include/State.h"
+	"./Heuristic.h"
+
+1523388917 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/ZeroHeuristic.h
+	"../include/State.h"
+	"./MDPHeuristic.h"
+
+1523388919 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/ZeroHeuristic.cpp
+	"ZeroHeuristic.h"
+
+1523426073 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/UCTHeuristic.cpp
+	"../include/UCTHeuristic.h"
+	"./solvers/UCTSolver.h"
+
+1523425399 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UCTHeuristic.h
+	"../include/State.h"
+	"./Problem.h"
+	"./ErUmdProblem.h"
+	"./MDPHeuristic.h"
+
+1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/UCTSolver.h
+	<unordered_map>
+	"../Action.h"
+	"../Problem.h"
+	"../State.h"
+	"Solver.h"
+
+1523705536 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/HminminHeuristic.cpp
+	<list>
+	"../include/HminminHeuristic.h"
+	"../include/solvers/Solver.h"
+	"../include/UmdUtils.h"
+
+1523705478 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/HminminHeuristic.h
+	"../include/State.h"
+	"./Problem.h"
+	"./ErUmdProblem.h"
+	"./MDPHeuristic.h"
 

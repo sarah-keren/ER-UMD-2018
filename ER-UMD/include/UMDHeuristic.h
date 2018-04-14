@@ -45,6 +45,12 @@ class UmdHeuristic : public mlcore::Heuristic
 
         mlcore::Heuristic* get_executionHeuristic_(){return executionHeuristic_;}
 
+        mlcore::Heuristic* get_designHeuristic_(){return this->designHeuristic_;}
+
+        int get_expandedStateCounter(){return this->expandedStateCounter;}
+        int get_examinedStateCounter(){return this->examinedStateCounter;}
+
+
     protected:
 
         /** The ppddl problem to be solved*/
@@ -62,6 +68,10 @@ class UmdHeuristic : public mlcore::Heuristic
 
         /** Determine if the state belongs to the design stage */
         bool isDesign(const mlcore::State* s);
+
+        int expandedStateCounter = 0;
+        int examinedStateCounter = 0;
+
 
 
     private:

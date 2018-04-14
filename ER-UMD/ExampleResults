@@ -1,0 +1,426 @@
+prob:: p1-3-design-tire
+-  -  -  -  -  -  -  -  -
+
+Command type:: rel-env
+Expanded nodes:: Execution:65124 Design: 1741 Total: 66865
+UMD heuristic Examined nodes:: 1741 Expanded nodes:: 1741
+Total time:: 5.42791
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:65124 Design: 1741 Total: 66865
+UMD heuristic Examined nodes:: 1741 Expanded nodes:: 1741
+Total time:: 4.00049
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:65124 Design: 1741 Total: 66865
+UMD heuristic Examined nodes:: 1741 Expanded nodes:: 1741
+Total time:: 5.99835
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:65124 Design: 37 Total: 65161
+UMD heuristic Examined nodes:: 1741 Expanded nodes:: 37
+Total time:: 4.29645
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:65124 Design: 37 Total: 65161
+UMD heuristic Examined nodes:: 1741 Expanded nodes:: 37
+Total time:: 3.28499
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 24666
+Total time:: 2.35907
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:65124 Design: 1741 Total: 66865
+UMD heuristic Examined nodes:: 1741 Expanded nodes:: 1741
+Total time:: 2.83397
+-------------------------------------------------------------------------------------
+
+prob:: p2-1-design-vacuum
+
+Command type:: rel-env
+Expanded nodes:: Execution:74 Design: 20 Total: 94
+UMD heuristic Examined nodes:: 20 Expanded nodes:: 20
+Total time:: 0.140241
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:107 Design: 23 Total: 130
+UMD heuristic Examined nodes:: 23 Expanded nodes:: 23
+Total time:: 0.23917
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:107 Design: 23 Total: 130
+UMD heuristic Examined nodes:: 23 Expanded nodes:: 23
+Total time:: 0.280579
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:107 Design: 4 Total: 111
+UMD heuristic Examined nodes:: 23 Expanded nodes:: 4
+Total time:: 0.206778
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:107 Design: 4 Total: 111
+UMD heuristic Examined nodes:: 23 Expanded nodes:: 4
+Total time:: 0.224242
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 108
+Total time:: 0.082137
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:149 Design: 26 Total: 175
+UMD heuristic Examined nodes:: 26 Expanded nodes:: 26
+Total time:: 0.315799
+*****************************************************
+
+prob:: p2-2-design
+
+Command type:: rel-env
+Expanded nodes:: Execution:74 Design: 52 Total: 126
+UMD heuristic Examined nodes:: 52 Expanded nodes:: 52
+Total time:: 0.349584
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:107 Design: 103 Total: 210
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 103
+Total time:: 0.463328
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:107 Design: 103 Total: 210
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 103
+Total time:: 0.928751
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:107 Design: 9 Total: 116
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 9
+Total time:: 0.24138
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:107 Design: 9 Total: 116
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 9
+Total time:: 0.260013
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 172
+Total time:: 0.196652
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:857 Design: 183 Total: 1040
+UMD heuristic Examined nodes:: 183 Expanded nodes:: 183
+Total time:: 1.41727
+*****************************************************
+
+
+prob:: p2-3-design
+
+Command type:: rel-env
+Expanded nodes:: Execution:74 Design: 52 Total: 126
+UMD heuristic Examined nodes:: 52 Expanded nodes:: 52
+Total time:: 0.777289
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:107 Design: 103 Total: 210
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 103
+Total time:: 0.869677
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:107 Design: 103 Total: 210
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 103
+Total time:: 1.80562
+*****************************************************
+Command type:: rel-proc
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:107 Design: 9 Total: 116
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 9
+Total time:: 0.262689
+*****************************************************
+Command type:: rel-combined-proc
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:107 Design: 9 Total: 116
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 9
+Total time:: 0.339907
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 172
+Total time:: 0.621188
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:2812 Design: 711 Total: 3523
+UMD heuristic Examined nodes:: 711 Expanded nodes:: 711
+Total time:: 4.81933
+*****************************************************
+
+prob:: p2-4-design
+
+Command type:: rel-env
+Expanded nodes:: Execution:74 Design: 52 Total: 126
+UMD heuristic Examined nodes:: 52 Expanded nodes:: 52
+Total time:: 1.66944
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:107 Design: 103 Total: 210
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 103
+Total time:: 1.74218
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:107 Design: 103 Total: 210
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 103
+Total time:: 2.92686
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:107 Design: 9 Total: 116
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 9
+Total time:: 0.363313
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:107 Design: 9 Total: 116
+UMD heuristic Examined nodes:: 103 Expanded nodes:: 9
+Total time:: 0.670916
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 172
+Total time:: 1.83262
+*****************************************************
+Command type:: bfs_design
+Heuristic_name:: BAOD-heur
+UMD heuristic Examined nodes:: 1834 Expanded nodes:: 1834
+Total time:: 14.7395
+*****************************************************
+
+
+
+
+prob:: p1-1-design -blocks
+
+Command type:: rel-env
+Expanded nodes:: Execution:2507 Design: 95 Total: 2602
+UMD heuristic Examined nodes:: 95 Expanded nodes:: 95
+Total time:: 1.14534
+*****************************************************
+Command type:: rel-mod
+UMD heuristic Examined nodes:: 95 Expanded nodes:: 95
+Total time:: 0.854658
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:2507 Design: 95 Total: 2602
+UMD heuristic Examined nodes:: 95 Expanded nodes:: 95
+Total time:: 1.08431
+*****************************************************
+Command type:: rel-proc
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:2507 Design: 7 Total: 2514
+UMD heuristic Examined nodes:: 95 Expanded nodes:: 7
+Total time:: 0.583226
+*****************************************************
+Command type:: rel-combined-proc
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:2507 Design: 7 Total: 2514
+UMD heuristic Examined nodes:: 95 Expanded nodes:: 7
+Total time:: 0.635926
+*****************************************************
+Command type:: compilation
+Heuristic_name:: BAOD-heur
+Expected cost:: 4.41687
+Expanded nodes:: 1438
+Total time:: 0.448628
+*****************************************************
+Command type:: bfs_design
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:2507 Design: 95 Total: 2602
+UMD heuristic Examined nodes:: 95 Expanded nodes:: 95
+Total time:: 0.617081
+*****************************************************
+
+
+prob:: p1-2-design
+
+Command type:: rel-env
+Expanded nodes:: Execution:39178 Design: 2483 Total: 41661
+UMD heuristic Examined nodes:: 2483 Expanded nodes:: 2483
+Total time:: 35.4781
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:39178 Design: 2483 Total: 41661
+UMD heuristic Examined nodes:: 2483 Expanded nodes:: 2483
+Total time:: 21.8403
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:39178 Design: 2483 Total: 41661
+UMD heuristic Examined nodes:: 2483 Expanded nodes:: 2483
+Total time:: 34.9627
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:39178 Design: 25 Total: 39203
+UMD heuristic Examined nodes:: 2483 Expanded nodes:: 25
+Total time:: 13.1482
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:39178 Design: 25 Total: 39203
+UMD heuristic Examined nodes:: 2483 Expanded nodes:: 25
+Total time:: 9.80087
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 22003
+Heuristic approach:: compilation
+Solver heuristic:: BAOD-heur
+Total time:: 15.557
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:39178 Design: 2483 Total: 41661
+UMD heuristic Examined nodes:: 2483 Expanded nodes:: 2483
+Total time:: 10.5635
+
+
+
+ex-blocksworld
+
+prob:: p2-1-design
+
+Command type:: rel-env
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 35.6369
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 3.44205
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 36.6459
+*****************************************************
+Command type:: rel-proc
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 1.31363
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 4.62371
+*****************************************************
+Command type:: compilation
+Heuristic_name:: BAOD-heur
+Expanded nodes:: 441
+Total time:: 2.25105
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:5435 Design: 65 Total: 5500
+UMD heuristic Examined nodes:: 65 Expanded nodes:: 65
+Total time:: 25.4168
+*****************************************************
+
+
+p2-2-design
+
+Command type:: rel-env
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 182.422
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 13.8426
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 216.569
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 2.52284
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 25.6936
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 441
+Total time:: 18.9591
+*****************************************************
+Command type:: bfs_design
+Expanded nodes:: Execution:56863 Design: 1158 Total: 58021
+UMD heuristic Examined nodes:: 1158 Expanded nodes:: 1158
+Total time:: 362.506
+*****************************************************
+Command type:: rel-env
+Heuristic_name:: BAOD-heur
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 411.305
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 50.2091
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 478.512
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 6.39179
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 69.2332
+*****************************************************
+Command type:: compilation
+Expanded nodes:: 441
+Total time:: 94.1709
+*****************************************************
+Command type:: bfs_design
+Heuristic_name:: BAOD-heur
+Total time:: Time-out
+*****************************************************
+
+
+prob:: p2-4-design
+
+
+
+Command type:: rel-env
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 605.468
+*****************************************************
+Command type:: rel-mod
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 113.779
+*****************************************************
+Command type:: rel-combined
+Expanded nodes:: Execution:250 Design: 44 Total: 294
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 44
+Total time:: 675.679
+*****************************************************
+Command type:: rel-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 16.2662
+*****************************************************
+Command type:: rel-combined-proc
+Expanded nodes:: Execution:250 Design: 9 Total: 259
+UMD heuristic Examined nodes:: 44 Expanded nodes:: 9
+Total time:: 114.594
+*****************************************************
+Command type:: compilation
+Heuristic approach:: compilation
+Total time:: 273.908
+*****************************************************
+Command type:: bfs_design
+Heuristic_name:: BAOD-heur
+Total time:: Time-out
+*****************************************************
+

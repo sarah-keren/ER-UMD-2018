@@ -71,6 +71,8 @@ bool UmdHeuristic::isDesign(const mlcore::State* s)
 double UmdHeuristic::cost(const mlcore::State* s)
 {
 
+
+
     //std::cout<<"---------------------------------------------------------------------------------- "<<std::endl;
     //std::cout<<"UmdHeuristic::cost with state :"<< (mlppddl::PPDDLState*)s<<std::endl;
 
@@ -78,6 +80,10 @@ double UmdHeuristic::cost(const mlcore::State* s)
     //if a design heuristic is defined - apply it for design states
     if((this->designHeuristic_)&&(isDesign(s)))
     {
+
+        expandedStateCounter+=1;
+        examinedStateCounter+=1;
+
 
         unsigned long begTime = clock();
         design_state_count +=1;

@@ -112,9 +112,8 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
         return umdHeuristic;
     }//if
 
-    // we are here only with relaxed design so we get the relaxed file according to the command
+    // we are here only with BFD so we get the relaxed file according to the command
     std::string heuristic_name = argv[5];
-
     exeHeuristic = umdutils::getHeuristic(heuristic_name,umdProblem->getPPDDLProblem());
     std::string file = argv[1];
     std::string problem_name = argv[2];
@@ -129,13 +128,10 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
         exit(0);
         return  NULL;
     }//if
-
-
     simplifiedProblem = new mlppddl::PPDDLProblem(simplified_problem);
 
     // get the suitable design heuristic
     desHeuristic = umdutils::getHeuristic(heuristic_name,simplifiedProblem);
-
     if((command_type.find(umddefs::relaxed_design_process) != std::string::npos)|| (command_type.find(umddefs::relaxed_combined_design_process) != std::string::npos))
     {
         umdHeuristic  = new umd::PDBHeuristic (umdProblem->getPPDDLProblem(), simplifiedProblem, desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
@@ -229,12 +225,13 @@ int perform_testing (int argc, char **argv)
         // solve the problem
         umdProblem->solve(umdHeur,true,command_type);
 
-
         //log results
         cout<<"Heuristic approach:: "<< argv[4] <<endl;
         cout<<"Solver heuristic:: "<< argv[5] <<endl;
         seconds_elapsed =  ((unsigned long) clock() - begTime)/(CLOCKS_PER_SEC/1.0);
         cout<<"Total time:: "<<seconds_elapsed<<endl;
+
+
         //cout<<umddefs::deliminator<<seconds_elapsed<<endl;
         //umdutils::print_policy(umdProblem);
 

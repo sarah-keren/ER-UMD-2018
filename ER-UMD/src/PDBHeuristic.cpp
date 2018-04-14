@@ -56,7 +56,7 @@ double PDBHeuristic::get_dominating_modification_cost(const mlcore::State*  s)
         //std::cout << "value not found in the hash - computing value" <<std::endl;
         mlcore::State* abstract_state =  umdutils::get_abstract_state((mlppddl::PPDDLState*)s,umdutils::get_abstraction_type(this->domainName_));
         cost = this->designHeuristic_->cost(s);
-
+        expandedStateCounter += 1;
         this->mapOfValues->insert({abstraction_key,cost});
 
      }
@@ -98,14 +98,14 @@ double PDBHeuristic::cost(const mlcore::State* s)
 {
 
     state_count +=1;
-
-     //std::cout<<"in pdb cost"<<std::endl;
+    //std::cout<<"in pdb cost"<<std::endl;
 
     unsigned long begTime = clock();
 
 
     if (isDesign(s))
     {
+            examinedStateCounter +=1;
             double cur_cost = get_dominating_modification_cost(s);
             design_state_count +=1;
             //double hcost = this->designHeuristic_->cost(s);
@@ -114,7 +114,7 @@ double PDBHeuristic::cost(const mlcore::State* s)
             return cur_cost;
     }
 
-    return 0;
+    return 0.0;
     /*
     execution_state_count +=1;
     //std::cout<<"\nUsing the exe hueristic cost: "<< this->executionHeuristic_->cost(s)<<std::endl;
