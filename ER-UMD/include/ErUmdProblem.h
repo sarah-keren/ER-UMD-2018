@@ -9,6 +9,8 @@
 
 namespace umd
 {
+
+
 /*
 A class represening a Equi-Reward Utility Maximizing problem as decribed in "Equi-Reward Utility Maximizing Design in Stochastic Environments
 Sarah Keren, Luis Pineda, Avigdor Gal, Erez Karpas, Shlomo Zilberstein" IJCAI-17
@@ -46,12 +48,20 @@ class ErUmdProblem : public mlppddl::PPDDLProblem
         virtual double cost(mlcore::State* s, mlcore::Action* a) const;
 
 
+        int m_totalExpandedLAO = 0;
+        int m_iteration_counterLAO =0;
+
+
+        int m_totalVisitedFLARES = 0;
+
+
 
 
     protected:
        mlppddl::PPDDLProblem* ppddlProblem_;
        std::string domainName_;
        std::string solverName;
+
     private:
         std::string fileName_;
         std::string problemName_;

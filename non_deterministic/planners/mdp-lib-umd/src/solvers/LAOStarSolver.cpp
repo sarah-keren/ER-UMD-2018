@@ -13,19 +13,17 @@ mlcore::Action* LAOStarSolver::solve(mlcore::State* s0)
 
     //std::cout<<"In LAOStarSolver::solve(mlcore::State* s0)"<<std::endl;
     clock_t startTime = clock();
-    int totalExpanded = 0;
-    this->m_totalExpanded = totalExpanded;
-    int countExpanded = 0;
     double error = mdplib::dead_end_cost;
-    int iteration_counter =0;
+    int countExpanded;
     while (true) {
         do {
-            iteration_counter+=1;
+
             visited.clear();
             countExpanded = expand(s0);
-            totalExpanded += countExpanded;
-            this->m_totalExpanded = totalExpanded;
-            this->m_iteration_counter = iteration_counter;
+
+            this->m_totalExpanded += countExpanded;
+            this->m_iteration_counter+=1;
+
             //std::cout<<" Expanded:"<< this->m_totalExpanded<<std::endl;
             //std::cout<<" iteration_counter:"<< iteration_counter<<std::endl;
 

@@ -9,7 +9,7 @@
 namespace mlsolvers
 {
 
-
+static int COUNTER_VISITED = 0;
 /**
  * A SSP solver using the FLARES algorithm.
  */
@@ -72,6 +72,7 @@ public:
     virtual mlcore::Action* solve(mlcore::State* s0);
 
     void cleanup() { depthSolved_.clear(); }
+
 };
 
 }

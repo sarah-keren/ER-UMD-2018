@@ -59,22 +59,22 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
     if((command_type.find(umddefs::compilation) != std::string::npos)|| (command_type.find(umddefs::original) != std::string::npos))
     {
 
-
+        int iExpandedNodesExecution = -1;
         if (solverName.find(umddefs::solverLAO) != std::string::npos) {
             // TODO: change this if(true) to an appropriate option
             //SOLVE
             this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
             mlsolvers::LAOStarSolver solver(this->ppddlProblem_);
             solver.solve(this->ppddlProblem_->initialState());
-
             //ANALYZE
             double cost = this->ppddlProblem_->initialState()->cost();
             std::cout << "Initial state:: "<<this->ppddlProblem_->initialState()<<std::endl;
             std::cout<< "Expected cost:: "<< this->ppddlProblem_->initialState()->cost()<<std::endl;
             //umdutils::print_policy_pddl(this->ppddlProblem_);
             std::cout << "Best action:: "<< this->ppddlProblem_->initialState()->bestAction() << std::endl;
-            int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
-            std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<std::endl;
+            iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
+            std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<"  Total Expanded nodes algorithm:: " << solver.m_totalExpanded << " Iteration coutner:: "<< solver.m_iteration_counter<<std::endl;
+
 
             return;
         } else {
@@ -85,12 +85,15 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
                 solver.solve(this->ppddlProblem_->initialState());
 
+
                 // ANALYZE
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
+                std::cout << "Expanded nodes:: " << m_totalVisitedFLARES <<std::endl;
+
                 double expectedCost = 0.0;
                 double expectedTime = 0.0;
                 std::vector<double> simCosts;
-                int numSims = 100;
+                int numSims = umddefs::flares_sims;
                 for (int sim = 0; sim < numSims; sim++) {
                     double cost = 0.0;
                     double planningTime = 0.0;
@@ -135,9 +138,9 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 }
                 stderr /= (numSims - 1);
                 stderr = sqrt(stderr / numSims);
-                std::cout << std::endl << "ExpectedCost:: " << expectedCost / numSims << " +/- " << stderr << std::endl;
+                std::cout << "ExpectedCost:: " << expectedCost / numSims << " +/- " << stderr << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
-                int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
+                iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
                 std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<std::endl;
 
                 }//if sub optimal
@@ -166,17 +169,13 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
         int iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_designHeuristic_())->get_counter();
 
         std::cout << "Expanded nodes:: Execution:" << iExpandedNodesExecution << " Design: " << iExpandedNodesDesign<< " Total: " << iExpandedNodesDesign+iExpandedNodesExecution<<std::endl;
-
-
-        std::cout << "UMD heuristic Examined nodes:: " << umdHeur->get_examinedStateCounter() << " Expanded nodes:: " << umdHeur->get_expandedStateCounter() <<std::endl;
-
-
-
-
+        std::cout << "UMD heuristic:: Examined nodes:: " << umdHeur->get_examinedStateCounter() << " Expanded nodes:: " << umdHeur->get_expandedStateCounter() <<std::endl;
 
         return;
     }
 
+
+    //std::cout<<mlsolvers::FLARESSolver::COUNTER_VISITED;
 
 }
 
@@ -252,18 +251,18 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
             return cost;
         } else {
             if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
-                mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
+                mlsolvers::FLARESSolver solver(this->ppddlProblem_, umddefs::flares_sims, 1.0e-3, 0);
                 unsigned long startTime = clock();
-                solver.solve(s0);
+                solver.solve(s);
                 unsigned long endTime = clock();
                 double planTime = (double(endTime - startTime) / CLOCKS_PER_SEC);
-                return s0->cost();
+                return s->cost();
             }
             else
             {
 
                 std::cout<< "Error in ErUmdProblem::cost - solver " <<solverName << "not supported" <<std::endl;
-                throw Exception( "Error in ErUmdProblem::cost - solver not supported");
+                throw Exception( "Error in ErUmdProblsem::cost - solver not supported");
 
 
             }

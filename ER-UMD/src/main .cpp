@@ -62,14 +62,14 @@ static bool read_file( const char* name )
 
 bool parse_problem ( std::string file, std::string prob)
 {
-    std::cout<< "parse_problem " << file.c_str()<< ":"<< prob<<std::endl;
+    //std::cout<< "parse_problem " << file.c_str()<< ":"<< prob<<std::endl;
 
     if( !read_file( file.c_str() ) ) {
         std::cout <<
             "<main>: ERROR: couldn't read problem file `" << file << std::endl;
         return false;
     }
-    std::cout<< "read_file " << file<< ":"<<std::endl;
+    //std::cout<< "read_file " << file<< ":"<<std::endl;
     return true;
 
 }//parse_problem
@@ -118,7 +118,7 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
     std::string file = argv[1];
     std::string problem_name = argv[2];
     std::string relaxed_prob = umdutils::get_relaxed_problem_name(file,problem_name,command_type);
-    std::cout<<"The relaxed problem:: " << relaxed_prob.c_str()<<"\n";
+    std::cout<<"Relaxed problem:: " << relaxed_prob.c_str()<<"\n";
 
     //create a simplified problem
     problem_t * simplified_problem =  (problem_t*) problem_t::find( relaxed_prob.c_str() );
@@ -173,8 +173,8 @@ int perform_testing (int argc, char **argv)
         //Parse ppddl problem using mgpt parser
 
         std::cout<< "File:: " << file << std::endl;
-        std::cout<< "prob:: " << prob << std::endl;
-        std::cout<< "Solver name:: " << solverName << std::endl;
+        std::cout<< "Problem:: " << prob << std::endl;
+        std::cout<< "Solver :: " << solverName << std::endl;
 
         //parse the ppddle file (all problems are witihn the class problem_t)
         if(!parse_problem(file,prob))
@@ -191,14 +191,14 @@ int perform_testing (int argc, char **argv)
             "' is not defined in file '" << file << "'" << std::endl;
             return NULL;
         }
-        std::cout<< "found problem  " << prob.c_str()<<std::endl;
+        //std::cout<< "found problem  " << prob.c_str()<<std::endl;
 
 
         //std::cout<<"Problem:: " << problem->name()<< "\nDomain::  "<< problem->domain().name();
 
         //ge the mdp to be used at the tip nodes
         std:string prob_tip = prob+umddefs::TIP;
-        std::cout<<"Serching for problem " << prob_tip<<std::endl;
+        //std::cout<<"Serching for problem " << prob_tip<<std::endl;
         problem_t * problem_tip_nodes =  (problem_t*) problem_t::find( prob_tip.c_str() );
         if(!problem_tip_nodes)
         {
@@ -209,11 +209,10 @@ int perform_testing (int argc, char **argv)
 
         //create erumd problem
         umd::ErUmdProblem* umdProblem = new umd::ErUmdProblem(problem,problem_tip_nodes,solverName);
-        std::cout<<"generated umdproblem\n";
 
         //get analysis type
         std::string command_type = argv[4];
-        std::cout<<"\nCommand type:: " << command_type <<std::endl;
+        std::cout<<"Command type:: " << command_type <<std::endl;
         std::string heuristic_name = argv[5];
         std::cout<<"Heuristic_name:: " << heuristic_name <<std::endl;
 
@@ -225,11 +224,18 @@ int perform_testing (int argc, char **argv)
         // solve the problem
         umdProblem->solve(umdHeur,true,command_type);
 
+
+
+
+
+
         //log results
-        cout<<"Heuristic approach:: "<< argv[4] <<endl;
-        cout<<"Solver heuristic:: "<< argv[5] <<endl;
+        //cout<<"Heuristic approach:: "<< argv[4] <<endl;
+        //cout<<"Solver heuristic:: "<< argv[5] <<endl;
         seconds_elapsed =  ((unsigned long) clock() - begTime)/(CLOCKS_PER_SEC/1.0);
         cout<<"Total time:: "<<seconds_elapsed<<endl;
+
+
 
 
         //cout<<umddefs::deliminator<<seconds_elapsed<<endl;

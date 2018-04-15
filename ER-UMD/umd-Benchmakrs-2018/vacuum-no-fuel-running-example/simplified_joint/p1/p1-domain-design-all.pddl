@@ -465,15 +465,15 @@
 
 (define (problem p1)
                    (:domain vacuum-no-fuel)
-                   (:objects x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+                   (:objects x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init 
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -501,15 +501,15 @@
 
 (define (problem p1)
                    (:domain vacuum-no-fuel)
-                   (:objects x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+                   (:objects x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init 
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -538,16 +538,16 @@
 (define (problem p1-0-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -576,16 +576,16 @@
 (define (problem p1-0-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -614,16 +614,16 @@
 (define (problem p1-0-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -652,16 +652,16 @@
 (define (problem p1-0-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -690,16 +690,16 @@
 (define (problem p1-0-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -728,16 +728,16 @@
 (define (problem p1-1-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -766,16 +766,16 @@
 (define (problem p1-1-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 t2 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -804,16 +804,16 @@
 (define (problem p1-1-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 t2 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -842,16 +842,16 @@
 (define (problem p1-1-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 t2 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -880,16 +880,16 @@
 (define (problem p1-1-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -918,16 +918,16 @@
 (define (problem p1-2-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -956,16 +956,16 @@
 (define (problem p1-2-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 t2 t3 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -994,16 +994,16 @@
 (define (problem p1-2-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 t2 t3 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1032,16 +1032,16 @@
 (define (problem p1-2-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 t2 t3 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1070,16 +1070,16 @@
 (define (problem p1-2-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1108,16 +1108,16 @@
 (define (problem p1-3-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1146,16 +1146,16 @@
 (define (problem p1-3-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 t2 t3 t4 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1184,16 +1184,16 @@
 (define (problem p1-3-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 t2 t3 t4 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1222,16 +1222,16 @@
 (define (problem p1-3-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 t2 t3 t4 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1260,16 +1260,16 @@
 (define (problem p1-3-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1298,16 +1298,16 @@
 (define (problem p1-4-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1336,16 +1336,16 @@
 (define (problem p1-4-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 t2 t3 t4 t5 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1374,16 +1374,16 @@
 (define (problem p1-4-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 t2 t3 t4 t5 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1412,16 +1412,16 @@
 (define (problem p1-4-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 t2 t3 t4 t5 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1450,16 +1450,16 @@
 (define (problem p1-4-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1488,16 +1488,16 @@
 (define (problem p1-5-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1526,16 +1526,16 @@
 (define (problem p1-5-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 t2 t3 t4 t5 t6 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1564,16 +1564,16 @@
 (define (problem p1-5-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 t2 t3 t4 t5 t6 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1602,16 +1602,16 @@
 (define (problem p1-5-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 t2 t3 t4 t5 t6 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1640,16 +1640,16 @@
 (define (problem p1-5-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1678,16 +1678,16 @@
 (define (problem p1-6-design)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1716,16 +1716,16 @@
 (define (problem p1-6-design-relaxed)
                    (:domain vacuum-no-fuel-design-relaxed)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1754,16 +1754,16 @@
 (define (problem p1-6-design-over)
                    (:domain vacuum-no-fuel-design-over)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1792,16 +1792,16 @@
 (define (problem p1-6-design-over-relaxed)
                    (:domain vacuum-no-fuel-design-over-relaxed)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)
@@ -1830,16 +1830,16 @@
 (define (problem p1-6-design-tip)
                    (:domain vacuum-no-fuel-design)
                    (:objects t1 t2 t3 t4 t5 t6 t7 - time
- x1 x2 x3 x4 x5 x6 y1 y2 y3 y4 - location 
+ x1 x2 x3 x4 x5 y1 y2 y3 y4 - location 
 		              d1 - dirt)
 (:init (current-time t1)(next t1 t2)(next t2 t3)(next t3 t4)(next t4 t5)(next t5 t6)(next t6 t7)
  
-(prox x6 x5)(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
-(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)(prox x5 x6)
+(prox x5 x4)(prox x4 x3)(prox x3 x2)(prox x2 x1)
+(prox x1 x2)(prox x2 x3)(prox x3 x4)(prox x4 x5)
 (prox y1 y2)(prox y2 y3)(prox y3 y4)
 (prox y4 y3)(prox y3 y2)(prox y2 y1)
 
-(robot-at x1 y1)
+(robot-at x3 y1)
 
 (occupied x1 y2)
 (occupied x1 y3)

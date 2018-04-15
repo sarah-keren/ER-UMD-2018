@@ -15,11 +15,10 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
     allNodes.push_back(init);
     Node* final = nullptr;
     Node* node = nullptr;
-    int iteration_counter = 0;
     while (!frontier.empty()) {
 
         /*TODO: SARAH delete*/
-        iteration_counter += 1;
+        this->iteration_counter += 1;
 
         /*
         std::cout << " \n the queue in deterministic solver:\n";
@@ -109,7 +108,7 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
         cur_node = cur_node->parent();
     }
     //std::cout<<"cur_node: "<<cur_node->state()<<std::endl;
-    std::cout<<"Optimal action: " <<optimal<<std::endl;
+    std::cout<<"Optimal action:: " <<optimal<<std::endl;
 
     for (Node* node : allNodes) {
         node->state()->clearBits(mdplib::VISITED_ASTAR);

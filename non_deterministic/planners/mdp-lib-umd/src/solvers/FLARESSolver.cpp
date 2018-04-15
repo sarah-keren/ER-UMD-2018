@@ -31,6 +31,7 @@ void FLARESSolver::trial(State* s)
             break;
 
         visited.push_front(currentState);
+        COUNTER_VISITED+=1;
         depth++;
                                                                                 double res = residual(problem_, currentState);
         bellmanUpdate(problem_, currentState);

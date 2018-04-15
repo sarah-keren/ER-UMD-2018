@@ -38,13 +38,6 @@ namespace umddefs
 
   // the general huuristics used
   const std::string zeroHeuristic ("zero-heur");
-  const std::string zeroPlusHeuristic ("zero-plus-heur");
-  const std::string minminIDAHeuristic ("mm-ida");
-  const std::string hminFalseHeuristic ("hmin-heur-false");
-  const std::string FFHeuristic ("FF");
-  const std::string atomMin1ForwardHeuristic ("AM1F");
-  const std::string atomMinMForwardHeuristic ("AMMF");
-  const std::string atomMinMBackwardHeuristic ("AMMB");
   const std::string baodHeuristic ("BAOD-heur");
   const std::string hminminHeuristic ("hmin-heur");
 
@@ -56,6 +49,8 @@ namespace umddefs
   const std::string solverFLARES ("FLARES");
   const int lrtdp_trials = 5000 ;
   const double lrtdp_epsilon = 0.0001 ;
+  const int flares_sims = 100 ;
+
 
 
 

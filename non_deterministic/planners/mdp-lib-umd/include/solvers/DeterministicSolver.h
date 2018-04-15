@@ -60,6 +60,8 @@ public:
      * @param s0 The state to start the search at.
      */
     virtual mlcore::Action* solve(mlcore::State* s0);
+
+    int iteration_counter = 0;
 };
 
 /**

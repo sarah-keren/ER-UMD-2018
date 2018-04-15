@@ -1,5 +1,8 @@
 #include "MDPHeuristic.h"
 
+//namespace umd
+//{
+
 MDPHeuristic::MDPHeuristic()
 {
     state_counter = 0;
@@ -10,3 +13,8 @@ MDPHeuristic::~MDPHeuristic()
 {
     //dtor
 }
+//}
+
+
+
+

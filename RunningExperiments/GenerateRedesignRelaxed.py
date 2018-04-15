@@ -174,11 +174,9 @@ def generate_problems(domains_folder_name, problems_folder_name, destination_fol
 if __name__ == '__main__' :
 
     domain_names = []
-    #domain_names.append('vacuum-no-fuel-test')
-    #domain_names.append('vacuum-no-fuel')
-    #domain_names.append('triangle-tireworld')
-    #domain_names.append('triangle-tireworld-test')
-    #domain_names.append('vacuum-no-fuel-running-example')
+    domain_names.append('vacuum-no-fuel')
+    domain_names.append('triangle-tireworld')
+    domain_names.append('vacuum-no-fuel-running-example')
     domain_names.append('ex-blocksworld')
     domain_names.append('boxworld')
     domain_names.append('blocksworld')

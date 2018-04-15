@@ -83,7 +83,7 @@ public:
 
     HminminHeuristic(mlcore::Problem* problem_, int iteration_limit, bool solveAll=false);
 
-    virtual ~HminminHeuristic() { }
+    virtual ~HminminHeuristic() { print_cost_array();}
 
     void reset()
     {

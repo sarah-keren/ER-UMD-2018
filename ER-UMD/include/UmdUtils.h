@@ -658,61 +658,25 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
             {heuristic = new umd::ZeroHeuristic();}
         else
         {
-            if(heuristic_name.find(umddefs::zeroPlusHeuristic)!= std::string::npos)
-                {heuristic = new umd_heuristics::design_zeroPlusHeuristic_t(*umdProblem->pProblem());}
 
-            else
-            {
 
-                    if(heuristic_name.find(umddefs::FFHeuristic)!= std::string::npos)
-                    {heuristic = new mlppddl::PPDDLHeuristic(umdProblem, mlppddl::FF);}
+                if(heuristic_name.find(umddefs::baodHeuristic)!= std::string::npos)
+                {
+                    heuristic =  new umd::BAODHeuristic(umdProblem,true,umddefs::ITERATION_LIMIT);
+                }
+                else
+                {
+                    if(heuristic_name.find(umddefs::hminminHeuristic)!= std::string::npos)
+                    {
+                        heuristic =  new umd::HminminHeuristic(umdProblem,umddefs::ITERATION_LIMIT);
+                    }
 
-                        else
-                        {
-                            if(heuristic_name.find(umddefs::atomMinMForwardHeuristic)!= std::string::npos)
-                            {heuristic = new umd_heuristics::design_atomMinMForwardHeuristic_t(*umdProblem->pProblem(),2);
+                    else
+                    {
+                        throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );}
+                    }
+            }
 
-                            //heuristic = new mlppddl::PPDDLHeuristic(umdProblem, mlppddl::atomMinMForward,2);
-                            }
-                            else
-                            {
-                                if(heuristic_name.find(umddefs::atomMinMBackwardHeuristic)!= std::string::npos)
-                                {heuristic = new mlppddl::PPDDLHeuristic(umdProblem, mlppddl::atomMinMBackward,2);}
-                                else
-                                {
-                                    if(heuristic_name.find(umddefs::atomMin1ForwardHeuristic)!= std::string::npos)
-                                    //{heuristic = new mlppddl::PPDDLHeuristic(umdProblem, mlppddl::atomMin1Forward);}
-                                    {heuristic = new umd_heuristics::design_atomMin1ForwardHeuristic_t(*umdProblem->pProblem());}
-                                    else
-                                    {
-                                        if(heuristic_name.find(umddefs::minminIDAHeuristic)!= std::string::npos)
-                                        {
-
-                                            umd_heuristics::design_zeroHeuristic_t* zeroHeur = new umd_heuristics::design_zeroHeuristic_t(*umdProblem->pProblem());
-
-                                            heuristic = new umd_heuristics::design_minMinIDAHeuristic_t(*umdProblem->pProblem(),*zeroHeur,true);
-                                        }
-
-                                        else
-                                        {
-
-                                        if(heuristic_name.find(umddefs::baodHeuristic)!= std::string::npos)
-                                        {
-                                            heuristic =  new umd::BAODHeuristic(umdProblem,true,umddefs::ITERATION_LIMIT);
-                                        }
-                                        else
-                                        {
-                                            if(heuristic_name.find(umddefs::hminminHeuristic)!= std::string::npos)
-                                            {
-                                                heuristic =  new umd::HminminHeuristic(umdProblem,umddefs::ITERATION_LIMIT);
-                                            }
-
-                                            else
-                                            {
-                                                throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );}
-                                            }
-                                        }
-                    }}}}}}//else
 
         seconds_elapsed =  ((unsigned long) clock() - begTime);
         return heuristic;

@@ -15,6 +15,7 @@ class ZeroHeuristic : public MDPHeuristic
             update_counter();
             return 0.0;
             };
+
     protected:
     private:
 };

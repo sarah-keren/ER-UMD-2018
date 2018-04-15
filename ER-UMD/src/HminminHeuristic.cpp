@@ -11,7 +11,6 @@ namespace umd
 {
 
 
-
 HminminHeuristic::HminminHeuristic(mlcore::Problem* problem, int iteration_limit,bool solveAll):MDPHeuristic()
 {
 
@@ -44,6 +43,9 @@ HminminHeuristic::HminminHeuristic(mlcore::Problem* problem, int iteration_limit
 double HminminHeuristic::cost(const mlcore::State* s)
 {
 
+
+    this->update_counter();
+
     //std::cout<<"Entering  hmin cost with state : "<< (mlcore::State*)s<< std::endl;
 
     if (problem_->goal(const_cast<mlcore::State*>(s)))
@@ -51,7 +53,6 @@ double HminminHeuristic::cost(const mlcore::State* s)
         //std::cout<<" ------->goal sate "<<std::endl;
         return 0.0;
     }
-
 
     //std::cout<<" ------->serching for precomputed value "<<std::endl;
     auto it = costs_.find(const_cast<mlcore::State*> (s));
@@ -65,44 +66,37 @@ double HminminHeuristic::cost(const mlcore::State* s)
 
     mlcore::State* currentState = nullptr;
     while (true) {
+
         // Starting a LRTA* trial.
         currentState = const_cast<mlcore::State*> (s);
         bool noActionChange = true;
         double maxResidual = 0.0;
         int counter = 0;
+        // continue as long as the goal has not been reached
         while (!problem_->goal(currentState)) {
+
+            //get the current best action
             mlcore::Action* bestAction = nullptr;
             if (bestActions_.count(currentState) > 0)
                 bestAction = bestActions_[currentState];
 
+            //update the value of the current state (and its best action)
             hminUpdate(currentState);
 
+            //get the previous cost and check if the best action has changed
             double prevCost = costs_[currentState];
             if (currentState->deadEnd())
                 break;
             if (bestAction != bestActions_.at(currentState))
                 noActionChange = false;
 
-
+            //check if the cost difference is meaningful
             maxResidual = std::max(maxResidual,
                                    fabs(prevCost - costs_.at(currentState)));
-            // Getting the successor of the best action.
+
+
+            // Getting the successor of the best action - and update their costs
             bestAction = bestActions_.at(currentState);
-
-
-            /*if (bestAction == nullptr)
-            {
-                std::cout<<"best action for state "<<currentState<< " is null"<<std::endl;
-
-            }
-            else
-            {
-              std::cout<<"best action for state "<<currentState<< " is "<<bestAction<<std::endl;
-
-            }
-            */
-
-
             double minCost = mdplib::dead_end_cost;
             mlcore::State* nextState = nullptr;
             for (auto const & successor :
@@ -115,7 +109,7 @@ double HminminHeuristic::cost(const mlcore::State* s)
                 }
             }
 
-            counter += 1;
+            // change to the next state
             currentState = nextState;
             if (currentState == nullptr)
             {
@@ -124,13 +118,15 @@ double HminminHeuristic::cost(const mlcore::State* s)
             //std::cout<<"current state is "<< (mlcore::State*)currentState<< " iteration:" << counter<< " and goal "<< problem_->goal(currentState)<<std::endl;
         }
 
-
+        // if no action has been updated and there is no meaningful change - stop
         if (noActionChange && maxResidual < 1.0e-6)
             break;
     }
 
+
     it = costs_.find(const_cast<mlcore::State*> (s));
     //std::cout<< "\n cost::::: " << it->second << std::endl<<std::endl;
+    //print_cost_array();
 
 
     return it->second;
@@ -139,11 +135,13 @@ double HminminHeuristic::cost(const mlcore::State* s)
 
 void HminminHeuristic::hminUpdate(mlcore::State* s)
 {
+    //if the problem is the goal - the cost is 0
     if (problem_->goal(s)) {
         costs_[s] = 0.0;
         return;
     }
 
+    //iterate through applicable actions and check if their value was updated (taking the min instead of expected value)
     double bestQ = mdplib::dead_end_cost;
     bool hasAction = false;
     for (mlcore::Action* a : problem_->actions()) {
@@ -168,8 +166,6 @@ void HminminHeuristic::hminUpdate(mlcore::State* s)
         s->markDeadEnd();
     }
     costs_[s] = bestQ;
-
-    //print_cost_array();
 }
 
 
