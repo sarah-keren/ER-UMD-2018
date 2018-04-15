@@ -35,7 +35,6 @@ ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, s
 
 ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName ):mlppddl::PPDDLProblem (pProblem)
 {
-    std::cout<<"in const"<<std::endl;
     ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem_tip_nodes);
     fileName(str_fileName);
     problemName(str_problemName);
@@ -82,6 +81,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
             if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
                 // This is the suboptimal solver part
                 // SOLVE
+                this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
                 mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
                 solver.solve(this->ppddlProblem_->initialState());
 
