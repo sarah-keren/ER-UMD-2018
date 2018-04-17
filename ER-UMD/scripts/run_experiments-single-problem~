@@ -6,7 +6,6 @@
 # $5 - exe-folder
 # $6 - problem-type (simplified or original)
 
-echo "*****************************************************"
 
 #for method in LAO*; do
 #	for heuristic in sarah-heur; do			
@@ -18,16 +17,17 @@ echo "*****************************************************"
 #done
 #done	
 
-for budget in $(seq 1 $4);do	
+for budget in $(seq 0 $4);do	
 	for method in LAO* FLARES; do		
 		for heuristic in BAOD-heur hmin-heur;do 
 			for approach in rel-env rel-mod rel-combined rel-proc rel-combined-proc compilation bfs_design; do
 				
-				echo "* * *"
+				echo ""				
+				echo "*****************************************************"				
 				#echo "---$1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic ---"
 				$5/ER-UMD $1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic
 				echo ""
-				echo "*****************************************************"
+				echo "* * *"				
 				echo ""
 
 

@@ -98,6 +98,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     double planningTime = 0.0;
                     mlcore::State* currentState = this->ppddlProblem_->initialState();
                     unsigned long startTime = clock();
+                    //if already lableled - it will return
                     solver.solve(currentState);
                     unsigned long endTime = clock();
                     planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
