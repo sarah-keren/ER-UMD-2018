@@ -8,22 +8,22 @@
 
 echo "*****************************************************"
 
-for method in LAO* FLARES; do
-	for heuristic in zero-heur AM1F hmin-heur-false FF; do			
-		#echo "---$1/$2/$6/p$3/p$3-domain.pddl p$3 $method original $heuristic ---"
-		$5/ER-UMD $1/$2/$6/p$3/p$3-domain-design-all.pddl p$3 $method original $heuristic
-		echo ""
-		echo "*****************************************************"
-		echo ""
-
-done
-done	
+#for method in LAO*; do
+#	for heuristic in sarah-heur; do			
+#		#echo "---$1/$2/$6/p$3/p$3-domain.pddl p$3 $method original $heuristic ---"
+#		$5/ER-UMD $1/$2/$6/p$3/p$3-domain-design-all.pddl p$3 $method original $heuristic
+#		echo ""
+#		echo "*****************************************************"
+#		echo ""
+#done
+#done	
 
 for budget in $(seq 0 $4);do	
 	for method in LAO* FLARES; do		
-		for heuristic in zero-heur AM1F hmin-heur-false FF; do
-			for approach in bfs_design compilation rel-env rel-mod rel-combined rel-proc rel-combined-proc; do
-	
+		for heuristic in BAOD-heur hmin-heur;do 
+			for approach in rel-env rel-mod rel-combined rel-proc rel-combined-proc compilation bfs_design; do
+				
+				echo "* * *"
 				#echo "---$1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic ---"
 				$5/ER-UMD $1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic
 				echo ""
@@ -35,9 +35,3 @@ done
 done
 done	
 done
-
-
-
-
-	
-

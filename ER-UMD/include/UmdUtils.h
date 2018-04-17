@@ -763,6 +763,65 @@ inline mlcore::State* mostLikelyOutcome(mlcore::Problem* problem, mlcore::State*
 }
 
 
+
+//given a policy and initial state - simulate the cost to goal
+inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver)
+{
+    double expectedCost = 0.0;
+    double expectedTime = 0.0;
+    std::vector<double> simCosts;
+
+    for (int sim = 0; sim < numSims; sim++) {
+
+        double cost = 0.0;
+        double planningTime = 0.0;
+
+        mlcore::State* currentState = ppddlProblem->initialState();
+        unsigned long startTime = clock();
+        solver->solve(currentState);
+        unsigned long endTime = clock();
+        planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
+        mlcore::Action* action = currentState->bestAction();
+        while (cost < mdplib::dead_end_cost) {
+            cost += ppddlProblem->cost(currentState, action);
+            // The successor state according to the
+            // original transition model.
+            mlcore::State* nextState =
+                mlsolvers::randomSuccessor(
+                    ppddlProblem, currentState, action);
+            if (ppddlProblem->goal(nextState)) {
+                break;
+            }
+            currentState = nextState;
+            // Re-planning if needed.
+            if (!currentState->checkBits(mdplib::SOLVED_FLARES)) {
+                startTime = clock();
+                solver->solve(currentState);
+                endTime = clock();
+                planningTime +=
+                    (double(endTime - startTime) / CLOCKS_PER_SEC);
+            }
+            if (currentState->deadEnd()) {
+                cost = mdplib::dead_end_cost;
+            }
+            action = currentState->bestAction();
+        }
+        expectedCost += cost;
+        simCosts.push_back(cost);
+        expectedTime += planningTime;
+    }
+
+    double stderr = 0.0;
+    double averageCost = expectedCost/numSims;
+    for (double cost : simCosts) {
+        double diff = (cost - averageCost);
+        stderr += diff * diff;
+    }
+    stderr /= (numSims - 1);
+    stderr = sqrt(stderr / numSims);
+    std::pair <double,double> result(averageCost,stderr);
+    return result;
+}
 /*
     // all the modifications applied in the current state
     std::string applied_modifications;

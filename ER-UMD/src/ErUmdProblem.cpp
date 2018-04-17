@@ -82,9 +82,8 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 // This is the suboptimal solver part
                 // SOLVE
                 this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
-                mlsolvers::FLARESSolver solver(this->ppddlProblem_, 100, 1.0e-3, 0);
+                mlsolvers::FLARESSolver solver(this->ppddlProblem_, umddefs::flares_sims, 1.0e-3, 0);
                 solver.solve(this->ppddlProblem_->initialState());
-
 
                 // ANALYZE
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
@@ -131,14 +130,16 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     simCosts.push_back(cost);
                     expectedTime += planningTime;
                 }
+
+                double averageCost = expectedCost/numSims;
                 double stderr = 0.0;
                 for (double cost : simCosts) {
-                    double diff = (cost - expectedCost);
+                    double diff = (cost - averageCost);
                     stderr += diff * diff;
                 }
                 stderr /= (numSims - 1);
                 stderr = sqrt(stderr / numSims);
-                std::cout << "ExpectedCost:: " << expectedCost / numSims << " +/- " << stderr << std::endl;
+                std::cout << "ExpectedCost:: " << averageCost << " +/- " << stderr << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
                 iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
                 std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<std::endl;

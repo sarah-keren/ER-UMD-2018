@@ -225,15 +225,13 @@ int perform_testing (int argc, char **argv)
         umdProblem->solve(umdHeur,true,command_type);
 
 
-
-
-
-
         //log results
         //cout<<"Heuristic approach:: "<< argv[4] <<endl;
         //cout<<"Solver heuristic:: "<< argv[5] <<endl;
         seconds_elapsed =  ((unsigned long) clock() - begTime)/(CLOCKS_PER_SEC/1.0);
         cout<<"Total time:: "<<seconds_elapsed<<endl;
+        std::cout<< "Expected cost:: "<< umdProblem->getPPDDLProblem()->initialState()->cost()<<std::endl;
+
 
 
 
