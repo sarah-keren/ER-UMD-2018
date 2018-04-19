@@ -64,7 +64,7 @@ double PPDDLProblem::cost(mlcore::State* s, mlcore::Action* a) const
     PPDDLState* state = (PPDDLState *) s;
 
     std::string name = action->pAction()->name();
-    if (name.find("design") != std::string::npos) && (name.find("idle") != std::string::npos) {
+    if ((name.find("design") != std::string::npos) && (name.find("idle") != std::string::npos)) {
         return 1.0e-4/2;
     }
 

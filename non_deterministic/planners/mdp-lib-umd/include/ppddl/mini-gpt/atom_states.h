@@ -99,9 +99,6 @@ public:
 
   void operator=( const state_t &state )
     {
-      if ( (size_ == state.size_) &&
-          !memcmp( data_, state.data_, size_ * sizeof(unsigned) ) )
-        return;
       memcpy( data_, state.data_, size_ * sizeof(unsigned) );
     }
   bool operator==( const state_t &state ) const

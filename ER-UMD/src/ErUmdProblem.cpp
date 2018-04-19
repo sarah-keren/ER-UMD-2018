@@ -26,8 +26,32 @@ namespace umd
 
 ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_solverName):mlppddl::PPDDLProblem (pProblem)
 {
-
+                                                                                std::cout << "CONSTR1 " << pProblem_tip_nodes->domain().name() << std::endl;
+                                                                                std::cout << pProblem_tip_nodes->domain() << std::endl;
     ppddlProblem_ = new mlppddl::PPDDLProblem(pProblem_tip_nodes);
+                                                                                auto currentState = ppddlProblem_->initialState();
+                                                                                std::list< std::pair<mlcore::State*, int> > my_queue;
+                                                                                my_queue.push_back(std::make_pair(currentState, 0));
+                                                                                while (true) {
+                                                                                    auto sd = my_queue.front();
+                                                                                    my_queue.pop_front();
+                                                                                    if (sd.second == 4)
+                                                                                        continue;
+                                                                                    currentState = sd.first;
+                                                                                    std::cout << "depth " << sd.second << " " << currentState << std::endl;
+                                                                                    int depth = sd.second;
+                                                                                    for (auto action : ppddlProblem_->actions()) {
+                                                                                        if (!ppddlProblem_->applicable(currentState, action))
+                                                                                            continue;
+                                                                                        std::cout << "  " << action << std::endl;
+                                                                                        for (auto successor : ppddlProblem_->transition(currentState, action)) {
+                                                                                            std::cout << "    " << successor.first << " " << successor.second << std::endl;
+                                                                                            my_queue.push_back(std::make_pair(successor.first, depth + 1));
+                                                                                        }
+
+                                                                                    }
+                                                                                }
+                                                                                exit(0);
     domainName_ = pProblem->domain().name();
     solverName = str_solverName;
 
@@ -35,6 +59,7 @@ ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, s
 
 ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName ):mlppddl::PPDDLProblem (pProblem)
 {
+                                                                                std::cout << "CONSTR2 " << pProblem_tip_nodes->domain().name() << std::endl;
     ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem_tip_nodes);
     fileName(str_fileName);
     problemName(str_problemName);
@@ -79,6 +104,8 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
         } else {
 
             if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
+                                                                                std::cout << "DOMAIN " << this->ppddlProblem_->pProblem()->domain().name() << std::endl;
+                                                                                std::cout << this->ppddlProblem_->pProblem()->domain() << std::endl;
                 // This is the suboptimal solver part
                 // SOLVE
                 this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
@@ -105,11 +132,16 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     mlcore::Action* action = currentState->bestAction();
                     while (cost < mdplib::dead_end_cost) {
                         cost += this->ppddlProblem_->cost(currentState, action);
+                                                                                std::cout << this->ppddlProblem_->cost(currentState, action) << " " << cost << std::endl;
                         // The successor state according to the
                         // original transition model.
+                                                                                for (auto successor : ppddlProblem_->transition(currentState, action)) {
+                                                                                    std::cout << "             " << successor.first << " " << successor.second << std::endl;
+                                                                                }
                         mlcore::State* nextState =
                             mlsolvers::randomSuccessor(
                                 this->ppddlProblem_, currentState, action);
+                                                                                std::cout << action << " " << nextState << std::endl;
                         if (this->ppddlProblem_->goal(nextState)) {
                             break;
                         }
@@ -130,6 +162,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     expectedCost += cost;
                     simCosts.push_back(cost);
                     expectedTime += planningTime;
+                                                                                std::cout << "*******************************" << std::endl;
                 }
 
                 double averageCost = expectedCost/numSims;

@@ -1,20 +1,19 @@
-/* A Bison parser, made by GNU Bison 2.5.  */
-
+/* A Bison parser, made by GNU Bison 3.0.2.  */
 
 /* Bison interface for Yacc-like parsers in C
-   
-      Copyright (C) 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.
-   
+
+   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-   
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
@@ -27,92 +26,100 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
+#ifndef YY_YY_Y_TAB_H_INCLUDED
+# define YY_YY_Y_TAB_H_INCLUDED
+/* Debug traces.  */
+#ifndef YYDEBUG
+# define YYDEBUG 0
+#endif
+#if YYDEBUG
+extern int yydebug;
+#endif
 
-/* Tokens.  */
+/* Token type.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
-   /* Put the tokens into the symbol table, so that GDB and other debuggers
-      know about them.  */
-   enum yytokentype {
-     DEFINE = 258,
-     DOMAIN_TOKEN = 259,
-     PROBLEM = 260,
-     REQUIREMENTS = 261,
-     TYPES = 262,
-     CONSTANTS = 263,
-     PREDICATES = 264,
-     FUNCTIONS = 265,
-     STRIPS = 266,
-     TYPING = 267,
-     NEGATIVE_PRECONDITIONS = 268,
-     DISJUNCTIVE_PRECONDITIONS = 269,
-     EQUALITY = 270,
-     EXISTENTIAL_PRECONDITIONS = 271,
-     UNIVERSAL_PRECONDITIONS = 272,
-     QUANTIFIED_PRECONDITIONS = 273,
-     CONDITIONAL_EFFECTS = 274,
-     FLUENTS = 275,
-     ADL = 276,
-     DURATIVE_ACTIONS = 277,
-     DURATION_INEQUALITIES = 278,
-     CONTINUOUS_EFFECTS = 279,
-     PROBABILISTIC_EFFECTS = 280,
-     REWARDS = 281,
-     MDP = 282,
-     ACTION = 283,
-     PARAMETERS = 284,
-     PRECONDITION = 285,
-     EFFECT = 286,
-     PDOMAIN = 287,
-     OBJECTS = 288,
-     INIT = 289,
-     GOAL = 290,
-     GOAL_REWARD = 291,
-     METRIC = 292,
-     EXPECTED_COST = 293,
-     GOAL_PROBABILITY = 294,
-     WHEN = 295,
-     NOT = 296,
-     AND = 297,
-     OR = 298,
-     IMPLY = 299,
-     EXISTS = 300,
-     FORALL = 301,
-     PROBABILISTIC = 302,
-     ASSIGN = 303,
-     SCALE_UP = 304,
-     SCALE_DOWN = 305,
-     INCREASE = 306,
-     DECREASE = 307,
-     MINIMIZE = 308,
-     MAXIMIZE = 309,
-     NUMBER_TOKEN = 310,
-     OBJECT_TOKEN = 311,
-     EITHER = 312,
-     LT = 313,
-     LE = 314,
-     GE = 315,
-     GT = 316,
-     NAME = 317,
-     VARIABLE = 318,
-     NUMBER = 319,
-     ILLEGAL_TOKEN = 320,
-     PLUS = 321,
-     HYPHEN = 322,
-     STAR = 323,
-     SLASH = 324,
-     LEFTPAR = 325,
-     RIGHTPAR = 326,
-     LEFTBRACE = 327,
-     RIGHTBRACE = 328,
-     EQUAL = 329,
-     ORBIT = 330,
-     SYSTEM = 331
-   };
+  enum yytokentype
+  {
+    DEFINE = 258,
+    DOMAIN_TOKEN = 259,
+    PROBLEM = 260,
+    REQUIREMENTS = 261,
+    TYPES = 262,
+    CONSTANTS = 263,
+    PREDICATES = 264,
+    FUNCTIONS = 265,
+    STRIPS = 266,
+    TYPING = 267,
+    NEGATIVE_PRECONDITIONS = 268,
+    DISJUNCTIVE_PRECONDITIONS = 269,
+    EQUALITY = 270,
+    EXISTENTIAL_PRECONDITIONS = 271,
+    UNIVERSAL_PRECONDITIONS = 272,
+    QUANTIFIED_PRECONDITIONS = 273,
+    CONDITIONAL_EFFECTS = 274,
+    FLUENTS = 275,
+    ADL = 276,
+    DURATIVE_ACTIONS = 277,
+    DURATION_INEQUALITIES = 278,
+    CONTINUOUS_EFFECTS = 279,
+    PROBABILISTIC_EFFECTS = 280,
+    REWARDS = 281,
+    MDP = 282,
+    ACTION = 283,
+    PARAMETERS = 284,
+    PRECONDITION = 285,
+    EFFECT = 286,
+    PDOMAIN = 287,
+    OBJECTS = 288,
+    INIT = 289,
+    GOAL = 290,
+    GOAL_REWARD = 291,
+    METRIC = 292,
+    EXPECTED_COST = 293,
+    GOAL_PROBABILITY = 294,
+    WHEN = 295,
+    NOT = 296,
+    AND = 297,
+    OR = 298,
+    IMPLY = 299,
+    EXISTS = 300,
+    FORALL = 301,
+    PROBABILISTIC = 302,
+    ASSIGN = 303,
+    SCALE_UP = 304,
+    SCALE_DOWN = 305,
+    INCREASE = 306,
+    DECREASE = 307,
+    MINIMIZE = 308,
+    MAXIMIZE = 309,
+    NUMBER_TOKEN = 310,
+    OBJECT_TOKEN = 311,
+    EITHER = 312,
+    LT = 313,
+    LE = 314,
+    GE = 315,
+    GT = 316,
+    NAME = 317,
+    VARIABLE = 318,
+    NUMBER = 319,
+    ILLEGAL_TOKEN = 320,
+    PLUS = 321,
+    HYPHEN = 322,
+    STAR = 323,
+    SLASH = 324,
+    LEFTPAR = 325,
+    RIGHTPAR = 326,
+    LEFTBRACE = 327,
+    RIGHTBRACE = 328,
+    EQUAL = 329,
+    ORBIT = 330,
+    SYSTEM = 331
+  };
 #endif
 /* Tokens.  */
 #define DEFINE 258
@@ -190,15 +197,12 @@
 #define ORBIT 330
 #define SYSTEM 331
 
-
-
-
+/* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE
+typedef union YYSTYPE YYSTYPE;
+union YYSTYPE
 {
-
-/* Line 2068 of yacc.c  */
-#line 175 "parser.y"
+#line 175 "parser.y" /* yacc.c:1909  */
 
   unsigned setop;
   const Effect* effect;
@@ -218,16 +222,15 @@ typedef union YYSTYPE
   std::vector<const Atom*>* atoms;
   const Rational* num;
 
-
-
-/* Line 2068 of yacc.c  */
-#line 224 "y.tab.h"
-} YYSTYPE;
+#line 226 "y.tab.h" /* yacc.c:1909  */
+};
 # define YYSTYPE_IS_TRIVIAL 1
-# define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
 #endif
 
+
 extern YYSTYPE yylval;
 
+int yyparse (void);
 
+#endif /* !YY_YY_Y_TAB_H_INCLUDED  */

@@ -45,10 +45,6 @@ namespace gpt
   extern double heuristic_weight;
   extern size_t xtra;
   extern std::stack<heuristic_t*> hstack;
-  
-  // MDP-Reduction
-  extern std::string exc_predicate;
-  extern std::string primary_predicate;
 };
 
 typedef unsigned char uchar_t;

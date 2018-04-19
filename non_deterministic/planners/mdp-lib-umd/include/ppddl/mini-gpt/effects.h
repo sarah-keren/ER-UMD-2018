@@ -95,10 +95,6 @@ public:
   virtual void analyze( PredicateTable &predicates, TermTable &terms,
 			std::map<const StateFormula*,const Atom*> &hash ) const = 0;
   virtual const Effect& rewrite( std::map<const StateFormula*,const Atom*> &hash ) const = 0;
-  
-  //MDP-Reduction
-  virtual bool is_primary_keyword(const PredicateTable& predicates) const {return false;};
-  virtual bool is_primary(const PredicateTable& predicates) const {return false;};
 };
 
 class EffectList : public std::vector<const Effect*> { };
@@ -130,10 +126,6 @@ public:
   virtual void analyze( PredicateTable &predicates, TermTable &terms,
 			std::map<const StateFormula*,const Atom*> &hash ) const;
   virtual const Effect& rewrite( std::map<const StateFormula*,const Atom*> &hash ) const;
-  
-  //MDP-Reduction
-  virtual bool is_primary_keyword(const PredicateTable& predicates) const;
-  virtual bool is_primary(const PredicateTable& predicates) const;
 };
 
 
@@ -224,9 +216,6 @@ public:
   virtual void analyze( PredicateTable &predicates, TermTable &terms,
 			std::map<const StateFormula*,const Atom*> &hash ) const;
   virtual const Effect& rewrite( std::map<const StateFormula*,const Atom*> &hash ) const;
-  
-  // MDP-Reduction
-  virtual bool is_primary(const PredicateTable& predicates) const;
 };
 
 class ConditionalEffect : public Effect
@@ -295,9 +284,6 @@ public:
   virtual void print( std::ostream& os, const PredicateTable& predicates,
 		      const FunctionTable& functions,
 		      const TermTable& terms ) const;
-  virtual void print_normal( std::ostream& os, const PredicateTable& predicates,
-			      const FunctionTable& functions,
-			      const TermTable& terms ) const;
 
   virtual void analyze( PredicateTable &predicates, TermTable &terms,
 			std::map<const StateFormula*,const Atom*> &hash ) const;
@@ -335,62 +321,6 @@ public:
   virtual void analyze( PredicateTable &predicates, TermTable &terms,
 			std::map<const StateFormula*,const Atom*> &hash ) const;
   virtual const Effect& rewrite( std::map<const StateFormula*,const Atom*> &hash ) const;
-};
-
-class ExceptionalEffect : public Effect 
-{
-  bool is_noop;
-  const Effect *effect_;
-public:
-  
-  ExceptionalEffect() {
-    register_use( this );
-    is_noop = true;
-    effect_ = NULL;
-  }
-  
-  ExceptionalEffect(const Effect &effect) {
-    is_noop = false;
-    register_use( this );
-    effect_ = &effect;
-  }
-    
-  virtual ~ExceptionalEffect() 
-  {
-      unregister_use(this);
-  };
-  
-  void print( std::ostream& os, const PredicateTable& predicates,
-				const FunctionTable& functions,
-				const TermTable& terms ) const 
-  {
-    os << "(and (" << gpt::exc_predicate << ")"; 
-    if (!is_noop)
-    {
-      os << " ";
-      effect_->print(os, predicates, functions, terms);
-    }
-    os << ")";
-  }
-  
-  // None of these functions are correctly implemented by this class
-  // DO NOT USE
-  virtual const Effect& flatten( void ) const { return effect_->flatten(); }
-  virtual void state_change( AtomList& adds, AtomList& deletes,
-			     AssignmentList& assignments,
-			     const state_t& state ) const {}
-  virtual const stateProbList_t& expand( const stateProbList_t &state_list ) 
-	    const { return effect_->expand(state_list); }
-  virtual void translate( stripsEffect_t &s_effect,
-			  conditionalEffectList_t &c_effect ) const {}
-  virtual const Effect& instantiation( const SubstitutionMap& subst,
-				       const problem_t& problem ) 
-	    const { return effect_->instantiation(subst, problem); }
-  virtual bool operator==( const Effect& eff ) const { return *effect_ == eff; }
-  virtual void analyze( PredicateTable &predicates, TermTable &terms,
-			std::map<const StateFormula*,const Atom*> &hash ) const { }
-  virtual const Effect& rewrite( std::map<const StateFormula*,const Atom*> &hash ) 
-	    const { return effect_->rewrite(hash); }
 };
 
 #endif /* EFFECTS_H */

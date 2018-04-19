@@ -187,9 +187,6 @@ public:
 			std::map<const StateFormula*,const Atom*> &hash ) const;
   virtual const StateFormula& rewrite( std::map<const StateFormula*,const Atom*> &hash ) const;
   virtual void generate_atoms( void ) const;
-  
-  // MDP-Reduction
-  bool is_primary(const PredicateTable& predicates) const;
 };
 
 
