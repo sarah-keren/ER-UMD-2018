@@ -131,25 +131,25 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
                     mlcore::Action* action = currentState->bestAction();
                     while (cost < mdplib::dead_end_cost) {
-//                                                                                std::cerr << (void *) action << std::endl;
+                                                                                std::cerr << (void *) action << std::endl;
                         cost += this->ppddlProblem_->cost(currentState, action);
-//                                                                                std::cout << this->ppddlProblem_->cost(currentState, action) << " " << cost << std::endl;
+                                                                                std::cout << this->ppddlProblem_->cost(currentState, action) << " " << cost << std::endl;
                         // The successor state according to the
                         // original transition model.
-//                                                                                for (auto successor : ppddlProblem_->transition(currentState, action)) {
-//                                                                                    std::cout << "             " << successor.first << " " << successor.second << std::endl;
-//                                                                                }
+                                                                                for (auto successor : ppddlProblem_->transition(currentState, action)) {
+                                                                                    std::cout << "             " << successor.first << " " << successor.second << std::endl;
+                                                                                }
                         mlcore::State* nextState =
                             mlsolvers::randomSuccessor(
                                 this->ppddlProblem_, currentState, action);
-//                                                                                std::cout << action << " " << nextState << std::endl;
+                                                                                std::cout << action << " " << nextState << std::endl;
                         if (this->ppddlProblem_->goal(nextState)) {
                             break;
                         }
                         currentState = nextState;
                         // Re-planning if needed.
                         if (!currentState->checkBits(mdplib::SOLVED_FLARES)) {
-//                                                                                std::cerr << "replan"<< std::endl;
+                                                                                std::cerr << "replan"<< std::endl;
                             startTime = clock();
                             solver.solve(currentState);
                             endTime = clock();
@@ -157,7 +157,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                                 (double(endTime - startTime) / CLOCKS_PER_SEC);
                         }
                         if (currentState->deadEnd()) {
-//                                                                                std::cout << "DEAD-END" << std::endl;
+                                                                                std::cout << "DEAD-END" << std::endl;
                             cost = mdplib::dead_end_cost;
                         }
                         action = currentState->bestAction();
@@ -165,7 +165,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                     expectedCost += cost;
                     simCosts.push_back(cost);
                     expectedTime += planningTime;
-//                                                                                std::cout << "*******************************" << std::endl;
+                                                                                std::cout << "*******************************" << std::endl;
                 }
 
                 double averageCost = expectedCost/numSims;

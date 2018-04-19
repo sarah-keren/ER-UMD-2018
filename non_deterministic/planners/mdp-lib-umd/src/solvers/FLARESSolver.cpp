@@ -26,6 +26,7 @@ void FLARESSolver::trial(State* s)
     State* currentState = s;
     list<State*> visited;
     int depth = 0;
+    double cost = 0;
     while (!labeledSolved(currentState)) {
         if (problem_->goal(currentState))
             break;
@@ -39,12 +40,13 @@ void FLARESSolver::trial(State* s)
                                                                                     cerr << "ooops!" << residual(problem_, currentState) << endl;
                                                                                 }
 
-        if (currentState->deadEnd() || depth > 1000000)
+        if (currentState->deadEnd() || cost > mdplib::dead_end_cost)
             break;
 
-        currentState = randomSuccessor(problem_,
-                                       currentState,
-                                       greedyAction(problem_, currentState));
+        mlcore::Action* action = greedyAction(problem_, currentState);
+        cost += problem_->cost(currentState, action);
+
+        currentState = randomSuccessor(problem_, currentState, action);
     }
 
     while (!visited.empty()) {
