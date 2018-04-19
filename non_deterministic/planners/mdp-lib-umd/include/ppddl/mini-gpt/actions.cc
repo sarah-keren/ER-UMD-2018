@@ -828,7 +828,7 @@ void
 deterministicAction_t::expand( const state_t &state,
 			       std::pair<state_t*,Rational> *list, bool nprec ) const
 {
-                                                                                std::cout << "this is weird" << std::endl;
+//                                                                                std::cout << "this is weird" << std::endl;
   *list[0].first = state;
   affect( *list[0].first, nprec );
   list[0].second = Rational( 1 );
@@ -934,7 +934,7 @@ void
 probabilisticAction_t::expand( const state_t &state,
 			       std::pair<state_t*,Rational> *state_prob_list, bool nprec ) const
 {
-                                                                                std::cout << "should be here" << std::endl;
+//                                                                                std::cout << "should be here" << std::endl;
   for( size_t i = 0; i < effect().size(); ++i )
     {
       *state_prob_list[i].first = state;

@@ -103,10 +103,13 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
     //std::cout<<" Search is over - now looking for the optimal action " <<std::endl;
     mlcore::Action* optimal = nullptr;
     Node* cur_node = node ;
+    double cost_path = 0.0;
     while (cur_node->parent() != nullptr) {
         optimal = cur_node->action();
+        cost_path += problem_->cost(cur_node->state(), optimal);
         cur_node = cur_node->parent();
     }
+    std::cout << "A* Cost:: " << cost_path << std::endl;
     //std::cout<<"cur_node: "<<cur_node->state()<<std::endl;
     std::cout<<"Optimal action:: " <<optimal<<std::endl;
 
