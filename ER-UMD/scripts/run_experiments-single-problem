@@ -17,14 +17,14 @@
 #done
 #done	
 
-# for budget in $(seq 0 $4);do	
-for budget in $(seq 0 0);do
-# 	for method in LAO* FLARES; do
-        for method in FLARES; do           		
-# 		for heuristic in BAOD-heur hmin-heur;do                         
-                for heuristic in BAOD-heur;do  
-# 			for approach in rel-env rel-mod rel-combined rel-proc rel-combined-proc compilation bfs_design; do
-			for approach in compilation; do
+for budget in $(seq 0 $4);do	
+# for budget in $(seq 0 0);do
+	for method in LAO* FLARES; do
+#         for method in FLARES; do           		
+		for heuristic in BAOD-heur hmin-heur;do                         
+#                 for heuristic in BAOD-heur;do  
+			for approach in rel-env rel-mod rel-combined rel-proc rel-combined-proc compilation bfs_design; do
+# 			for approach in compilation; do
 				
 				echo ""				
 				echo "*****************************************************"				
