@@ -44,6 +44,7 @@ std::list<mlcore::Successor>
 
     pProblem_->expand(*action->pAction(), *state->pState(), display_);
     for (int i = 0; display_[i].second != Rational(-1); i++) {
+        std::cout<<"Successor " << i <<std::endl;
         PPDDLState* nextState = new PPDDLState(this);
         nextState->setPState(*display_[i].first);
         successors.push_back(
@@ -59,7 +60,7 @@ double PPDDLProblem::cost(mlcore::State* s, mlcore::Action* a) const
 {
 
 
-    //std::cout<< "cost for state: "<< state << "and action "<< action << " is: "<< cost<<std::endl;
+    std::cout<< "cost for state: "<< state << "and action "<< action << " is: "<< cost<<std::endl;
     PPDDLAction* action = (PPDDLAction *) a;
     PPDDLState* state = (PPDDLState *) s;
 

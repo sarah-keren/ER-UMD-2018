@@ -7,7 +7,6 @@
 # $6 - exe-folder
 
 
-ulimit -t 1800;
 
 rm -r ../exp_results
 mkdir ../exp_results

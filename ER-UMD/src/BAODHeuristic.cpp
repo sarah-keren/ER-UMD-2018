@@ -3,8 +3,6 @@
 #include "../include/solvers/Solver.h"
 #include "../include/UmdUtils.h"
 
-using namespace mlcore;
-
 
 namespace umd
 {
@@ -23,6 +21,7 @@ BAODHeuristic::BAODHeuristic(mlcore::Problem* problem, bool solveAll, int iterat
 
 double BAODHeuristic::cost(const mlcore::State* s)
 {
+    //std::cout<<"Evaluating  : "<< (mlcore::State*)s<< std::endl;
 
     this->update_counter();
 

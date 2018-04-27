@@ -21,19 +21,15 @@
     :parameters (?x_from - location ?x_to - location ?y - location)
     :precondition (and (execution) (robot-at ?x_from ?y) (prox ?x_from ?x_to) (enabled-remove-occupancy ?x_to ?y) (occupied ?x_to ?y))
     :effect (and (probabilistic 0.9 (and (not (robot-at ?x_from ?y)) (robot-at ?x_to ?y))
-		)
-           )
+				0.1 (robot-at ?x_from ?y)))
 	    
    )
 
  (:action move-robot-y-enabled
     :parameters (?x - location ?y_from - location ?y_to - location )
     :precondition (and (execution) (robot-at ?x ?y_from) (prox ?y_from ?y_to) (enabled-remove-occupancy ?x ?y_to) (occupied ?x ?y_to))
-    :effect (and
-		 (probabilistic 0.9 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
-		)
-           )
-	    
+    :effect (and(probabilistic 0.9 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
+  		               0.1 (robot-at ?x ?y_from)))	    
    )
 
 
@@ -41,9 +37,8 @@
     :parameters (?x_from - location ?x_to - location ?y - location)
     :precondition (and (execution) (robot-at ?x_from ?y) (not (occupied ?x_to ?y)) (prox ?x_from ?x_to))
     :effect (and (probabilistic 0.8 (and (not (robot-at ?x_from ?y)) (robot-at ?x_to ?y))
-		)
-           )
-	    
+		                0.2 (robot-at ?x_from ?y)))
+  		 
    )
 
 
@@ -51,14 +46,9 @@
  (:action move-robot-y
     :parameters (?x - location ?y_from - location ?y_to - location )
     :precondition (and (execution) (robot-at ?x ?y_from) (not (occupied ?x ?y_to)) (prox ?y_from ?y_to))
-    :effect (and
-		 (probabilistic 0.8 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
-		)
-           )
-	    
+    :effect (and (probabilistic 0.8 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
+		                0.2 (robot-at ?x ?y_from)))
    )
-
-
 
 
 
@@ -77,12 +67,6 @@
  
 
 ;Design actions
-
- (:action design-idle
-    :parameters ( ?t - time ?tnext - time )
-    :precondition (and (not (execution)) (current-time ?t ) (next ?t ?tnext))
-    :effect (and (current-time ?tnext ) (not (current-time ?t)))
-  )
 
 
   (:action design-start-execution

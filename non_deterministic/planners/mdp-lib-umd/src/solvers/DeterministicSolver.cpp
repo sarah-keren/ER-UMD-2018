@@ -45,7 +45,7 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
 
         //goal found
         if (problem_->goal(node->state())) {
-            //std::cout<< "\nn DeterministicSolver::solve. Solution found" << node->state() <<
+            //std::cout<< "\nn DeterministicSolver::solve. Solution found" << node->state();
             //std::cout<<"Goal found::" << node->state()<<" cost::"<< node->f()<< "\ng() value::"<< node->g()<< "  \niteration_counter: "<<iteration_counter <<std::endl;
             break;
             /*
@@ -68,11 +68,16 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
             if (!problem_->applicable(node->state(), a))
                 continue;
 
+
+
             mlcore::State* nextState = nullptr;
             if (choice_ == det_most_likely)
             {
+
                 nextState = mostLikelyOutcome(problem_, node->state(), a);
+
                 double cost = problem_->cost(node->state(), a);
+
                 Node* next = new Node(node, nextState, a, cost, heuristic_, true);
                 frontier.push(next);
                 allNodes.push_back(next);

@@ -21,20 +21,14 @@
   (:action move-robot-x-enabled
     :parameters (?x_from - location ?x_to - location ?y - location)
     :precondition (and (execution) (robot-at ?x_from ?y) (prox ?x_from ?x_to) (remove-occupancy-x ?x_to) (occupied ?x_to ?y))
-    :effect (and (probabilistic 1.0 (and (not (robot-at ?x_from ?y)) (robot-at ?x_to ?y))
-		)
-           )
+    :effect (and (probabilistic 1.0 (and (not (robot-at ?x_from ?y)) (robot-at ?x_to ?y))))
 	    
    )
 
  (:action move-robot-y-enabled
     :parameters (?x - location ?y_from - location ?y_to - location )
     :precondition (and (execution) (robot-at ?x ?y_from) (prox ?y_from ?y_to) (remove-occupancy-x ?x) (occupied ?x ?y_to))
-    :effect (and
-		 (probabilistic 1.0 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
-		)
-           )
-	    
+    :effect (and(probabilistic 1.0 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))))	    
    )
 
 
@@ -42,9 +36,7 @@
     :parameters (?x_from - location ?x_to - location ?y - location)
     :precondition (and (execution) (robot-at ?x_from ?y) (not (occupied ?x_to ?y)) (prox ?x_from ?x_to))
     :effect (and (probabilistic 0.8 (and (not (robot-at ?x_from ?y)) (robot-at ?x_to ?y))
-		)
-           )
-	    
+				0.2 (robot-at ?x_from ?y)))	    
    )
 
 
@@ -53,12 +45,9 @@
     :parameters (?x - location ?y_from - location ?y_to - location )
     :precondition (and (execution) (robot-at ?x ?y_from) (not (occupied ?x ?y_to)) (prox ?y_from ?y_to))
     :effect (and
-		 (probabilistic 0.8 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
-		)
-           )
+	 (probabilistic 0.8 (and (not (robot-at ?x ?y_from)) (robot-at ?x ?y_to))
+			0.2 (robot-at ?x ?y_from)))	               
    )
-
-
 
 
 
@@ -78,11 +67,6 @@
 
 ;Design actions
 
- (:action design-idle
-    :parameters ( ?t - time ?tnext - time )
-    :precondition (and (not (execution)) (current-time ?t ) (next ?t ?tnext))
-    :effect (and (current-time ?tnext ) (not (current-time ?t)))
-  )
 
 
   (:action design-start-execution

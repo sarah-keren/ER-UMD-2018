@@ -292,7 +292,19 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
                 solver.solve(s);
                 unsigned long endTime = clock();
                 double planTime = (double(endTime - startTime) / CLOCKS_PER_SEC);
-                return s->cost();
+
+                if (umddefs::simulate_at_tips_flares)
+                {
+                    std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->ppddlProblem_,&solver);
+                    //std::cout<<"Simulated cost is "<< simulated_result.first<< "\n mean is "<< simulated_result.second<< " s->cost() is "<< s->cost()<<std::endl;
+                    return simulated_result.first;
+                }
+                else
+                {
+                    return s->cost();
+                }
+
+
             }
             else
             {

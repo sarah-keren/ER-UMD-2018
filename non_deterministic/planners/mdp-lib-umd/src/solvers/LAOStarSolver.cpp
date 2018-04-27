@@ -24,7 +24,7 @@ mlcore::Action* LAOStarSolver::solve(mlcore::State* s0)
             this->m_totalExpanded += countExpanded;
             this->m_iteration_counter+=1;
 
-            //std::cout<<" Expanded:"<< this->m_totalExpanded<<std::endl;
+            //zzstd::cout<<" Expanded:"<< this->m_totalExpanded<<std::endl;
             //std::cout<<" iteration_counter:"<< iteration_counter<<std::endl;
 
             if ((0.001 * (clock() - startTime)) /

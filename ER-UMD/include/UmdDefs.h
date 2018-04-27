@@ -71,6 +71,9 @@ namespace umddefs
    const std::string TIP = "-tip";
 
 
+   const bool simulate_at_tips_flares = true;
+
+
 
 
 }

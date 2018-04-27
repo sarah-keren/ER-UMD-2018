@@ -54,18 +54,20 @@
   
   (:action put-down
    :parameters (?b - block)
-   :precondition (and (holding ?b) (no-destroyed-table)(execution))
-   :effect (and (emptyhand) (on-table ?b) (not (holding ?b))
-                (probabilistic 2/5 (when (no-detonated ?b) (and (not (no-destroyed-table)) (not (no-detonated ?b))))))
+   :precondition (and (holding ?b) (no-destroyed-table))
+   :effect (and (emptyhand) 
+                (probabilistic 0.4 (and (not (no-destroyed-table)) (not (no-detonated ?b)))
+			       0.6 (and (on-table ?b) (not (holding ?b)))))
   )
   
   (:action put-on-block
    :parameters (?b1 ?b2 - block)
-   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2)(execution))
-   :effect (and (emptyhand) (on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2))
-                (probabilistic 1/10 (when (no-detonated ?b1) (and (not (no-destroyed ?b2)) (not (no-detonated ?b1))))))
+   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2))
+   :effect (and (emptyhand) 
+                (probabilistic 0.1 (and (not (no-destroyed ?b2)) (not (no-detonated ?b1)))
+			       0.9 (and(on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2)))
+		))
   )
-  
 
 ;Design actions
 
@@ -122,15 +124,18 @@
   (:action put-down
    :parameters (?b - block)
    :precondition (and (holding ?b) (no-destroyed-table))
-   :effect (and (emptyhand) (on-table ?b) (not (holding ?b))
-                (probabilistic 2/5 (when (no-detonated ?b) (and (not (no-destroyed-table)) (not (no-detonated ?b))))))
+   :effect (and (emptyhand) 
+                (probabilistic 0.4 (and (not (no-destroyed-table)) (not (no-detonated ?b)))
+			       0.6 (and (on-table ?b) (not (holding ?b)))))
   )
   
   (:action put-on-block
    :parameters (?b1 ?b2 - block)
    :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2))
-   :effect (and (emptyhand) (on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2))
-                (probabilistic 1/10 (when (no-detonated ?b1) (and (not (no-destroyed ?b2)) (not (no-detonated ?b1))))))
+   :effect (and (emptyhand) 
+                (probabilistic 0.1 (and (not (no-destroyed ?b2)) (not (no-detonated ?b1)))
+			       0.9 (and(on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2)))
+		))
   )
   
   
@@ -190,18 +195,22 @@
    :effect (and (holding ?b)  )
   )
   
+
   (:action put-down
    :parameters (?b - block)
-   :precondition (and (holding ?b) (no-destroyed-table)(execution))
-   :effect (and (emptyhand) (on-table ?b) 
-                (probabilistic 2/5 (when (no-detonated ?b) (and (not (no-destroyed-table)) (not (no-detonated ?b))))))
+   :precondition (and (holding ?b) (no-destroyed-table))
+   :effect (and (emptyhand) 
+                (probabilistic 0.4 (and (not (no-destroyed-table)) (not (no-detonated ?b)))
+			       0.6 (and (on-table ?b) (not (holding ?b)))))
   )
   
   (:action put-on-block
    :parameters (?b1 ?b2 - block)
-   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2)(execution))
-   :effect (and (emptyhand) (on ?b1 ?b2)  
-                (probabilistic 1/10 (when (no-detonated ?b1) (and (not (no-destroyed ?b2)) (not (no-detonated ?b1))))))
+   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2))
+   :effect (and (emptyhand) 
+                (probabilistic 0.1 (and (not (no-destroyed ?b2)) (not (no-detonated ?b1)))
+			       0.9 (and(on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2)))
+		))
   )
   
 
@@ -288,18 +297,21 @@
    :effect (and (holding ?b) (not (emptyhand)) (not (on-table ?b)))
   )
   
-  (:action put-down
+    (:action put-down
    :parameters (?b - block)
-   :precondition (and (holding ?b) (no-destroyed-table)(execution))
-   :effect (and (emptyhand) (on-table ?b) (not (holding ?b))
-                (probabilistic 2/5 (when (no-detonated ?b) (and (not (no-destroyed-table)) (not (no-detonated ?b))))))
+   :precondition (and (holding ?b) (no-destroyed-table))
+   :effect (and (emptyhand) 
+                (probabilistic 0.4 (and (not (no-destroyed-table)) (not (no-detonated ?b)))
+			       0.6 (and (on-table ?b) (not (holding ?b)))))
   )
   
   (:action put-on-block
    :parameters (?b1 ?b2 - block)
-   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2)(execution))
-   :effect (and (emptyhand) (on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2))
-                (probabilistic 1/10 (when (no-detonated ?b1) (and (not (no-destroyed ?b2)) (not (no-detonated ?b1))))))
+   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2))
+   :effect (and (emptyhand) 
+                (probabilistic 0.1 (and (not (no-destroyed ?b2)) (not (no-detonated ?b1)))
+			       0.9 (and(on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2)))
+		))
   )
   
 
@@ -388,18 +400,21 @@
   
   (:action put-down
    :parameters (?b - block)
-   :precondition (and (holding ?b) (no-destroyed-table)(execution))
-   :effect (and (emptyhand) (on-table ?b) 
-                (probabilistic 2/5 (when (no-detonated ?b) (and (not (no-destroyed-table)) (not (no-detonated ?b))))))
+   :precondition (and (holding ?b) (no-destroyed-table))
+   :effect (and (emptyhand) 
+                (probabilistic 0.4 (and (not (no-destroyed-table)) (not (no-detonated ?b)))
+			       0.6 (and (on-table ?b) (not (holding ?b)))))
   )
   
   (:action put-on-block
    :parameters (?b1 ?b2 - block)
-   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2)(execution))
-   :effect (and (emptyhand) (on ?b1 ?b2)  
-                (probabilistic 1/10 (when (no-detonated ?b1) (and (not (no-destroyed ?b2)) (not (no-detonated ?b1))))))
+   :precondition (and (holding ?b1) (clear ?b2) (no-destroyed ?b2))
+   :effect (and (emptyhand) 
+                (probabilistic 0.1 (and (not (no-destroyed ?b2)) (not (no-detonated ?b1)))
+			       0.9 (and(on ?b1 ?b2) (not (holding ?b1)) (not (clear ?b2)))
+		))
   )
-  
+    
 
 ;Design actions
 
