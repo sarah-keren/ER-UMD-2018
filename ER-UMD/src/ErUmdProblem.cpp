@@ -118,6 +118,10 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
                 std::cout << "Expanded nodes:: " << m_totalVisitedFLARES <<std::endl;
 
+                std::cout<<" THIS IS IT" <<std::endl;
+                umdutils::simulation_result simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, this->ppddlProblem_->initialState());
+                std::cout<<" THIS WAS IT" <<std::endl;
+                /*
                 double expectedCost = 0.0;
                 double expectedTime = 0.0;
                 std::vector<double> simCosts;
@@ -179,12 +183,17 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 }
                 stderr /= (numSims - 1);
                 stderr = sqrt(stderr / numSims);
+                */
+
+
                 std::cout << "Estimated cost:: " << this->ppddlProblem_->initialState()->cost() << std::endl;
-                std::cout << "ExpectedCost:: " << averageCost << " +/- " << stderr << std::endl;
+                std::cout << "ExpectedCost:: " << simulated_result.averageCost << " +/- " << simulated_result.stderr << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
                 iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
                 iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_design_state_counter();
                 std::cout << "Expanded nodes:: " << iExpandedNodesExecution << " Expanded Design nodes:: " <<iExpandedNodesDesign<< std::endl;// <<"  Total Expanded nodes algorithm:: " << solver.m_totalExpanded << " Iteration coutner:: "<< solver.m_iteration_counter<<std::endl;
+                std::cout<<"Simulation results:: "<< "num_of_runs: "<< simulated_result.num_of_runs<< " num_of_solved: " <<simulated_result.num_of_solved<< " averageCost: "<< simulated_result.averageCost <<" stderr: "<< simulated_result.stderr << " averageCost_solved: "<< simulated_result.averageCost_solved << " stderr_solved: " <<simulated_result.stderr_solved<< std::endl;
+
 
                 }//if sub optimal
                 else //error
@@ -200,16 +209,21 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
     else
     {
         this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
-
         //SOLVE
         mlsolvers::DeterministicSolver solver (this, mlsolvers::det_most_likely, umdHeur);
 
         if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
             //silent the logging of the simualted values
             solver.set_log_results(false);
-             std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, ppddlProblem_->initialState());
+            //std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, ppddlProblem_->initialState());
+            std::cout<<" THIS IS IT" <<std::endl;
+            umdutils::simulation_result simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, ppddlProblem_->initialState());
+            std::cout<<" THIS WAS IT" <<std::endl;
             solver.set_log_results(true);
-            std::cout<<"Simulated expected cost: "<< simulated_result.first<< " +/-  "<< simulated_result.second<<std::endl;
+            std::cout<<"Simulated expected cost: "<< simulated_result.averageCost<< " +/-  "<< simulated_result.stderr<<std::endl;
+            std::cout<<"Simulation results:: "<< "num_of_runs: "<< simulated_result.num_of_runs<< " num_of_solved: " <<simulated_result.num_of_solved<< " averageCost: "<< simulated_result.averageCost <<" stderr: "<< simulated_result.stderr << " averageCost_solved: "<< simulated_result.averageCost_solved << " stderr_solved: " <<simulated_result.stderr_solved<< std::endl;
+
+
 
         }
         else
@@ -316,9 +330,10 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
 
                 if (umddefs::simulate_at_tips_flares)
                 {
-                    std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->ppddlProblem_,&solver, s);
+                    //std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->ppddlProblem_,&solver, s);
+                    umdutils::simulation_result simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->ppddlProblem_,&solver, s);
                     //std::cout<<"Simulated cost is "<< simulated_result.first<< "\n mean is "<< simulated_result.second<< " s->cost() is "<< s->cost()<<std::endl;
-                    return simulated_result.first;
+                    return simulated_result.averageCost;
                 }
                 else
                 {

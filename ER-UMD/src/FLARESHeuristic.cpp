@@ -68,9 +68,11 @@ double FLARESHeuristic::cost(const mlcore::State* s)
     double planTime = (double(endTime - startTime) / CLOCKS_PER_SEC);
     if (this->simulate_at_tips)
     {
-        std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->problem_,&solver, relaxedProblemState);
+        //std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->problem_,&solver, relaxedProblemState);
+        umdutils::simulation_result result = umdutils::simulateCost(umddefs::flares_sims,this->problem_,&solver, relaxedProblemState);
+
         //std::cout<<"FLARESHeuristic simulated cost: "<< simulated_result.first<< " mean is "<< simulated_result.second<< " s->cost() is "<< s->cost()<<std::endl;
-        cost =  simulated_result.first;
+        cost =  result.averageCost;
     }
     else
     {

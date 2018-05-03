@@ -25,6 +25,18 @@ namespace umdutils
 {
 
 
+struct simulation_result {
+
+ double averageCost;
+ double stderr;
+ long num_of_runs;
+ long num_of_solved;
+ double averageCost_solved;
+ double stderr_solved;
+
+  };
+
+
 // check if the (execution) predicate is on
 inline bool isDesign(const mlcore::State* s)
 {
@@ -806,14 +818,30 @@ inline mlcore::State* mostLikelyOutcome(mlcore::Problem* problem, mlcore::State*
 }
 
 
-
 //given a policy and initial state - simulate the cost to goal
-inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver, mlcore::State* currentState)
+//inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver, mlcore::State* currentState)
+inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver, mlcore::State* state)
 {
+
+    std::cout<<"Entering simulateCost with state "<<state<<std::endl;
+    if (ppddlProblem->goal(state)) {
+        std::pair <double,double> result(0.0,0.0);
+    }//if
+
     double expectedCost = 0.0;
     double expectedTime = 0.0;
+    long count_deadEnds = 0;
+    double expectedCostSolved = 0.0;
+
+
     std::vector<double> simCosts;
+    std::vector<double> simCostsSolved;
+
+
     for (int sim = 0; sim < numSims; sim++) {
+
+        mlcore::State* currentState = state;
+        double dead_end_reached = false;
 
         double cost = 0.0;
         double planningTime = 0.0;
@@ -822,40 +850,55 @@ inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem*
         unsigned long endTime = clock();
         planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
         mlcore::Action* action = currentState->bestAction();
+
         // added by Sarah to avoid segfault - make sure this is correct
         if (NULL == action)
         {
             cost = mdplib::dead_end_cost;
+            count_deadEnds += 1;
+            dead_end_reached = true;
+
         }
-        while (cost < mdplib::dead_end_cost) {
-            cost += ppddlProblem->cost(currentState, action);
-            // The successor state according to the
-            // original transition model.
-            mlcore::State* nextState =
-                mlsolvers::randomSuccessor(
-                    ppddlProblem, currentState, action);
-            if (ppddlProblem->goal(nextState)) {
-                break;
-            }
-            currentState = nextState;
-            // Re-planning if needed.
-            if (!currentState->checkBits(mdplib::SOLVED_FLARES)) {
-                startTime = clock();
-                solver->solve(currentState);
-                endTime = clock();
-                planningTime +=
-                    (double(endTime - startTime) / CLOCKS_PER_SEC);
-            }
-            if (currentState->deadEnd()) {
-                cost = mdplib::dead_end_cost;
-            }
-            action = currentState->bestAction();
-        }
+        else{
+            while (cost < mdplib::dead_end_cost) {
+                cost += ppddlProblem->cost(currentState, action);
+                // The successor state according to the
+                // original transition model.
+                mlcore::State* nextState =
+                    mlsolvers::randomSuccessor(
+                        ppddlProblem, currentState, action);
+                if (ppddlProblem->goal(nextState)) {
+                    break;
+                }
+                currentState = nextState;
+                // Re-planning if needed.
+                if (!currentState->checkBits(mdplib::SOLVED_FLARES)) {
+                    startTime = clock();
+                    solver->solve(currentState);
+                    endTime = clock();
+                    planningTime +=
+                        (double(endTime - startTime) / CLOCKS_PER_SEC);
+                }
+                if (currentState->deadEnd()) {
+                    cost = mdplib::dead_end_cost;
+                    count_deadEnds += 1;
+                    dead_end_reached = true;
+                }
+                action = currentState->bestAction();
+            }//while
+        }//else
+
         expectedCost += cost;
         simCosts.push_back(cost);
         expectedTime += planningTime;
+        if (!dead_end_reached)
+        {
+          expectedCostSolved += cost;
+          simCostsSolved.push_back(cost);
+        }
     }
 
+    //calculate for all instances
     double stderr = 0.0;
     double averageCost = expectedCost/numSims;
     for (double cost : simCosts) {
@@ -864,7 +907,20 @@ inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem*
     }
     stderr /= (numSims - 1);
     stderr = sqrt(stderr / numSims);
-    std::pair <double,double> result(averageCost,stderr);
+    //std::pair <double,double> result(averageCost,stderr);
+
+    //calculate for solved only
+    double stderr_solved = 0.0;
+    double num_of_solved = numSims-count_deadEnds;
+    double averageCostSovled = expectedCostSolved/num_of_solved;
+    for (double cost : simCostsSolved) {
+        double diff = (cost - averageCostSovled);
+        stderr_solved += diff * diff;
+    }
+    stderr_solved /= (num_of_solved - 1);
+    stderr_solved = sqrt(stderr_solved / num_of_solved);
+    std::cout<<"num_of_solved: " <<num_of_solved<<std::endl;
+    simulation_result result = {averageCost,stderr,numSims,num_of_solved,averageCostSovled,stderr_solved};
     return result;
 }
 /*
