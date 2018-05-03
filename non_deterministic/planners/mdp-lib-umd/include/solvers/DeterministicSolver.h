@@ -49,8 +49,8 @@ public:
      *      - mlsolvers::det_most_likely (Most likely outcome)
      */
     DeterministicSolver(mlcore::Problem* problem, int choice = det_most_likely,
-                        mlcore::Heuristic* heuristic = nullptr)
-        : problem_(problem), choice_(choice), heuristic_(heuristic) {}
+                        mlcore::Heuristic* heuristic = nullptr,bool log_results = true)
+        : problem_(problem), choice_(choice), heuristic_(heuristic) {this->log_results = log_results;}
 
     virtual ~DeterministicSolver() {}
 
@@ -61,7 +61,11 @@ public:
      */
     virtual mlcore::Action* solve(mlcore::State* s0);
 
+    virtual void set_log_results(bool val){log_results = val;};
+
     int iteration_counter = 0;
+
+    bool log_results ;
 };
 
 /**

@@ -175,12 +175,12 @@ if __name__ == '__main__' :
 
     domain_names = []
     #domain_names.append('vacuum-no-fuel')
-    #domain_names.append('triangle-tireworld')
+    domain_names.append('triangle-tireworld')
     domain_names.append('vacuum-no-fuel-running-example')
     domain_names.append('vacuum-no-fuel')
     domain_names.append('ex-blocksworld')
-    #domain_names.append('boxworld')
-    #domain_names.append('blocksworld')
+    domain_names.append('boxworld')
+    domain_names.append('blocksworld')
     #domain_names.append('elevators')
 
 

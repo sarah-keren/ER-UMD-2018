@@ -8,10 +8,11 @@
 namespace mlsolvers
 {
 
+
 mlcore::Action* LAOStarSolver::solve(mlcore::State* s0)
 {
 
-    //std::cout<<"In LAOStarSolver::solve(mlcore::State* s0)"<<std::endl;
+    //std::cout<<"In LAOStarSolver::solve(mlcore::State* s0)"<< s0<<std::endl;
     clock_t startTime = clock();
     double error = mdplib::dead_end_cost;
     int countExpanded;
@@ -24,8 +25,9 @@ mlcore::Action* LAOStarSolver::solve(mlcore::State* s0)
             this->m_totalExpanded += countExpanded;
             this->m_iteration_counter+=1;
 
-            //zzstd::cout<<" Expanded:"<< this->m_totalExpanded<<std::endl;
-            //std::cout<<" iteration_counter:"<< iteration_counter<<std::endl;
+            //std::cout<<" Expanded:"<< this->m_totalExpanded<<std::endl;
+            //std::cout<<" iteration_counter:"<< this->m_iteration_counter<<std::endl;
+
 
             if ((0.001 * (clock() - startTime)) /
                     CLOCKS_PER_SEC > timeLimit_)

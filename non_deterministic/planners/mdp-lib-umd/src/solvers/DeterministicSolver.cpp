@@ -13,8 +13,10 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
     frontier.push(init);
     std::list<Node*> allNodes;  // for memory clean-up later
     allNodes.push_back(init);
+
     Node* final = nullptr;
     Node* node = nullptr;
+
     while (!frontier.empty()) {
 
         /*TODO: SARAH delete*/
@@ -114,9 +116,13 @@ mlcore::Action* DeterministicSolver::solve(mlcore::State* s0)
         cost_path += problem_->cost(cur_node->state(), optimal);
         cur_node = cur_node->parent();
     }
-    std::cout << "A* Cost:: " << cost_path << std::endl;
-    //std::cout<<"cur_node: "<<cur_node->state()<<std::endl;
-    std::cout<<"Optimal action:: " <<optimal<<std::endl;
+
+    if (log_results)
+    {
+        std::cout << "Expected cost (A*):: " << cost_path << std::endl;
+        //std::cout<<"cur_node: "<<cur_node->state()<<std::endl;
+        std::cout<<"Optimal action:: " <<optimal<<std::endl;
+    }
 
     for (Node* node : allNodes) {
         node->state()->clearBits(mdplib::VISITED_ASTAR);

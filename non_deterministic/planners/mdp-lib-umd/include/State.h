@@ -241,6 +241,10 @@ public:
         cost_ = mdplib::dead_end_cost + 1;
         bestAction_ = nullptr;
     }
+
+    //Added by Sarah to support FlaresHeuristic
+    void SetProblem( Problem* problem){this->problem_ = problem;}
+
 };
 
 /**

@@ -117,7 +117,15 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
     exeHeuristic = umdutils::getHeuristic(heuristic_name,umdProblem->getPPDDLProblem());
     std::string file = argv[1];
     std::string problem_name = argv[2];
-    std::string relaxed_prob = umdutils::get_relaxed_problem_name(file,problem_name,command_type);
+    std::string relaxed_prob;
+    if((command_type.find(umddefs::relaxed_solution_method_simulate) != std::string::npos) || (command_type.find(umddefs::relaxed_solution_method) != std::string::npos))
+    {
+        relaxed_prob = umdutils::get_relaxed_problem_name(file,problem_name,umddefs::relaxed_environment);
+    }
+    else
+    {
+       relaxed_prob = umdutils::get_relaxed_problem_name(file,problem_name,command_type);
+    }
     std::cout<<"Relaxed problem:: " << relaxed_prob.c_str()<<"\n";
 
     //create a simplified problem
@@ -130,15 +138,26 @@ umd::UmdHeuristic* parse_command(int argc, char **argv, umd::ErUmdProblem* umdPr
     }//if
     simplifiedProblem = new mlppddl::PPDDLProblem(simplified_problem);
 
-    // get the suitable design heuristic
-    desHeuristic = umdutils::getHeuristic(heuristic_name,simplifiedProblem);
+    // get the design heuristic
+    if((command_type.find(umddefs::relaxed_solution_method_simulate) != std::string::npos) || (command_type.find(umddefs::relaxed_solution_method) != std::string::npos))
+    {
+        desHeuristic = umdutils::getHeuristic(command_type,simplifiedProblem);
+    }
+    else
+    {
+        desHeuristic = umdutils::getHeuristic(heuristic_name,simplifiedProblem);
+    }
+
+
+
+    // create the integrated umd heuristic
     if((command_type.find(umddefs::relaxed_design_process) != std::string::npos)|| (command_type.find(umddefs::relaxed_combined_design_process) != std::string::npos))
     {
         umdHeuristic  = new umd::PDBHeuristic (umdProblem->getPPDDLProblem(), simplifiedProblem, desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
         return umdHeuristic;
     }
 
-    if((command_type.find(umddefs::relaxed_environment) != std::string::npos)|| (command_type.find(umddefs::relaxed_modification) != std::string::npos)|| (command_type.find(umddefs::relaxed_combined) != std::string::npos))
+    if((command_type.find(umddefs::relaxed_environment) != std::string::npos)|| (command_type.find(umddefs::relaxed_modification) != std::string::npos)|| (command_type.find(umddefs::relaxed_combined) != std::string::npos)|| (command_type.find(umddefs::relaxed_solution_method_simulate) != std::string::npos) || (command_type.find(umddefs::relaxed_solution_method) != std::string::npos))
     {
        umdHeuristic = new umd::UmdHeuristic(umdProblem->getPPDDLProblem(),simplifiedProblem,desHeuristic,exeHeuristic,isRelaxedMethod, umdProblem->getDomainName());
        return umdHeuristic;
@@ -230,10 +249,7 @@ int perform_testing (int argc, char **argv)
         //cout<<"Solver heuristic:: "<< argv[5] <<endl;
         seconds_elapsed =  ((unsigned long) clock() - begTime)/(CLOCKS_PER_SEC/1.0);
         cout<<"Total time:: "<<seconds_elapsed<<endl;
-        std::cout<< "Expected cost:: "<< umdProblem->getPPDDLProblem()->initialState()->cost()<<std::endl;
-
-
-
+        //std::cout<< "Expected cost:: "<< umdProblem->getPPDDLProblem()->initialState()->cost()<<std::endl;
 
 
         //cout<<umddefs::deliminator<<seconds_elapsed<<endl;

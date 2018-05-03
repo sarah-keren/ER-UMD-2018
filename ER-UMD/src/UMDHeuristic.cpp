@@ -45,28 +45,6 @@ UmdHeuristic::~UmdHeuristic()
     //dtor
 }
 
-// check if the (execution) predicate is on
-bool UmdHeuristic::isDesign(const mlcore::State* s)
-{
-
-    //
-    //std::cout<<"in design"<<std::endl;
-    std::stringstream buffer;
-    buffer<<(mlppddl::PPDDLState*)s;
-
-    //std::cout<<buffer.str();
-    //std::cout<<std::endl;
-    if (buffer.str().find(umddefs::execution_stage_string) != std::string::npos)
-    {
-        //std::cout<<"Execution found"<<std::endl;
-        return false;
-     }
-
-    //std::cout<<"Design found"<<std::endl;
-    return true;
-
-}
-
 
 double UmdHeuristic::cost(const mlcore::State* s)
 {
@@ -78,7 +56,7 @@ double UmdHeuristic::cost(const mlcore::State* s)
 
 
     //if a design heuristic is defined - apply it for design states
-    if((this->designHeuristic_)&&(isDesign(s)))
+    if((this->designHeuristic_)&&(umdutils::isDesign(s)))
     {
 
         expandedStateCounter+=1;

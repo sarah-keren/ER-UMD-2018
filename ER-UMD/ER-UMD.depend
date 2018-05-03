@@ -1169,7 +1169,7 @@
 	"./Problem.h"
 	"./ErUmdProblem.h"
 
-1524800785 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/ErUmdProblem.cpp
+1525339533 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/ErUmdProblem.cpp
 	<stdio.h>
 	"../include/UMDProblem.h"
 	"../include/UmdDefs.h"
@@ -1363,9 +1363,9 @@
 	<./Heuristic.h>
 	"./State.h"
 
-1524800329 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdDefs.h
+1524810719 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdDefs.h
 
-1523960144 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdUtils.h
+1525339158 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/UmdUtils.h
 	<sstream>
 	"./ppddl/PPDDLState.h"
 	"./ppddl/PPDDLProblem.h"
@@ -1375,6 +1375,7 @@
 	"../include/BAODHeuristic.h"
 	"../include/HminminHeuristic.h"
 	"../include/ZeroHeuristic.h"
+	"../include/FLARESHeuristic.h"
 	"../include/solvers/Solver.h"
 	"../include/GPTHeuristicsDesign.h"
 
@@ -1560,7 +1561,7 @@
 	<iostream>
 	<sstream>
 
-1523954478 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/main .cpp
+1524816700 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/main .cpp
 	<sstream>
 	<iostream>
 	"../include/UMDHeuristic.h"
@@ -1578,13 +1579,13 @@
 	<../include/ErUmdProblem.h>
 	<map>
 
-1523427639 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/PDBHeuristic.cpp
+1524906102 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/PDBHeuristic.cpp
 	"../include/PDBHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/UmdUtils.h"
 	"./solvers/LAOStarSolver.h"
 
-1523427097 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/UMDHeuristic.cpp
+1524906128 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/UMDHeuristic.cpp
 	"../include/UMDHeuristic.h"
 	"../include/UmdDefs.h"
 	"../include/UmdUtils.h"
@@ -1744,14 +1745,14 @@
 	<set>
 	<tr1/unordered_map>
 
-1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/Problem.h
+1524900069 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/Problem.h
 	<list>
 	"State.h"
 	"Action.h"
 	"Heuristic.h"
 	"util/general.h"
 
-1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/State.h
+1524899552 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/State.h
 	<iostream>
 	<string>
 	<list>
@@ -1858,11 +1859,11 @@
 	"../Heuristic.h"
 	"Solver.h"
 
-1523168734 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/LAOStarSolver.h
+1525337800 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/LAOStarSolver.h
 	<ctime>
 	"Solver.h"
 
-1523784819 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/DeterministicSolver.h
+1524817562 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/non_deterministic/planners/mdp-lib-umd/include/solvers/DeterministicSolver.h
 	"../Action.h"
 	"../State.h"
 	"Solver.h"
@@ -1934,20 +1935,23 @@
 	"./ErUmdProblem.h"
 	"./MDPHeuristic.h"
 
-1524800882 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/BAODHeuristic.cpp
+1525337666 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/BAODHeuristic.cpp
 	<list>
 	"../include/BAODHeuristic.h"
 	"../include/solvers/Solver.h"
 	"../include/UmdUtils.h"
 
-1523782674 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/MDPHeuristic.cpp
+1524906655 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/MDPHeuristic.cpp
 	"MDPHeuristic.h"
 
-1523782674 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/MDPHeuristic.h
+1524940371 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/MDPHeuristic.h
 	"../include/State.h"
+	"./ppddl/PPDDLState.h"
 	"./Heuristic.h"
+	"../include/UmdDefs.h"
+	<sstream>
 
-1523782346 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/ZeroHeuristic.h
+1524906383 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/ZeroHeuristic.h
 	"../include/State.h"
 	"./MDPHeuristic.h"
 
@@ -1971,13 +1975,13 @@
 	"../State.h"
 	"Solver.h"
 
-1523783210 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/HminminHeuristic.cpp
+1524994391 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/HminminHeuristic.cpp
 	<list>
 	"../include/HminminHeuristic.h"
 	"../include/solvers/Solver.h"
 	"../include/UmdUtils.h"
 
-1523780614 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/HminminHeuristic.h
+1524902686 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/HminminHeuristic.h
 	"../include/State.h"
 	"./Problem.h"
 	"./ErUmdProblem.h"
@@ -2979,4 +2983,17 @@
 
 1524103097 source:/home/lpineda/Documents/code/ER-UMD/ER-UMD/src/ZeroHeuristic.cpp
 	"ZeroHeuristic.h"
+
+1525337384 source:/home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/src/FLARESHeuristic.cpp
+	<list>
+	"../include/FLARESHeuristic.h"
+	"../include/solvers/Solver.h"
+	"./solvers/FLARESSolver.h"
+	"../include/UmdUtils.h"
+
+1524900948 /home/sarah/Documents/GoalRecognitionDesign/Redesign/Code-IJCAI18/ER-UMD/ER-UMD/include/FLARESHeuristic.h
+	"../include/State.h"
+	"./Problem.h"
+	"./ErUmdProblem.h"
+	"./MDPHeuristic.h"
 

@@ -43,10 +43,10 @@ HminminHeuristic::HminminHeuristic(mlcore::Problem* problem, int iteration_limit
 double HminminHeuristic::cost(const mlcore::State* s)
 {
 
-
-    this->update_counter();
-
     //std::cout<<"Entering  hmin cost with state : "<< (mlcore::State*)s<< std::endl;
+    this->update_counter(s);
+
+
 
     if (problem_->goal(const_cast<mlcore::State*>(s)))
     {

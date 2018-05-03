@@ -280,24 +280,19 @@
   (:action pick-tower-safely
     :parameters (?b1 ?b2 ?b3 - block)
     :precondition (and (emptyhand) (clear ?b1) (on ?b1 ?b2) (on ?b2 ?b3)(execution)(enabled-safety-pickup-tower ?b1 ?b2 ?b3))
-    :effect
-      (probabilistic 1.0 (and (holding ?b2) (clear ?b3) (not (emptyhand)) (not (on ?b2 ?b3))))
+    :effect (probabilistic 1.0 (and (holding ?b2) (clear ?b3) (not (emptyhand)) (not (on ?b2 ?b3))))
   )
 
 
  (:action pick-up-safely
     :parameters (?b1 ?b2 - block)
     :precondition (and (emptyhand) (clear ?b1) (on ?b1 ?b2)(enabled-safety-pickup ?b1)(execution))
-    :effect
-      (probabilistic
-        1.0 (and (holding ?b1) (clear ?b2) (not (emptyhand)) (not (on ?b1 ?b2)))
-      )
+    :effect (probabilistic 1.0 (and (holding ?b1) (clear ?b2) (not (emptyhand)) (not (on ?b1 ?b2))))
   )
   (:action pick-up-from-table-safely
     :parameters (?b - block)
     :precondition (and (emptyhand) (clear ?b) (on-table ?b)(enabled-safety-pickup ?b)(execution))
-    :effect
-      (probabilistic 1.0 (and (holding ?b) (not (emptyhand)) (not (on-table ?b))))
+    :effect(probabilistic 1.0 (and (holding ?b) (not (emptyhand)) (not (on-table ?b))))
   )
 
   (:action pick-up

@@ -13,6 +13,7 @@
 #include "../include/BAODHeuristic.h"
 #include "../include/HminminHeuristic.h"
 #include "../include/ZeroHeuristic.h"
+#include "../include/FLARESHeuristic.h"
 
 
 
@@ -22,6 +23,31 @@
 
 namespace umdutils
 {
+
+
+// check if the (execution) predicate is on
+inline bool isDesign(const mlcore::State* s)
+{
+
+    //
+    //std::cout<<"in design"<<std::endl;
+    std::stringstream buffer;
+    buffer<<(mlppddl::PPDDLState*)s;
+
+    //std::cout<<buffer.str();
+    //std::cout<<std::endl;
+    if (buffer.str().find(umddefs::execution_stage_string) != std::string::npos)
+    {
+        //std::cout<<"Execution found"<<std::endl;
+        return false;
+     }
+
+    //std::cout<<"Design found"<<std::endl;
+    return true;
+
+}
+
+
 inline std::string get_relaxed_problem_name(std::string file,std::string problem_name,std::string command_type)
 {
     std::string relaxed_prob;
@@ -55,6 +81,7 @@ inline std::string get_relaxed_problem_name(std::string file,std::string problem
         relaxed_prob.append(umddefs::relaxed_combined_string);
         return relaxed_prob;
     }
+
 
 
 }
@@ -673,9 +700,25 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
 
                     else
                     {
-                        throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );}
+                        if(heuristic_name.find(umddefs::relaxed_solution_method_simulate)!= std::string::npos)
+                        {
+                            heuristic =  new umd::FLARESHeuristic(umdProblem,umddefs::flares_sims,true);
+                        }
+                        else
+                        {
+                            if(heuristic_name.find(umddefs::relaxed_solution_method)!= std::string::npos)
+                            {
+                                heuristic =  new umd::FLARESHeuristic(umdProblem,umddefs::flares_sims,false);
+                            }
+                            else
+                            {
+                              throw std::invalid_argument( "heuritic type: " + heuristic_name + " not supported!" );
+                            }
+                        }
+
                     }
             }
+        }
 
 
         seconds_elapsed =  ((unsigned long) clock() - begTime);
@@ -765,23 +808,25 @@ inline mlcore::State* mostLikelyOutcome(mlcore::Problem* problem, mlcore::State*
 
 
 //given a policy and initial state - simulate the cost to goal
-inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver)
+inline std::pair <double,double> simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver, mlcore::State* currentState)
 {
     double expectedCost = 0.0;
     double expectedTime = 0.0;
     std::vector<double> simCosts;
-
     for (int sim = 0; sim < numSims; sim++) {
 
         double cost = 0.0;
         double planningTime = 0.0;
-
-        mlcore::State* currentState = ppddlProblem->initialState();
         unsigned long startTime = clock();
         solver->solve(currentState);
         unsigned long endTime = clock();
         planningTime += (double(endTime - startTime) / CLOCKS_PER_SEC);
         mlcore::Action* action = currentState->bestAction();
+        // added by Sarah to avoid segfault - make sure this is correct
+        if (NULL == action)
+        {
+            cost = mdplib::dead_end_cost;
+        }
         while (cost < mdplib::dead_end_cost) {
             cost += ppddlProblem->cost(currentState, action);
             // The successor state according to the

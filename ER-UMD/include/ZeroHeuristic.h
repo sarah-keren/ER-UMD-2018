@@ -12,7 +12,7 @@ class ZeroHeuristic : public MDPHeuristic
         ZeroHeuristic();
         virtual ~ZeroHeuristic();
         virtual double cost(const mlcore::State* s){
-            update_counter();
+            update_counter(s);
             return 0.0;
             };
 

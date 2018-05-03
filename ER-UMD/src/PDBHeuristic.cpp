@@ -103,7 +103,7 @@ double PDBHeuristic::cost(const mlcore::State* s)
     unsigned long begTime = clock();
 
 
-    if (isDesign(s))
+    if (umdutils::isDesign(s))
     {
             examinedStateCounter +=1;
             double cur_cost = get_dominating_modification_cost(s);

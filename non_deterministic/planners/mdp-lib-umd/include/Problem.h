@@ -169,6 +169,7 @@ public:
         // If the the state was found but the object representing it in
         // memory is different to the given one, delete the given one.
         if ((void *) ret != (void *) s && !check) {
+            std::cout<<"Deleting state: "<< s <<std::endl;
             delete s;
         }
         return ret;

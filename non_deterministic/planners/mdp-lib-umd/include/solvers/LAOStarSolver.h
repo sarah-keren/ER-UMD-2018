@@ -60,8 +60,8 @@ public:
      */
     virtual mlcore::Action* solve(mlcore::State* s0);
 
-    int m_totalExpanded;
-    int m_iteration_counter;
+    int m_totalExpanded = 0;
+    int m_iteration_counter = 0;
 
 
 };

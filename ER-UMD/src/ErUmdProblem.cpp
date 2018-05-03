@@ -26,7 +26,7 @@ namespace umd
 
 ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_solverName):mlppddl::PPDDLProblem (pProblem)
 {
-//                                                                                std::cout << "CONSTR1 " << pProblem_tip_nodes->domain().name() << std::endl;
+                                                                               // std::cout << "CONSTR1 " << pProblem_tip_nodes->domain().name() << std::endl;
 //                                                                                std::cout << pProblem_tip_nodes->domain() << std::endl;
     ppddlProblem_ = new mlppddl::PPDDLProblem(pProblem_tip_nodes);
 //                                                                                auto currentState = ppddlProblem_->initialState();
@@ -59,7 +59,7 @@ ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, s
 
 ErUmdProblem::ErUmdProblem(problem_t* pProblem, problem_t* pProblem_tip_nodes, std::string str_fileName, std::string str_problemName, std::string str_domainName, std::string str_solverName ):mlppddl::PPDDLProblem (pProblem)
 {
-                                                                                std::cout << "CONSTR2 " << pProblem_tip_nodes->domain().name() << std::endl;
+//                                                                                std::cout << "CONSTR2 " << pProblem_tip_nodes->domain().name() << std::endl;
     ppddlProblem_ = new mlppddl::PPDDLProblem (pProblem_tip_nodes);
     fileName(str_fileName);
     problemName(str_problemName);
@@ -84,6 +84,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
     {
 
         int iExpandedNodesExecution = -1;
+        int iExpandedNodesDesign = -1;
         if (solverName.find(umddefs::solverLAO) != std::string::npos) {
             // TODO: change this if(true) to an appropriate option
             //SOLVE
@@ -97,7 +98,9 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
             //umdutils::print_policy_pddl(this->ppddlProblem_);
             std::cout << "Best action:: "<< this->ppddlProblem_->initialState()->bestAction() << std::endl;
             iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
-            std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<"  Total Expanded nodes algorithm:: " << solver.m_totalExpanded << " Iteration coutner:: "<< solver.m_iteration_counter<<std::endl;
+            iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_design_state_counter();
+            std::cout << "Expanded nodes:: " << iExpandedNodesExecution << " Expanded Design nodes:: " <<iExpandedNodesDesign<< std::endl;
+            std::cout <<"Algorithm Total Expanded nodes:: " << solver.m_totalExpanded << " Iteration coutner:: "<< solver.m_iteration_counter<<std::endl;
 
 
             return;
@@ -111,7 +114,6 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 this->ppddlProblem_->setHeuristic(umdHeur->get_executionHeuristic_());
                 mlsolvers::FLARESSolver solver(this->ppddlProblem_, umddefs::flares_sims, 1.0e-3, 0);
                 solver.solve(this->ppddlProblem_->initialState());
-
                 // ANALYZE
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
                 std::cout << "Expanded nodes:: " << m_totalVisitedFLARES <<std::endl;
@@ -160,6 +162,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
 //                                                                                std::cout << "DEAD-END" << std::endl;
                             cost = mdplib::dead_end_cost;
                         }
+
                         action = currentState->bestAction();
                     }
                     expectedCost += cost;
@@ -180,7 +183,8 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 std::cout << "ExpectedCost:: " << averageCost << " +/- " << stderr << std::endl;
                 std::cout << "Best action:: " << this->ppddlProblem_->initialState()->bestAction() << std::endl;
                 iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
-                std::cout << "Expanded nodes:: " << iExpandedNodesExecution <<std::endl;
+                iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_design_state_counter();
+                std::cout << "Expanded nodes:: " << iExpandedNodesExecution << " Expanded Design nodes:: " <<iExpandedNodesDesign<< std::endl;// <<"  Total Expanded nodes algorithm:: " << solver.m_totalExpanded << " Iteration coutner:: "<< solver.m_iteration_counter<<std::endl;
 
                 }//if sub optimal
                 else //error
@@ -199,16 +203,33 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
 
         //SOLVE
         mlsolvers::DeterministicSolver solver (this, mlsolvers::det_most_likely, umdHeur);
-        mlcore::Action* best_action = solver.solve(this->initialState());
-        //ANALYZE
-        std::cout << "Initial state:: " << this->initialState() <<std::endl;
-        //std::cout << "Expected cost:: "<< this->initialState()->cost()<<std::endl;
-        //std::cout << "Best action:: " << best_action <<std::endl;
-        int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
-        int iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_designHeuristic_())->get_counter();
 
-        std::cout << "Expanded nodes:: Execution:" << iExpandedNodesExecution << " Design: " << iExpandedNodesDesign<< " Total: " << iExpandedNodesDesign+iExpandedNodesExecution<<std::endl;
-        std::cout << "UMD heuristic:: Examined nodes:: " << umdHeur->get_examinedStateCounter() << " Expanded nodes:: " << umdHeur->get_expandedStateCounter() <<std::endl;
+        if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
+            //silent the logging of the simualted values
+            solver.set_log_results(false);
+             std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, ppddlProblem_->initialState());
+            solver.set_log_results(true);
+            std::cout<<"Simulated expected cost: "<< simulated_result.first<< " +/-  "<< simulated_result.second<<std::endl;
+
+        }
+        else
+        {
+            this->initialState();
+            mlcore::Action* best_action = solver.solve(this->initialState());
+            //ANALYZE
+            std::cout << "Initial state:: " << this->initialState() <<std::endl;
+            //std::cout << "Expected cost:: "<< this->initialState()->cost()<<std::endl;
+            //std::cout << "Best action:: " << best_action <<std::endl;
+
+       }
+       int iExpandedNodesExecution = ((MDPHeuristic*)umdHeur->get_executionHeuristic_())->get_counter();
+       int iExpandedNodesDesign = ((MDPHeuristic*)umdHeur->get_designHeuristic_())->get_counter();
+
+       std::cout << "Expanded nodes:: Execution:" << iExpandedNodesExecution << " Design: " << iExpandedNodesDesign<< " Total: " << iExpandedNodesDesign+iExpandedNodesExecution<<std::endl;
+       std::cout << "UMD heuristic:: Examined nodes:: " << umdHeur->get_examinedStateCounter() << " Expanded nodes:: " << umdHeur->get_expandedStateCounter() <<std::endl;
+
+        // if the solver used for the nodes is flares - simulate on the value
+
 
         return;
     }
@@ -295,7 +316,7 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
 
                 if (umddefs::simulate_at_tips_flares)
                 {
-                    std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->ppddlProblem_,&solver);
+                    std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->ppddlProblem_,&solver, s);
                     //std::cout<<"Simulated cost is "<< simulated_result.first<< "\n mean is "<< simulated_result.second<< " s->cost() is "<< s->cost()<<std::endl;
                     return simulated_result.first;
                 }

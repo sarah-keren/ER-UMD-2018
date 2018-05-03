@@ -146,8 +146,13 @@ bool FLARESSolver::checkSolved(State* s)
 Action* FLARESSolver::solve(State* s0)
 {
     if (optimal_)
-        return solveOptimally(s0);
-    return solveApproximate(s0);
+    {
+        Action* action = solveOptimally(s0);
+        return action;
+     }
+    Action* action = solveApproximate(s0);
+
+    return action;
 }
 
 

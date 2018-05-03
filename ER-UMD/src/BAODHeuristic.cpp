@@ -21,11 +21,11 @@ BAODHeuristic::BAODHeuristic(mlcore::Problem* problem, bool solveAll, int iterat
 
 double BAODHeuristic::cost(const mlcore::State* s)
 {
+
+
     //std::cout<<"Evaluating  : "<< (mlcore::State*)s<< std::endl;
 
-    this->update_counter();
-
-
+    this->update_counter(s);
     if (problem_->goal(const_cast<mlcore::State*>(s)))
     {
         //std::cout<<" ------->goal sate "<<std::endl<< std::endl<< std::endl;
@@ -91,7 +91,11 @@ double BAODHeuristic::cost(const mlcore::State* s)
             {
                 //std::cout<<"Heur value is (goal reached) "<<cur_cost<<std::endl;
                 //cache the result
+                costs_[const_cast<mlcore::State*>(s)] = minCost;
+                //print_cost_array();
                 return cur_cost;
+
+
             }
 
             if ((curIterMinCost == 0)||(cur_cost < curIterMinCost))
@@ -165,6 +169,9 @@ double BAODHeuristic::cost(const mlcore::State* s)
     }
     */
 
+    //std::cout<<"Updating costs"<<std::endl;
+    costs_[const_cast<mlcore::State*>(s)] = minCost;
+    //print_cost_array();
     return minCost;
 
 }

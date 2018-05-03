@@ -20,9 +20,9 @@
 
 
 for budget in $(seq 0 $4);do	
-	for method in LAO* FLARES; do
-		for heuristic in BAOD-heur hmin-heur;do                         
-			for approach in bfs_design compilation rel-env rel-mod rel-combined rel-proc rel-combined-proc; do	
+	for method in LAO* FLARES; do 
+		for heuristic in baod-heur hmin-heur;do                         
+			for approach in bfs_design compilation rel-env rel-mod rel-combined rel-proc rel-combined-proc rel-sol-simulate rel-sol; do	
 				echo ""				
 				echo "*****************************************************"				
 				#echo "---$1/$2/$6/p$3/p$3-domain-design-all.pddl p$3\-$budget-design $method $approach $heuristic ---"

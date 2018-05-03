@@ -30,16 +30,18 @@ namespace umddefs
   const std::string relaxed_design_process ("rel-proc");
   const std::string relaxed_combined_design_process ("rel-combined-proc");
   const std::string relaxed_solution_method ("rel-sol");
+  const std::string relaxed_solution_method_simulate ("rel-sol-sim");
   const std::string compilation("compilation"); // no heuristic for design (one heuristic is used for the entire mdp)
   const std::string bfs_design("bfs_design"); // zero heuristic for design, regular heuristic for execution
   const std::string original("original"); // zero heuristic for design, regular heuristic for execution
 
 
 
-  // the general huuristics used
+  // the mdp hueristics used
   const std::string zeroHeuristic ("zero-heur");
-  const std::string baodHeuristic ("BAOD-heur");
+  const std::string baodHeuristic ("baod-heur");
   const std::string hminminHeuristic ("hmin-heur");
+
 
 
   // Solution algorithms
