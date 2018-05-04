@@ -880,6 +880,7 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
                         (double(endTime - startTime) / CLOCKS_PER_SEC);
                 }
                 if (currentState->deadEnd()) {
+                    std::cout<< " \n SARAH: the state: "<< currentState <<" is a deadend\n ";
                     cost = mdplib::dead_end_cost;
                     count_deadEnds += 1;
                     dead_end_reached = true;
