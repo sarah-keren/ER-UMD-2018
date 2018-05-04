@@ -823,9 +823,9 @@ inline mlcore::State* mostLikelyOutcome(mlcore::Problem* problem, mlcore::State*
 inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlProblem,mlsolvers::Solver* solver, mlcore::State* state)
 {
 
-    std::cout<<"Entering simulateCost with state "<<state<<std::endl;
     if (ppddlProblem->goal(state)) {
-        std::pair <double,double> result(0.0,0.0);
+        simulation_result result = {0.0,0.0,0,0,0.0,0.0};
+        return result;
     }//if
 
     double expectedCost = 0.0;
@@ -919,7 +919,6 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
     }
     stderr_solved /= (num_of_solved - 1);
     stderr_solved = sqrt(stderr_solved / num_of_solved);
-    std::cout<<"num_of_solved: " <<num_of_solved<<std::endl;
     simulation_result result = {averageCost,stderr,numSims,num_of_solved,averageCostSovled,stderr_solved};
     return result;
 }
