@@ -118,9 +118,10 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
                 std::cout << "Initial state:: "<<this->ppddlProblem_->initialState();
                 std::cout << "Expanded nodes:: " << m_totalVisitedFLARES <<std::endl;
 
-                std::cout<<" THIS IS IT" <<std::endl;
+                std::cout<<" Simulating on the initial state "<<this->ppddlProblem_->initialState() <<std::endl;
                 umdutils::simulation_result simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, this->ppddlProblem_->initialState());
-                std::cout<<" THIS WAS IT" <<std::endl;
+                std::cout<<" \n\n Results for the initial state: " << this->ppddlProblem_->initialState()<<std::endl;
+                std::cout<<"Simulation results:: "<< "num_of_runs: "<< simulated_result.num_of_runs<< " num_of_solved: " <<simulated_result.num_of_solved<< " averageCost: "<< simulated_result.averageCost <<" stderr: "<< simulated_result.stderr << " averageCost_solved: "<< simulated_result.averageCost_solved << " stderr_solved: " <<simulated_result.stderr_solved<< std::endl;
                 /*
                 double expectedCost = 0.0;
                 double expectedTime = 0.0;

@@ -714,13 +714,13 @@ inline mlcore::Heuristic* getHeuristic(std::string heuristic_name , mlppddl::PPD
                     {
                         if(heuristic_name.find(umddefs::relaxed_solution_method_simulate)!= std::string::npos)
                         {
-                            heuristic =  new umd::FLARESHeuristic(umdProblem,umddefs::flares_sims,true);
+                            heuristic =  new umd::FLARESHeuristic(umdProblem,umddefs::flares_heur_sims,true);
                         }
                         else
                         {
                             if(heuristic_name.find(umddefs::relaxed_solution_method)!= std::string::npos)
                             {
-                                heuristic =  new umd::FLARESHeuristic(umdProblem,umddefs::flares_sims,false);
+                                heuristic =  new umd::FLARESHeuristic(umdProblem,umddefs::flares_heur_sims,false);
                             }
                             else
                             {
@@ -880,7 +880,7 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
                         (double(endTime - startTime) / CLOCKS_PER_SEC);
                 }
                 if (currentState->deadEnd()) {
-                    std::cout<< " \n SARAH: the state: "<< currentState <<" is a deadend\n ";
+                    //std::cout<< " \n SARAH: the state: "<< currentState <<" is a deadend\n ";
                     cost = mdplib::dead_end_cost;
                     count_deadEnds += 1;
                     dead_end_reached = true;
@@ -921,6 +921,7 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
     stderr_solved /= (num_of_solved - 1);
     stderr_solved = sqrt(stderr_solved / num_of_solved);
     simulation_result result = {averageCost,stderr,numSims,num_of_solved,averageCostSovled,stderr_solved};
+    std::cout<<"Simulation results for state :: "<< state<< " \n num_of_runs: "<< result.num_of_runs<< " num_of_solved: " <<result.num_of_solved<< " averageCost: "<< result.averageCost <<" stderr: "<< result.stderr << " averageCost_solved: "<< result.averageCost_solved << " stderr_solved: " <<result.stderr_solved<< std::endl;
     return result;
 }
 /*

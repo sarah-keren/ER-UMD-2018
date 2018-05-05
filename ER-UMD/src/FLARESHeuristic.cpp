@@ -21,7 +21,7 @@ FLARESHeuristic::FLARESHeuristic(mlcore::Problem* problem, int num_of_simulation
 double FLARESHeuristic::cost(const mlcore::State* s)
 {
 
-    //std::cout<<"Evaluating  : "<< (mlcore::State*)s<< std::endl;
+    //std::cout<<"Sarah: Evaluating  : "<< (mlcore::State*)s<< std::endl;
     this->update_counter(s);
 
 
@@ -29,7 +29,10 @@ double FLARESHeuristic::cost(const mlcore::State* s)
 
     mlppddl::PPDDLState* copyState = new mlppddl::PPDDLState(this->problem_,((mlppddl::PPDDLState*)s)->pState());
     mlcore::State* relaxedProblemState = this->problem_->getState(copyState);
-
+    if(relaxedProblemState== NULL)
+    {
+        relaxedProblemState = this->problem_->addState(copyState);
+    }
 
     if (problem_->goal(relaxedProblemState))
     {
@@ -71,7 +74,7 @@ double FLARESHeuristic::cost(const mlcore::State* s)
         //std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this->problem_,&solver, relaxedProblemState);
         umdutils::simulation_result result = umdutils::simulateCost(umddefs::flares_sims,this->problem_,&solver, relaxedProblemState);
 
-        //std::cout<<"FLARESHeuristic simulated cost: "<< simulated_result.first<< " mean is "<< simulated_result.second<< " s->cost() is "<< s->cost()<<std::endl;
+        //std::cout<<"FLARESHeuristic simulated cost: "<< result.averageCost<<std::endl;
         cost =  result.averageCost;
     }
     else
@@ -81,6 +84,7 @@ double FLARESHeuristic::cost(const mlcore::State* s)
         //cost = s->cost();
         cost = relaxedProblemState->cost();
     }
+
 
     //delete copyState;
     costs_[const_cast<mlcore::State*> (relaxedProblemState)] = cost;

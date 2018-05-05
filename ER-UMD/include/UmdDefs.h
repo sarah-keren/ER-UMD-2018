@@ -52,6 +52,8 @@ namespace umddefs
   const int lrtdp_trials = 5000 ;
   const double lrtdp_epsilon = 0.0001 ;
   const int flares_sims = 100 ;
+  const int flares_heur_sims = 30 ;
+
 
 
 
