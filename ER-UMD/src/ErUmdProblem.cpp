@@ -103,6 +103,11 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
             std::cout <<"Algorithm Total Expanded nodes:: " << solver.m_totalExpanded << " Iteration coutner:: "<< solver.m_iteration_counter<<std::endl;
 
 
+            //Sarah: Delete this
+            umdutils::simulation_result simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, this->ppddlProblem_->initialState());
+            std::cout<<" \n\n Results for the initial state: " << this->ppddlProblem_->initialState()<<std::endl;
+            std::cout<<"Simulation results:: "<< "num_of_runs: "<< simulated_result.num_of_runs<< " num_of_solved: " <<simulated_result.num_of_solved<< " averageCost: "<< simulated_result.averageCost <<" stderr: "<< simulated_result.stderr << " averageCost_solved: "<< simulated_result.averageCost_solved << " stderr_solved: " <<simulated_result.stderr_solved<< std::endl;
+
             return;
         } else {
 
@@ -214,6 +219,9 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
         mlsolvers::DeterministicSolver solver (this, mlsolvers::det_most_likely, umdHeur);
 
         if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {
+
+            mlcore::Action* best_action = solver.solve(this->initialState());
+
             //silent the logging of the simualted values
             solver.set_log_results(false);
             //std::pair <double,double> simulated_result = umdutils::simulateCost(umddefs::flares_sims,this,&solver, ppddlProblem_->initialState());
@@ -229,7 +237,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
         }
         else
         {
-            this->initialState();
+
             mlcore::Action* best_action = solver.solve(this->initialState());
             //ANALYZE
             std::cout << "Initial state:: " << this->initialState() <<std::endl;
@@ -258,14 +266,13 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
  bool ErUmdProblem::goal(mlcore::State* s) const
  {
 
-    //std::cout << "in goal with state" << s << std::endl;
     // the goal is achieved when the extracted noded is an execution node
     std::stringstream buffer;
     buffer<<(mlppddl::PPDDLState*)s;
 
     if (buffer.str().find(umddefs::execution_stage_string) != std::string::npos)
     {
-        //std::cout << "at goal : execution node" << std::endl;
+        std::cout << "at goal : execution node" << std::endl;
         return true;
 
     }
@@ -277,7 +284,7 @@ void ErUmdProblem::solve(UmdHeuristic* umdHeur, bool timed, std::string command_
 double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
 {
     std::string actionName = ((mlppddl::PPDDLAction*)a)->pAction()->name();
-    //std::cout << "\n in ErUmdProblem::cost with state" << s << " and action "<< a<< std::endl;
+    std::cout << "\n in ErUmdProblem::cost with state" << s << " and action "<< " and command: "<< std::endl;
 
     // for design actions that do not start execution
     if (actionName.find(umddefs::design_start_execution) == std::string::npos)
@@ -319,7 +326,7 @@ double ErUmdProblem::cost(mlcore::State* s, mlcore::Action* a) const
             mlcore::State* s0 = successors.front().su_state;
             solver.solve(s0);
             double cost = s0->cost();
-            //std::cout << "\n for state: "<<s << " and successor state: " << s0 <<" cost is:  "<< cost<<std::endl;
+            std::cout << "\n for state: "<<s << " and successor state: " << s0 <<" cost is:  "<< cost<<std::endl;
             return cost;
         } else {
             if (solverName.find(umddefs::solverFLARES)!= std::string::npos) {

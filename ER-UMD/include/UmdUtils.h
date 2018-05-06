@@ -831,6 +831,7 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
     double expectedCost = 0.0;
     double expectedTime = 0.0;
     long count_deadEnds = 0;
+    long count_solved = 0;
     double expectedCostSolved = 0.0;
 
 
@@ -868,6 +869,7 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
                     mlsolvers::randomSuccessor(
                         ppddlProblem, currentState, action);
                 if (ppddlProblem->goal(nextState)) {
+                    count_solved += 1;
                     break;
                 }
                 currentState = nextState;
@@ -922,6 +924,8 @@ inline simulation_result simulateCost(int numSims,mlppddl::PPDDLProblem* ppddlPr
     stderr_solved = sqrt(stderr_solved / num_of_solved);
     simulation_result result = {averageCost,stderr,numSims,num_of_solved,averageCostSovled,stderr_solved};
     std::cout<<"Simulation results for state :: "<< state<< " \n num_of_runs: "<< result.num_of_runs<< " num_of_solved: " <<result.num_of_solved<< " averageCost: "<< result.averageCost <<" stderr: "<< result.stderr << " averageCost_solved: "<< result.averageCost_solved << " stderr_solved: " <<result.stderr_solved<< std::endl;
+    std::cout<<"\n number of solved is: "<<  count_solved<< std::endl;
+
     return result;
 }
 /*
